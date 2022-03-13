@@ -20,4 +20,14 @@ public class Article extends Timestamped {
     @Column(nullable = false)
     private String contents;
 
+    public Article(ArticleRequestDto requestDto) {
+        this.title = requestDto.getTitle();
+        this.contents = requestDto.getContents();
+    }
+
+    public void update(ArticleRequestDto requestDto) {
+        this.title = requestDto.getTitle();
+        this.contents = requestDto.getContents();
+    }
+
 }
