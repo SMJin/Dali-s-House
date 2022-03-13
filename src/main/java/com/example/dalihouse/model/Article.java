@@ -18,16 +18,16 @@ public class Article extends Timestamped {
     private String title;
 
     @Column(nullable = false)
-    private String contents;
+    private String content;
 
     public Article(ArticleRequestDto requestDto) {
         this.title = requestDto.getTitle();
-        this.contents = requestDto.getContents();
+        this.content = requestDto.getContent();
     }
 
     public void update(ArticleRequestDto requestDto) {
         this.title = requestDto.getTitle();
-        this.contents = requestDto.getContents();
+        this.content = requestDto.getContent();
     }
 
 }
