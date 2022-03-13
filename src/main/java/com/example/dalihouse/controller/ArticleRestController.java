@@ -33,7 +33,7 @@ public class ArticleRestController {
         return articleService.update(id, requestDto);
     }
 
-    @DeleteMapping("/api/article/{id}")
+    @DeleteMapping("/api/articles/{id}")
     public Long deleteArticle(@PathVariable Long id) {
         articleRepository.deleteById(id);
         return id;

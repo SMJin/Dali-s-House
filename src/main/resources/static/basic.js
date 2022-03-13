@@ -71,6 +71,7 @@ function addHTML(id, title, content, updatedAt) {
             <textarea name="" id="${id}-edit-content" class="edit-content" cols="30" rows="10"></textarea>
             <button id="${id}-edit-btn" class="edit-btn" onclick="editArticle(${id})">수정하기</button>
             <button id="${id}-submit-btn" class="submit-btn" onclick="submitArticle(${id})">완료</button>
+            <button id="${id}-delete-btn" class="delete-btn" onclick="deleteArticle(${id})">삭제하기</button>
         </div> 
     `;
 }
@@ -140,4 +141,15 @@ function submitArticle(id) {
             window.location.reload();
         }
     });
+}
+
+function deleteArticle(id) {
+    $.ajax({
+        type: 'DELETE',
+        url: `/api/articles/${id}`,
+        success: function () {
+            alert("삭제가 완료되었습니다!");
+            window.location.reload();
+        }
+    })
 }
