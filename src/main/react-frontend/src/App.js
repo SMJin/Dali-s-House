@@ -3,9 +3,10 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 import Main from './pages/Main'
 import Community from './pages/Community'
-import Adoption from './pages/Adoption'
+import Adoption from './pages/adoption/Adoption'
 import VolunteerActivity from './pages/VolunteerActivity'
 import MyPage from './pages/Mypage'
+import AdoptionDetails from "./pages/adoption/AdoptionDetails";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/" element={<Main />} />
                 <Route path="/community" element={<Community />} />
                 <Route path="/adoption" element={<Adoption />} />
+                <Route path="/adoption/:id" element={<AdoptionDetails />} />
                 <Route path="/volunteerActivity" element={<VolunteerActivity />} />
                 <Route path="/myPage" element={<MyPage />} />
             </Routes>
