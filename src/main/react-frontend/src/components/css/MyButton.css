@@ -1,0 +1,15 @@
+.MyButton {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    color: dimgray;
+    font-weight: bold;
+}
+
+.MyButton_head_logo {
+    color: crimson;
+}
+
+.MyButton_head_login {
+    font-size: 50%;
+}
