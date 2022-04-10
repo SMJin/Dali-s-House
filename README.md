@@ -7,3 +7,8 @@
 ### 22. 04. 09
 ###### React 연동
 ###### front-end 페이지 나누기 (입양, 커뮤니티, 메인, 마이페이지, 봉사활동)
+
+### 22. 04. 10
+###### Adoption page (Author by. SMJ)
+###### Component (CrudButton, MyButton, MyHeader, MyImage)
+###### Adoption Page Component (Adoption(main), AdoptionDetails, AdoptionThumbnail, SearchBox)
