@@ -14,6 +14,9 @@ const CrudButton = ({text, type, onClick}) => {
 CrudButton.defaultProps = {
     text: "CrudButton",
     type: "default",
+    onClick : () => {
+        alert('CrudButton 이 눌렸습니다!');
+    }
 };
 
 export default CrudButton;
