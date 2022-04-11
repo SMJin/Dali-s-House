@@ -1,0 +1,42 @@
+.AdoptList {
+  float: left;
+  width: 23%;
+  margin: 1%;
+}
+
+.AdoptList_title {
+  display: flex;
+  font-size: 0.8em;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+
+.AdoptList_options {
+  color: #96969e;
+  font-size: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AdoptList_options_1 {
+  color: #96969e;
+  font-size: 0.2em;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AdoptList_options_2 {
+  color: #96969e;
+  font-size: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AdoptList > .img {
+  border-radius: 2.5px;
+}
