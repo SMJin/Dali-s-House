@@ -2,7 +2,8 @@ import "./css/MyImage.css";
 
 const MyImage = ({type, imgUrl}) => {
 
-    const imgType = ['img_best', 'img_thumbnail', 'icon_search'].includes(type) ? type : 'default';
+    const imgType = ['img_best', 'img_thumbnail',
+        'icon_search', 'icon_percentage'].includes(type) ? type : 'default';
 
     return (
       <div className="MyImage">
