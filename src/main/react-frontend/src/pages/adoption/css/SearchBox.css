@@ -1,5 +1,6 @@
 .search_box {
-    margin-left: 70%;
+    margin-right: 50px;
+    float: right;
     display: flex;
     justify-content: center;
     align-items: center;

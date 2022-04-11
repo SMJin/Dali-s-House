@@ -3,7 +3,7 @@ import "./css/SearchBox.css"
 
 const SearchBox = () => {
     return (
-        <div className="search_box">
+        <div className="search_box" >
             <input
                 className="search_input"
             />
