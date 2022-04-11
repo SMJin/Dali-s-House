@@ -1,0 +1,17 @@
+.MyNav {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+}
+
+.MyNav_leftText {
+    padding-right: 50%;
+    margin-left: 20px;
+    display: flex;
+}
+
+.select_region {
+    margin-left: 20px;
+    border: none;
+}
