@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "./pages/main/Main";
 import Community from "./pages/community/Community";
 import Adoption from "./pages/adoption/Adoption";
-import VolunteerActivity from "./pages/VolunteerActivity";
+import VolunteerActivity from "./pages/volunteerActivity/VolunteerActivity";
 import MyPage from "./pages/Mypage";
 import AdoptionDetails from "./pages/adoption/AdoptionDetails";
 

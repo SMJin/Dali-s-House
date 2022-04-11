@@ -17,10 +17,11 @@
     width: 60%;
 }
 
-.menu {
+.adoption_menu {
     float: right;
-    margin: 3% 8%;
-    padding-left: 50%;
+    /*margin: 3% 8%;*/
+    margin-right: 50px;
+    padding-left: 60%;
 }
 
 .adoption_thumbnail_board {

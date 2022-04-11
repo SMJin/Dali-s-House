@@ -1,0 +1,18 @@
+.MyFooter {
+    margin-top: 100px;
+    /*background-color: lightgray;*/
+    font-size: 10px;
+}
+
+.MyFooter_leftText {
+    float: left;
+}
+
+.MyFooter_rightText {
+    float: right;
+    margin-top: 20px;
+}
+
+.MyFooter_finishLine {
+    height: 300px;
+}
