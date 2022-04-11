@@ -7,6 +7,7 @@ import SponList from "./SponList";
 import MyButton from "../../components/MyButton";
 import MyTitle from "./MyTitle";
 import MainButton from "./MainButton";
+import MyFooter from "../../components/MyFooter";
 
 const Main = () => {
   return (
@@ -110,6 +111,7 @@ const Main = () => {
           </div>
         </div>
       </div>
+        <MyFooter />
     </div>
   );
 };
