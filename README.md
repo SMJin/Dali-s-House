@@ -12,3 +12,10 @@
 ###### Adoption page (Author by. SMJ)
 ###### Component (CrudButton, MyButton, MyHeader, MyImage)
 ###### Adoption Page Component (Adoption(main), AdoptionDetails, AdoptionThumbnail, SearchBox)
+
+### 22. 04. 11
+###### Main page (Author by. Ji in)
+
+###### Volunteer Activity page (Author by. SMJ)
+###### Component (MyFooter)
+###### Volunteer Activity Page Component (VolunteerActivity(main), VolunteerActivityThumbnail, MyNav)
