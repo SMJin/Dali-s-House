@@ -3,6 +3,7 @@ import MyHeader from "../../components/MyHeader";
 import MyImage from "../../components/MyImage";
 import SearchBox from "./SearchBox";
 import AdoptionThumbnail from "./AdoptionThumbnail";
+import MyFooter from "../../components/MyFooter";
 
 const Adoption = () => {
     return (
@@ -18,7 +19,7 @@ const Adoption = () => {
                 </div>
             </div>
             <SearchBox />
-            <div className="menu" >
+            <div className="adoption_menu" >
                 <h5>종류 성별 중성화 지역</h5>
             </div>
             <div className="adoption_thumbnail_board">
@@ -71,6 +72,8 @@ const Adoption = () => {
                 identification={true}
             />
             </div>
+
+            <MyFooter />
         </div>
     );
 }
