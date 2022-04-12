@@ -1,0 +1,32 @@
+.MagazineList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MagazineList > .MagazineListBox {
+  width: 90%;
+}
+
+.MagazineList > .MagazineListBox > .imgbox {
+  cursor: pointer;
+
+  width: 31%;
+  margin: 1%;
+}
+
+.MagazineList > .MagazineListBox > .imgbox > .img {
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MagazineList > .MagazineListBox > div {
+  float: left;
+  margin: auto;
+}
+
+.MagazineList > .MagazineListBox > div > h5 {
+  margin: auto;
+}

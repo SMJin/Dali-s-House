@@ -1,0 +1,28 @@
+.HeartnReply {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.HeartnReply > .icon {
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+}
+
+.HeartnReply > .icon > .heart {
+  width: 95%;
+}
+
+.HeartnReply > .icon > .HeartnReply {
+  width: 100%;
+}
+
+.HeartnReply > .text {
+  cursor: pointer;
+  font-size: 0.5em;
+  color: #595959;
+  margin-top: 1.5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}

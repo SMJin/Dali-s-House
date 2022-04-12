@@ -1,0 +1,124 @@
+.Community > h3 {
+  margin-left: 25px;
+}
+
+.Community > .searchbox {
+  margin: 0px;
+}
+
+.Community > div {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.Community
+  > .community
+  > .communitybox
+  > .ListBox
+  > section
+  > .category_wrapper {
+  margin-left: 5%;
+  margin-top: 3%;
+  width: 35%;
+
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 2%;
+}
+
+.Category_on_1 {
+  font-style: bold;
+  background-color: #ff5252;
+  color: white;
+  font-weight: bold;
+}
+
+.Category_on_2 {
+  background-color: #ff5252;
+  color: white;
+  font-weight: bold;
+}
+
+.Category_on_3 {
+  background-color: #ff5252;
+  color: white;
+  font-weight: bold;
+}
+
+.Category_on_4 {
+  background-color: #ff5252;
+  color: white;
+  font-weight: bold;
+}
+
+.Category_on_5 {
+  background-color: #ff5252;
+  color: white;
+  font-weight: bold;
+}
+
+.Community > .pagemove_wrapper {
+  width: 40%;
+
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 3%;
+
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  gap: 1%;
+}
+
+.Page_on_1 {
+  font-style: bold;
+  background-color: #ff5252;
+  color: white;
+}
+
+.Page_on_2 {
+  font-style: bold;
+  background-color: #ff5252;
+  color: white;
+}
+
+.Page_on_3 {
+  font-style: bold;
+  background-color: #ff5252;
+  color: white;
+}
+
+.Page_on_4 {
+  font-style: bold;
+  background-color: #ff5252;
+  color: white;
+}
+.Page_on_5 {
+  font-style: bold;
+  background-color: #ff5252;
+  color: white;
+}
+.Page_on_6 {
+  font-style: bold;
+  background-color: #ff5252;
+  color: white;
+}
+.Page_on_7 {
+  font-style: bold;
+  background-color: #ff5252;
+  color: white;
+}
+.Page_on_8 {
+  font-style: bold;
+  background-color: #ff5252;
+  color: white;
+}
+.Page_on_9 {
+  font-style: bold;
+  background-color: #ff5252;
+  color: white;
+}
+.Page_on_10 {
+  font-style: bold;
+  background-color: #ff5252;
+  color: white;
+}

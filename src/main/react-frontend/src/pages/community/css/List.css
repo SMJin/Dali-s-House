@@ -1,0 +1,101 @@
+.List {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.List > .ListBox {
+  display: flex;
+
+  width: 90%;
+  height: 200px;
+  line-height: 200px;
+  border: 1px #eeeff1 solid;
+  border-radius: 2px;
+}
+
+.List > .ListBox > .left {
+  width: 65%;
+}
+
+.List > .ListBox > .left > .top {
+  display: flex;
+  height: 33%;
+  margin-top: 10px;
+}
+
+.List > .ListBox > .left > .top > .user_img {
+  width: 17%;
+  margin: auto;
+  margin-left: 15px;
+}
+
+.List > .ListBox > .left > .top > .user_img > .icon {
+  width: 100%;
+  float: left;
+  justify-content: center;
+  align-items: center;
+}
+
+.List > .ListBox > .left > .top > .user_text {
+  width: 80%;
+  margin-left: 15px;
+  vertical-align: middle;
+  line-height: 20%;
+}
+
+.List > .ListBox > .left > .top > .user_text > .detail {
+  display: flex;
+  line-height: auto;
+}
+
+.List > .ListBox > .left > .top > .user_text > .detail > h5 {
+  margin-top: 0px;
+  color: #77777d;
+}
+
+.List > .ListBox > .left > .top > .user_text > .detail > h {
+  margin-top: 0px;
+  margin-left: 5px;
+  color: #b9bbc2;
+  font-size: 0.6em;
+}
+
+.List > .ListBox > .left > .middle {
+  height: 10%;
+  line-height: 10%;
+}
+
+.List > .ListBox > .left > .middle > p {
+  margin-top: 16px;
+  margin-left: 20px;
+}
+
+.List > .ListBox > .left > .bottom {
+  height: 50%;
+  line-height: 50%;
+  margin-top: 0px;
+}
+
+.List > .ListBox > .left > .bottom > p {
+  font-size: 0.8em;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-bottom: 7px;
+}
+
+.List > .ListBox > .right {
+  width: 32%;
+  height: 90%;
+  margin-top: 9px;
+  margin-left: 9px;
+  overflow: hidden;
+}
+
+.List > .ListBox > .right > .image {
+  width: 100%;
+  border-radius: 3px;
+}
