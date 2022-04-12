@@ -1,0 +1,14 @@
+.PageMove {
+  cursor: pointer;
+
+  font-size: 0.6em;
+
+  border-radius: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

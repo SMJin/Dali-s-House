@@ -1,0 +1,15 @@
+.Title {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.Title > .titleText {
+  padding-left: 8%;
+  font-size: 1em;
+  width: 80%;
+}
+
+.Title > .totalbutton {
+  padding-left: 10%;
+  width: 20%;
+}
