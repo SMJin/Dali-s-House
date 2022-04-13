@@ -10,6 +10,8 @@ img {
 }
 
 .VolunteerList > .imgbox {
+  cursor: pointer;
+
   width: 23%;
   margin: 5px;
 }
