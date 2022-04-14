@@ -1,11 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"); */
+@font-face {
+  font-family: "AppleFont";
+  src: url(/src/components/font/AppleSDGothicNeoL.ttf);
+}
 
 body {
   background-color: #f6f6f6;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: "AppleFont";
+  /* font-family: "Nanum Gothic", sans-serif; */
   /*vh : viewport height*/
   min-height: 100vh;
   margin: 0;
