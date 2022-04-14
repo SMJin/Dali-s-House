@@ -9,7 +9,19 @@ import MyTitle from "./MyTitle";
 import MainButton from "./MainButton";
 import MyFooter from "../../components/MyFooter";
 
+import { useNavigate } from "react-router-dom";
+
 const Main = () => {
+  const navigate = useNavigate();
+
+  const goVolunteer = () => {
+    navigate(`/volunteerActivity`);
+  };
+
+  const goAdoption = () => {
+    navigate(`/adoption`);
+  };
+
   return (
     <div className="main">
       <h1>메인 페이지</h1>
@@ -26,7 +38,7 @@ const Main = () => {
           <div className="main_volunteer_content">
             <MyTitle
               titleText={"이번주 달리단 모집"}
-              totalbutton={<MyButton text={"전체보기"} />}
+              totalbutton={<MyButton text={"전체보기"} onClick={goVolunteer} />}
             />
             <div>
               <VolunteerList />
@@ -47,7 +59,7 @@ const Main = () => {
           <div className="main_adoption_content">
             <MyTitle
               titleText={"새로운 가족을 찾아요!"}
-              totalbutton={<MyButton text={"전체보기"} />}
+              totalbutton={<MyButton text={"전체보기"} onClick={goAdoption} />}
             />
             <div>
               <AdoptList
@@ -111,7 +123,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-        <MyFooter />
+      <MyFooter />
     </div>
   );
 };

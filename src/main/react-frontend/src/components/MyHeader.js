@@ -1,48 +1,49 @@
-import './css/MyHeader.css';
+import "./css/MyHeader.css";
 import MyButton from "./MyButton";
+import { useNavigate } from "react-router-dom";
 
 const MyHeader = () => {
-    return (
-        <header>
-            <div>
-                <MyButton
-                text={"달리네 집"}
-                type={"head_logo"}
-                />
-            </div>
+  const navigate = useNavigate();
 
-            <div>
-                <MyButton
-                text={"봉사활동"}
-                type={"head_menus"}
-                />
-            </div>
-            <div>
-                <MyButton
-                text={"입양연결"}
-                type={"head_menus"}
-                />
-            </div>
-            <div>
-                <MyButton
-                text={"커뮤니티"}
-                type={"head_menus"}
-                />
-            </div>
-            <div>
-                <MyButton
-                text={"LOGIN"}
-                type={"head_login"}
-                />
-            </div>
-            <div>
-                <MyButton
-                text={"JOIN"}
-                type={"head_login"}
-                />
-            </div>
-        </header>
-    );
-}
+  const goMain = () => {
+    navigate(`/`);
+  };
+
+  const goVolunteer = () => {
+    navigate(`/volunteerActivity`);
+  };
+
+  const goAdoption = () => {
+    navigate(`/adoption`);
+  };
+
+  const goCommunity = () => {
+    navigate(`/community`);
+  };
+
+  return (
+    <header>
+      <div>
+        <MyButton text={"달리네집"} type={"head_logo"} onClick={goMain} />
+      </div>
+
+      <div>
+        <MyButton text={"봉사활동"} type={"head_menus"} onClick={goVolunteer} />
+      </div>
+      <div>
+        <MyButton text={"입양연결"} type={"head_menus"} onClick={goAdoption} />
+      </div>
+      <div>
+        <MyButton text={"커뮤니티"} type={"head_menus"} onClick={goCommunity} />
+      </div>
+      <div>
+        <MyButton text={"LOGIN"} type={"head_login"} />
+      </div>
+      <div>
+        <MyButton text={"JOIN"} type={"head_login"} />
+      </div>
+    </header>
+  );
+};
 
 export default MyHeader;

@@ -1,4 +1,5 @@
 .AdoptList {
+  cursor: pointer;
   float: left;
   width: 23%;
   margin: 1%;
