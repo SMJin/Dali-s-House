@@ -1,0 +1,41 @@
+.Adoption_item > .imgbox {
+  cursor: pointer;
+}
+
+.Adoption_item > .imgbox > .img_main {
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 90%;
+  border-radius: 5px;
+  /* overflow: hidden; */
+}
+
+.Adoption_item > .imgbox > .title {
+  height: 15px;
+  padding-bottom: 0px;
+  font-size: 0.8em;
+  font-weight: bolder;
+  margin-top: 7%;
+  margin-bottom: 1%;
+  line-height: 15px;
+  padding-left: 5%;
+  text-align: center;
+}
+
+.options_1 {
+  color: #96969e;
+  font-size: 0.2em;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options_2 {
+  color: #96969e;
+  font-size: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

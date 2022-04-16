@@ -1,19 +1,25 @@
 .VolunteerActivity_thumbnail_title {
-    font-weight: bold;
-    width: 150px;
-    font-size: 12px;
-    padding: 1px;
+  font-weight: bold;
+  width: 150px;
+  font-size: 12px;
+  padding: 1px;
 }
 
 .VolunteerActivity_thumbnail_content {
-    width: 150px;
-    font-size: 8px;
-    color: gray;
-    padding: 5px 0;
+  width: 150px;
+  font-size: 8px;
+  color: gray;
+  padding: 5px 0;
 }
 
 .VolunteerActivityList {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin: 0px;
 }

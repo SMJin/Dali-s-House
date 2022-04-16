@@ -16,6 +16,10 @@
 }
 
 .MagazineList > .MagazineListBox > .imgbox > .img {
+  width: 100%;
+  height: auto;
+  margin: 0px;
+
   border-radius: 4px;
   display: flex;
   justify-content: center;

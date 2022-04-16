@@ -1,13 +1,13 @@
 import "./css/Main.css";
 import MyHeader from "../../components/MyHeader";
-import VolunteerList from "./VolunteerList";
-import MagazineList from "./MagazineList";
-import AdoptList from "./AdoptList";
-import SponList from "./SponList";
-import MyButton from "../../components/MyButton";
-import MyTitle from "./MyTitle";
-import MainButton from "./MainButton";
 import MyFooter from "../../components/MyFooter";
+import MyTitle from "../../components/MyTitle";
+import MyButton from "../../components/MyButton";
+
+import Slider_Volunteer from "./Slider_Volunteer";
+import Slider_Adoption from "./Slider_Adoption";
+import Slider_Spon from "./Slider_Spon";
+import MagazineList from "./MagazineList";
 
 import { useNavigate } from "react-router-dom";
 
@@ -33,19 +33,11 @@ const Main = () => {
         />
       </div>
       <div>
-        <div class="main_volunteer">
-          <MainButton text={"<"} />
-          <div className="main_volunteer_content">
-            <MyTitle
-              titleText={"이번주 달리단 모집"}
-              totalbutton={<MyButton text={"전체보기"} onClick={goVolunteer} />}
-            />
-            <div>
-              <VolunteerList />
-            </div>
-          </div>
-          <MainButton text={">"} />
-        </div>
+        <MyTitle
+          titleText={"이번주 달리단 모집"}
+          totalbutton={<MyButton text={"전체보기"} onClick={goVolunteer} />}
+        />
+        <Slider_Volunteer />
       </div>
       <div>
         <img
@@ -54,69 +46,26 @@ const Main = () => {
         />
       </div>
       <div>
-        <div class="main_adoption">
-          <MainButton text={"<"} />
-          <div className="main_adoption_content">
-            <MyTitle
-              titleText={"새로운 가족을 찾아요!"}
-              totalbutton={<MyButton text={"전체보기"} onClick={goAdoption} />}
-            />
-            <div>
-              <AdoptList
-                name={"달리"}
-                age={"8개월"}
-                sex={"남아"}
-                neutering={true}
-                identification={true}
-              />
-              <AdoptList
-                name={"달리"}
-                age={"8개월"}
-                sex={"남아"}
-                neutering={true}
-                identification={true}
-              />
-              <AdoptList
-                name={"달리"}
-                age={"8개월"}
-                sex={"남아"}
-                neutering={true}
-                identification={true}
-              />
-              <AdoptList
-                name={"달리"}
-                age={"8개월"}
-                sex={"남아"}
-                neutering={true}
-                identification={true}
-              />
-            </div>
-          </div>
-          <MainButton text={">"} />
-        </div>
+        <MyTitle
+          titleText={"새로운 가족을 찾아요!"}
+          totalbutton={<MyButton text={"전체보기"} onClick={goAdoption} />}
+        />
+        <Slider_Adoption />
       </div>
       <div>
-        <div class="main_sponsor">
-          <MainButton text={"<"} />
-          <div className="main_sponsor_content">
-            <MyTitle
-              titleText={"소중한 후원을 요청드려요"}
-              totalbutton={<MyButton text={"전체보기"} />}
-            />
-            <div>
-              <SponList />
-            </div>
-          </div>
-          <MainButton text={">"} />
-        </div>
+        <MyTitle
+          titleText={"소중한 후원을 요청드려요"}
+          totalbutton={<MyButton text={"전체보기"} />}
+        />
+        <Slider_Spon />
       </div>
       <div>
+        <MyTitle
+          titleText={"3월 달리 매거진"}
+          totalbutton={<MyButton text={"전체보기"} />}
+        />
         <div class="main_magazine">
           <div className="main_magazine_content">
-            <MyTitle
-              titleText={"3월 달리 매거진"}
-              totalbutton={<MyButton text={"전체보기"} />}
-            />
             <div>
               <MagazineList />
             </div>
