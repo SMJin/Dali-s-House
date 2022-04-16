@@ -11,6 +11,25 @@
   margin-bottom: 10px;
 }
 
+.Community > div > .MyTitle > .titleText {
+  padding-left: 8%;
+  font-weight: bold;
+  font-size: 1em;
+  width: 80%;
+}
+
+.Community > div > .MyTitle > .totalbutton {
+  padding-right: 0%;
+  width: 20%;
+}
+
+.Community > div > .magazine > .magazine_content {
+  margin-left: 5%;
+  margin-bottom: 10%;
+  width: 90%;
+  height: 140px;
+}
+
 .Community
   > .community
   > .communitybox

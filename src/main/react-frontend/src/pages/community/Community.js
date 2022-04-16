@@ -5,9 +5,10 @@ import "./css/Community.css";
 import MyHeader from "../../components/MyHeader";
 import MyFooter from "../../components/MyFooter";
 import MyButton from "../../components/MyButton";
+import MyTitle from "../../components/MyTitle";
 import SearchBox from "./SearchBox";
 import Title from "./Title";
-import MagazineList from "./MagazineList";
+import MagazineList from "../main/MagazineList";
 import TopVolunteerList from "./TopVolunteerList";
 import List from "./List";
 import ListCate from "./ListCate";
@@ -57,13 +58,17 @@ const Community = () => {
         <Title titleText={"이번달 우수 봉사자"} />
         <TopVolunteerList />
       </div>
-      <div className="magazine">
-        <div className="magazine_content">
-          <Title
-            titleText={"3월 달리 매거진"}
-            totalbutton={<MyButton text={"전체보기"} />}
-          />
-          <MagazineList />
+      <div>
+        <MyTitle
+          titleText={"3월 달리 매거진"}
+          totalbutton={<MyButton text={"전체보기"} />}
+        />
+        <div class="magazine">
+          <div className="magazine_content">
+            <div>
+              <MagazineList />
+            </div>
+          </div>
         </div>
       </div>
       <div className="community">

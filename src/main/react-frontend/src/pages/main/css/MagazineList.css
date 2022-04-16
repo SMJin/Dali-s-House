@@ -1,9 +1,16 @@
+.MagazineList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .MagazineList > .imgbox {
   cursor: pointer;
 
   width: 30%;
   margin: 1.2%;
 }
+
 .MagazineList > .imgbox > .img {
   width: 100%;
   height: auto;

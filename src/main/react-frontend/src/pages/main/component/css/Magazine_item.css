@@ -1,0 +1,40 @@
+.Magazine_item > .imgbox {
+  cursor: pointer;
+}
+
+.Magazine_item > .imgbox > .img_main {
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 90%;
+  border-radius: 5px;
+  /* overflow: hidden; */
+}
+
+.Magazine_item > .imgbox > .cate {
+  position: relative;
+  z-index: 2;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 0.73em;
+  font-weight: bolder;
+  width: 30%;
+  height: 20px;
+  line-height: 20px;
+  margin-left: 10%;
+  margin-top: -50%;
+  margin-bottom: 7%;
+  padding: 1px 0px 1px 0px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.Magazine_item > .imgbox > .title {
+  height: 15px;
+  padding-bottom: 0px;
+  font-size: 0.8em;
+  line-height: 15px;
+  margin-left: 10%;
+  color: rgba(255, 255, 255, 0.95);
+  /* text-align: center; */
+}
