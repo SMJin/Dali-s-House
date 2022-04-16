@@ -32,10 +32,3 @@ const MagazineList = ({ img, title, host, percent }) => {
 };
 
 export default MagazineList;
-
-{
-  /* <img
-          class="img"
-          src={process.env.PUBLIC_URL + `/assets/magazine_img.png`}
-        /> */
-}

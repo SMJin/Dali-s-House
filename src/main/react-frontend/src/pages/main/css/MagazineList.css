@@ -5,6 +5,9 @@
   margin: 1.2%;
 }
 .MagazineList > .imgbox > .img {
+  width: 100%;
+  height: auto;
+  margin: 0px;
   border-radius: 4px;
 }
 
