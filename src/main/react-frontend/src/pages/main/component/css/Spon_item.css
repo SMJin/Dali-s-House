@@ -1,0 +1,52 @@
+.Spon_item > .imgbox {
+  cursor: pointer;
+}
+
+.Spon_item > .imgbox > .img_main {
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 90%;
+  border-radius: 5px;
+  /* overflow: hidden; */
+}
+
+.Spon_item > .imgbox > .title {
+  height: 15px;
+  padding-bottom: 0px;
+  font-size: 0.75em;
+  font-weight: bolder;
+  margin-top: 7%;
+  margin-bottom: 2%;
+  line-height: 15px;
+  padding-left: 5%;
+  text-align: left;
+}
+
+.Spon_item > .imgbox > .info {
+  height: 10px;
+  font-size: 0.7em;
+  color: #96969e;
+  margin-bottom: 3%;
+  line-height: 10px;
+  padding-left: 5%;
+  text-align: left;
+}
+
+.Spon_item > .imgbox > .spon_type {
+  color: #f34949;
+  font-size: 0.7em;
+  width: 33%;
+  border: #f34949 solid 1px;
+  display: flex;
+  margin-left: 5%;
+  padding: 2px 1px 2px 5px;
+  border-radius: 10px;
+}
+
+.Spon_item > .imgbox > .spon_type > .type_icon {
+  width: 15px;
+  height: 15px;
+  margin-left: 3%;
+  margin-right: 1%;
+}

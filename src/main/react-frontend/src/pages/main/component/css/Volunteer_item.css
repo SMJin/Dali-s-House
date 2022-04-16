@@ -1,0 +1,42 @@
+.Volunteer_item > .imgbox {
+  cursor: pointer;
+}
+
+.Volunteer_item > .imgbox > .img_main {
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 90%;
+  border-radius: 5px;
+  /* overflow: hidden; */
+}
+
+.Volunteer_item > .imgbox > .img_percent {
+  padding-left: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 90%;
+}
+
+.Volunteer_item > .imgbox > .title {
+  height: 15px;
+  padding-bottom: 0px;
+  font-size: 0.74em;
+  font-weight: bolder;
+  margin-top: 7%;
+  margin-bottom: 2%;
+  line-height: 15px;
+  padding-left: 5%;
+  text-align: left;
+}
+
+.Volunteer_item > .imgbox > .organ {
+  height: 10px;
+  font-size: 0.4em;
+  font-weight: bolder;
+  color: rgb(150, 150, 150);
+  margin: 0px;
+  line-height: 10px;
+  padding-left: 5%;
+  text-align: left;
+}
