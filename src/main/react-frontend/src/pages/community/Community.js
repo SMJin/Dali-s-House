@@ -12,7 +12,7 @@ import MagazineList from "../main/MagazineList";
 import TopVolunteerList from "./TopVolunteerList";
 import List from "./List";
 import ListCate from "./ListCate";
-import PageMove from "./PageMove";
+import MyPagination from "../../components/MyPagination";
 
 const listcategory = [
   { category_id: 1, category_descript: "전체" },
@@ -20,19 +20,6 @@ const listcategory = [
   { category_id: 3, category_descript: "후기" },
   { category_id: 4, category_descript: "고민" },
   { category_id: 5, category_descript: "팀원모집" },
-];
-
-const pagelist = [
-  { page_id: 1 },
-  { page_id: 2 },
-  { page_id: 3 },
-  { page_id: 4 },
-  { page_id: 5 },
-  { page_id: 6 },
-  { page_id: 7 },
-  { page_id: 8 },
-  { page_id: 9 },
-  { page_id: 10 },
 ];
 
 const Community = () => {
@@ -95,16 +82,7 @@ const Community = () => {
           </div>
         </div>
       </div>
-      <div className="pagemove_wrapper">
-        {pagelist.map((it) => (
-          <PageMove
-            key={it.page_id}
-            {...it}
-            onClick={handleClickPage}
-            isSelected={it.page_id === page}
-          />
-        ))}
-      </div>
+      <MyPagination />
       <MyFooter />
     </div>
   );

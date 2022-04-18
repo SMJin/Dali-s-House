@@ -7,7 +7,7 @@ import Volunteer_item from "./component/Volunteer_item";
 const Slider_Volunteer = () => {
   const settings = {
     // focusOnSelect: true,
-    infinite: true,
+    infinite: false,
     slidesToShow: 4,
     slidesToScroll: 1,
     speed: 500,
@@ -84,11 +84,11 @@ const Slider_Volunteer = () => {
 const cssstyle = `
 .container {
   margin: 0 auto;
-  padding: 5px 40px 30px 40px;
-  width: 80%;
+  padding: 50px 40px 30px 40px;
+  width: 50%;
 }
 .slick-next:before, .slick-prev:before {
-  color: #EEEFF1;
+  color: #f34949;
 }
 .item{
     overflow: hidden;
