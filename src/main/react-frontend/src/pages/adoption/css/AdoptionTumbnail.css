@@ -1,22 +1,19 @@
 .adoption_thumbnail {
   padding: 10px;
+  text-align: center;
 }
 
-.adoption_thumbnail_title {
-  padding: 5px;
-  width: 140px;
-  display: flex;
-  justify-content: space-between;
+.adoption_thumbnail_name {
+  font-weight: bold;
 }
 
-.adoption_thumbnail_type {
-  color: white;
-  background-color: gray;
-  border: gray solid 1px;
-  padding: 1px 2px;
-  border-radius: 15px;
+.adoption_thumbnail_details {
+  font-size: 10px;
+  color: gray;
 }
 
 .adoption_thumbnail_options {
-  font-size: 10px;
+  font-size: 11px;
+  color: black;
+  padding: 5px;
 }

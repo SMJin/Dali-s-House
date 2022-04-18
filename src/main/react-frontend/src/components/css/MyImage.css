@@ -20,3 +20,8 @@
 .MyImage_icon_percentage {
     width: 150px;
 }
+
+.MyImage_img_best {
+    border-radius: 100%;
+    border: white 2px solid;
+}

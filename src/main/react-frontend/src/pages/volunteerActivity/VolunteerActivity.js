@@ -7,12 +7,18 @@ import MyFooter from "../../components/MyFooter";
 import MyPagination from "../../components/MyPagination";
 
 const VolunteerActivity = () => {
+  const regionProps = {
+    pageName: "봉사활동",
+    region1: "전국",
+    region2: "전국",
+    region3: "전국",
+  };
   return (
     <div className="VolunteerActivity">
       <h1>봉사활동 페이지</h1>
       <MyHeader />
       <MyImage imgUrl={"/assets/main_volunteercs.png"} />
-      <MyNav />
+      <MyNav {...regionProps} />
       <div className="VolunteerActivityList">
         <VolunteerActivityThumbnail
           imgUrl={"/assets/vol_img.png"}
