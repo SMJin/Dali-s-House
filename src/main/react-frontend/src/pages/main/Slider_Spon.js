@@ -7,7 +7,7 @@ import Spon_item from "./component/Spon_item";
 const Slider_Spon = () => {
   const settings = {
     // focusOnSelect: true,
-    infinite: true,
+    infinite: false,
     slidesToShow: 4,
     slidesToScroll: 1,
     speed: 500,
@@ -108,7 +108,7 @@ const cssstyle = `
   width: 80%;
 }
 .slick-next:before, .slick-prev:before {
-  color: #EEEFF1;
+  color: #f34949;
 }
 .item{
     overflow: hidden;

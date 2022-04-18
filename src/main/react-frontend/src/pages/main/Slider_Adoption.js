@@ -7,7 +7,7 @@ import Adoption_item from "./component/Adoption_item";
 const Slider_Adoption = () => {
   const settings = {
     // focusOnSelect: true,
-    infinite: true,
+    infinite: false,
     slidesToShow: 4,
     slidesToScroll: 1,
     speed: 500,
@@ -118,7 +118,7 @@ const cssstyle = `
   width: 80%;
 }
 .slick-next:before, .slick-prev:before {
-  color: #EEEFF1;
+  color: #f34949;
 }
 .item{
     overflow: hidden;

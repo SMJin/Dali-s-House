@@ -4,6 +4,7 @@ import MyFooter from "../../components/MyFooter";
 import MyImage from "../../components/MyImage";
 import SearchBox from "./SearchBox";
 import AdoptionThumbnail from "./AdoptionThumbnail";
+import MyPagination from "../../components/MyPagination";
 
 const Adoption = () => {
   return (
@@ -72,6 +73,7 @@ const Adoption = () => {
           identification={true}
         />
       </div>
+      <MyPagination />
       <MyFooter />
     </div>
   );
