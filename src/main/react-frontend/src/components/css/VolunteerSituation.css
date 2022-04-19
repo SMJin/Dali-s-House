@@ -1,0 +1,103 @@
+.VolunteerSituation {
+  display: flex;
+  background-color: #ff7373;
+  height: 130px;
+  margin-bottom: 5px;
+}
+
+.VolunteerSituation_title_box {
+  width: 35%;
+  height: 130px;
+}
+
+.VolunteerSituation_title {
+  font-size: 1.4em;
+  font-weight: bolder;
+  color: white;
+
+  margin-left: 60%;
+  margin-top: 10%;
+}
+
+.VolunteerSituation_itembox {
+  width: 65%;
+  height: 130px;
+}
+
+.VolunteerSituation_itembox_top {
+  display: flex;
+  font-size: 1.5em;
+  font-weight: bolder;
+
+  color: #ffffff;
+
+  width: 100%;
+  height: 30px;
+  margin-top: 35px;
+}
+
+.VolunteerSituation_itembox_bottom {
+  display: flex;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bolder;
+
+  width: 100%;
+  height: 63px;
+  margin-top: 2px;
+}
+
+.VolunteerSituation_itembox_left {
+  display: flex;
+
+  width: 50%;
+  height: 65px;
+}
+
+.VolunteerSituation_itembox_right {
+  display: flex;
+
+  width: 50%;
+  height: 65px;
+}
+
+.VolunteerSituation_itembox_text {
+  font-size: 0.7em;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.VolunteerSituation_itembox_left > .VolunteerSituation_itembox_text {
+  margin-left: 40%;
+  margin-right: 5%;
+  margin-top: 5px;
+}
+
+.VolunteerSituation_itembox_right > .VolunteerSituation_itembox_text {
+  margin-right: 5%;
+  margin-top: 5px;
+}
+
+.VolunteerSituation_itembox_count {
+  font-size: 0.7em;
+  font-weight: normal;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.VolunteerSituation_itembox_left > .VolunteerSituation_itembox_count {
+  margin-left: 2%;
+  margin-top: 5px;
+}
+
+.VolunteerSituation_itembox_right > .VolunteerSituation_itembox_count {
+  margin-left: 2%;
+  margin-top: 5px;
+}
+
+.VolunteerSituation > .VolunteerSituation_itembox > .hr {
+  margin-left: 15%;
+  width: 60%;
+  height: 2px;
+  background-color: rgba(243, 73, 73, 0.5);
+}

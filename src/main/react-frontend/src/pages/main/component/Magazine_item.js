@@ -5,7 +5,7 @@ const Magazine_item = ({ id, category, title, title1, title2 }) => {
     <div className="Magazine_item">
       <div
         className="imgbox"
-        style={{ backgroundImage: `url(/assets/magazine/magazine_${id}}.png)` }}
+        // style={{ backgroundImage: `url(/assets/magazine/magazine_${id}}.png)` }}
       >
         <img
           class="img_main"
