@@ -1,7 +1,6 @@
 import "./css/Adoption.css";
 import MyHeader from "../../components/MyHeader";
 import MyFooter from "../../components/MyFooter";
-import MyImage from "../../components/MyImage";
 import AdoptionThumbnail from "./AdoptionThumbnail";
 import MyNav from "../volunteerActivity/MyNav";
 import AdoptionBest from "./AdoptionBest";
@@ -28,13 +27,17 @@ const Adoption = () => {
       <h1>입양 페이지</h1>
       <MyHeader />
       <AdoptionBest />
-      <MyNav {...regionProps} />
       <div className="adoption_thumbnail_board">
-        <AdoptionThumbnail {...adoptionThumbnailProps} />
-        <AdoptionThumbnail {...adoptionThumbnailProps} />
-        <AdoptionThumbnail {...adoptionThumbnailProps} />
-        <AdoptionThumbnail {...adoptionThumbnailProps} />
-        <AdoptionThumbnail {...adoptionThumbnailProps} />
+        <div className='adoption_thumbnail_board_nav'>
+          <MyNav {...regionProps} />
+        </div>
+        <div className='adoption_thumbnail_board_contents'>
+          <AdoptionThumbnail {...adoptionThumbnailProps} />
+          <AdoptionThumbnail {...adoptionThumbnailProps} />
+          <AdoptionThumbnail {...adoptionThumbnailProps} />
+          <AdoptionThumbnail {...adoptionThumbnailProps} />
+          <AdoptionThumbnail {...adoptionThumbnailProps} />
+        </div>
       </div>
       <MyPagination />
       <MyFooter />

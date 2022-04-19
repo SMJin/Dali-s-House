@@ -1,17 +1,17 @@
 .MyNav {
-    margin-top: 20px;
+    margin: 20px 0;
     display: flex;
-    flex-flow: row wrap;
-    align-content: space-between;
+    justify-content: space-between;
 }
 
-.MyNav_leftText {
-    padding-right: 60%;
-    margin-left: 20px;
-    display: flex;
+.MyNav_left {
+    margin-left: 10px;
 }
 
-.select_region {
-    margin-left: 20px;
-    border: none;
+.MyNav_right {
+    margin-right: 10px;
+}
+
+.MyNav_left_pageName {
+    margin-right: 10px;
 }

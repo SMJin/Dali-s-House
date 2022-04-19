@@ -1,25 +1,37 @@
-.VolunteerActivity_thumbnail_title {
-  font-weight: bold;
-  width: 150px;
-  font-size: 12px;
-  padding: 1px;
+.VolunteerActivity_today {
+  background-color: indianred;
+  color: white;
+  display: flex;
+  justify-content: space-around;
 }
 
-.VolunteerActivity_thumbnail_content {
-  width: 150px;
-  font-size: 8px;
-  color: gray;
-  padding: 5px 0;
+.VolunteerActivity_today_title {
+  margin: 20px 0;
 }
 
-.VolunteerActivityList {
+.VolunteerActivity_today_content {
+  padding: 20px;
+  display: grid;
+  grid-template-rows: 50px 50px;
+  grid-template-columns: 200px 200px;
+}
+
+.VolunteerActivity_today_contents {
+  margin: 0 10px;
+}
+
+.VolunteerActivity_thumbnail_board {
+  margin: 0 15%;
+}
+
+/* 
+.VolunteerActivity_thumbnail_board_nav {
+
+} */
+
+.VolunteerActivity_thumbnail_board_content {
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  margin: 0px;
+  justify-content: space-between;
+  /* justify-content: space-around; */
 }
