@@ -1,0 +1,75 @@
+.TopVolList_item {
+  width: 25%;
+  height: 50px;
+  margin-inline: 0.5%;
+  border: 1px #eeeff1 solid;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px 0.5px #eeeff1;
+}
+
+.TopVolList_item > .itembox {
+  display: flex;
+}
+
+.TopVolList_item > .itembox > .rank {
+  margin: -0.2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  background-color: #f34949;
+  width: 6%;
+  height: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  border-radius: 5px 0 8px 0px;
+}
+
+.TopVolList_item > .itembox > .user_img {
+  float: left;
+  width: 40%;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 15px;
+  padding-right: 5px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.TopVolList_item > .itembox > .user_img > .img {
+  float: left;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  padding-top: 4px;
+}
+
+.TopVolList_item > .itembox > .user_item {
+  width: 54%;
+  padding-left: 5px;
+}
+
+.TopVolList_item > .itembox > .user_item > .user_name {
+  font-size: 0.75em;
+  font-weight: bolder;
+  margin: auto;
+  padding-top: 1px;
+}
+
+.TopVolList_item > .itembox > .user_item > .user_grade {
+  margin: auto;
+  font-size: 0.5em;
+  font-weight: bolder;
+  color: #77777d;
+}
+
+.TopVolList_item > .itembox > .user_item > .user_hour {
+  font-weight: bolder;
+  margin: auto;
+  color: #f34949;
+}

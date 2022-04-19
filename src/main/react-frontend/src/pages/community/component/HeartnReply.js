@@ -1,6 +1,6 @@
 import "./css/HeartnReply.css";
 
-const HeartnReply = () => {
+const HeartnReply = ({ heart, reply }) => {
   return (
     <div className="HeartnReply">
       <div className="icon">
@@ -10,7 +10,7 @@ const HeartnReply = () => {
         />
       </div>
       <div className="text">
-        <b>좋아요 11</b>
+        <b>좋아요 {heart}</b>
       </div>
       <div className="icon">
         <img
@@ -19,7 +19,7 @@ const HeartnReply = () => {
         />
       </div>
       <div className="text">
-        <b>댓글 5</b>
+        <b>댓글 {reply}</b>
       </div>
     </div>
   );

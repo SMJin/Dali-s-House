@@ -15,6 +15,10 @@ const MyPagination = ({}) => {
       pageRangeDisplayed={10}
       prevPageText={"<"}
       nextPageText={">"}
+      // prevPageText={<img src={process.env.PUBLIC_URL + `/assets/prev.png`} />}
+      // nextPageText={<img src={process.env.PUBLIC_URL + `/assets/next.png`} />}
+      // firstPageText={<img src={process.env.PUBLIC_URL + `/assets/first.png`} />}
+      // lastPageText={<img src={process.env.PUBLIC_URL + `/assets/last.png`} />}
       onChange={handlePageChange}
     />
   );

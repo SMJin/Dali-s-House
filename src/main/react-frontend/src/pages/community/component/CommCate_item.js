@@ -1,11 +1,16 @@
-import "./css/ListCate.css";
+import "./css/CommCate_item.css";
 
-const ListCate = ({ category_id, category_descript, onClick, isSelected }) => {
+const CommCate_item = ({
+  category_id,
+  category_descript,
+  onClick,
+  isSelected,
+}) => {
   return (
     <div
       onClick={() => onClick(category_id)}
       className={[
-        "ListCate",
+        "CommCate_item",
         isSelected ? `Category_on_${category_id}` : `Category_off`,
       ].join(" ")}
     >
@@ -13,5 +18,4 @@ const ListCate = ({ category_id, category_descript, onClick, isSelected }) => {
     </div>
   );
 };
-
-export default ListCate;
+export default CommCate_item;

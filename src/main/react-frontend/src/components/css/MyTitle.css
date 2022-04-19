@@ -6,13 +6,13 @@
 }
 
 .MyTitle > .titleText {
-  padding-left: 12%;
+  padding-left: 11.5%;
   font-weight: bold;
   font-size: 1em;
   width: 80%;
 }
 
 .MyTitle > .totalbutton {
-  padding-right: 5%;
+  padding-right: 0.5%;
   width: 20%;
 }

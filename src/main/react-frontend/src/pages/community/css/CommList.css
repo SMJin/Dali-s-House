@@ -1,0 +1,15 @@
+.CommList {
+  width: 90%;
+  margin-left: 5%;
+  overflow: hidden;
+}
+
+.CommList > .category_wrapper {
+  margin-left: 0.5%;
+  margin-top: 0%;
+  width: 25%;
+
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 2%;
+}
