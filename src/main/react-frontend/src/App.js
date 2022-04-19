@@ -6,7 +6,7 @@ import Community from "./pages/community/Community";
 import Adoption from "./pages/adoption/Adoption";
 import VolunteerActivity from "./pages/volunteerActivity/VolunteerActivity";
 import MyPage from "./pages/Mypage";
-import AdoptionDetails from "./pages/adoption/AdoptionDetails";
+import AdoptionEdit from "./pages/adoption/AdoptionEdit";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/community" element={<Community />} />
           <Route path="/adoption" element={<Adoption />} />
-          <Route path="/adoption/:id" element={<AdoptionDetails />} />
+          <Route path="/adoption/edit" element={<AdoptionEdit />} />
           <Route path="/volunteerActivity" element={<VolunteerActivity />} />
           <Route path="/myPage" element={<MyPage />} />
         </Routes>

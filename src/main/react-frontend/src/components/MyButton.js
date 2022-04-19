@@ -2,7 +2,8 @@ import "./css/MyButton.css";
 
 const MyButton = ({text, type, onClick}) => {
 
-    const btnType =  ['head_menus', 'head_logo', 'head_login'].includes(type) ? type : 'default';
+    const btnType =  ['head_menus', 'head_logo', 'head_login',
+                        'true_false'].includes(type) ? type : 'default';
 
     return (
         <button className={["MyButton", `MyButton_${btnType}`].join(" ")} onClick={onClick}>
