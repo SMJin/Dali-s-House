@@ -1,13 +1,13 @@
 .HeartnReply {
   display: flex;
-  margin-top: 10px;
-  margin-left: 20px;
+  margin: 0px 0px 0px 4%;
 }
 
 .HeartnReply > .icon {
   cursor: pointer;
-  width: 12px;
-  height: 12px;
+  width: 15px;
+  height: 16px;
+  line-height: 16px;
 }
 
 .HeartnReply > .icon > .heart {
@@ -20,9 +20,9 @@
 
 .HeartnReply > .text {
   cursor: pointer;
-  font-size: 0.5em;
+  font-size: 0.8em;
   color: #595959;
-  margin-top: 1.5px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-top: 0px;
+  margin-left: 7px;
+  margin-right: 12px;
 }

@@ -12,7 +12,7 @@
 }
 
 .Community > div > .MyTitle > .titleText {
-  padding-left: 8%;
+  padding-left: 10.5%;
   font-weight: bold;
   font-size: 1em;
   width: 80%;
@@ -23,26 +23,22 @@
   width: 20%;
 }
 
-.Community > div > .magazine > .magazine_content {
-  margin-left: 5%;
-  margin-bottom: 10%;
-  width: 90%;
-  height: 140px;
+.Community > div > .TopVolList {
+  margin-left: 9%;
+  width: 82%;
 }
 
-.Community
-  > .community
-  > .communitybox
-  > .ListBox
-  > section
-  > .category_wrapper {
-  margin-left: 5%;
-  margin-top: 3%;
-  width: 35%;
+.Community > div > .MagazineList {
+  margin-left: 9%;
+  width: 82%;
 
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  gap: 2%;
+  margin-bottom: 6%;
+}
+
+.Community > div > .CommList {
+  margin-left: 10%;
+  width: 80%;
+  margin-bottom: 6%;
 }
 
 .Category_on_1 {
@@ -86,58 +82,4 @@
   display: grid;
   grid-template-columns: repeat(10, auto);
   gap: 1%;
-}
-
-.Page_on_1 {
-  font-style: bold;
-  background-color: #ff5252;
-  color: white;
-}
-
-.Page_on_2 {
-  font-style: bold;
-  background-color: #ff5252;
-  color: white;
-}
-
-.Page_on_3 {
-  font-style: bold;
-  background-color: #ff5252;
-  color: white;
-}
-
-.Page_on_4 {
-  font-style: bold;
-  background-color: #ff5252;
-  color: white;
-}
-.Page_on_5 {
-  font-style: bold;
-  background-color: #ff5252;
-  color: white;
-}
-.Page_on_6 {
-  font-style: bold;
-  background-color: #ff5252;
-  color: white;
-}
-.Page_on_7 {
-  font-style: bold;
-  background-color: #ff5252;
-  color: white;
-}
-.Page_on_8 {
-  font-style: bold;
-  background-color: #ff5252;
-  color: white;
-}
-.Page_on_9 {
-  font-style: bold;
-  background-color: #ff5252;
-  color: white;
-}
-.Page_on_10 {
-  font-style: bold;
-  background-color: #ff5252;
-  color: white;
 }

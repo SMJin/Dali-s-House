@@ -118,6 +118,7 @@ const cssstyle = `
   width: 80%;
 }
 .slick-next:before, .slick-prev:before {
+  background-image:
   color: #f34949;
 }
 .item{
