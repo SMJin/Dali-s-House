@@ -1,7 +1,7 @@
 .TopVolList_item {
   width: 25%;
   height: 50px;
-  margin-inline: 0.5%;
+  margin-inline: 0.6%;
   border: 1px #eeeff1 solid;
   border-radius: 5px;
   box-shadow: 0px 0px 2px 0.5px #eeeff1;
@@ -32,9 +32,9 @@
 .TopVolList_item > .itembox > .user_img {
   float: left;
   width: 40%;
-  height: 50px;
+  height: spx;
   line-height: 50px;
-  padding-left: 15px;
+  padding-left: 14px;
   padding-right: 5px;
 
   justify-content: center;

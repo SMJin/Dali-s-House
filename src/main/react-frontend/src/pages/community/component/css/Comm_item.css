@@ -96,14 +96,13 @@
 }
 
 .Comm_item > .body_right > .img_box {
-  margin: 15px;
-  height: 220px;
-  line-height: 220px;
-
-  overflow: hidden;
+  margin: 20px;
+  height: 210px;
+  line-height: 210px;
 }
 
 .Comm_item > .body_right > .img_box > img {
   width: 100%;
   border-radius: 5px;
+  overflow: hidden;
 }

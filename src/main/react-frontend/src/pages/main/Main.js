@@ -10,6 +10,7 @@ import Slider_Spon from "./Slider_Spon";
 import MagazineList from "./MagazineList";
 
 import { useNavigate } from "react-router-dom";
+import VolunteerSituation from "../../components/VolunteerSituation";
 
 const Main = () => {
   const navigate = useNavigate();
@@ -40,9 +41,11 @@ const Main = () => {
         <Slider_Volunteer />
       </div>
       <div>
-        <img
-          class="main_volunteercs"
-          src={process.env.PUBLIC_URL + `/assets/main_volunteercs.png`}
+        <VolunteerSituation
+          vol={10 + "," + 275}
+          adopt={321}
+          dona={5 + "," + 114}
+          spon={7 + "," + 225}
         />
       </div>
       <div>
