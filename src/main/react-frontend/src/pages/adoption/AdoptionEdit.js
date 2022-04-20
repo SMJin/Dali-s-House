@@ -6,11 +6,14 @@ import "./css/AdoptionEdit.css";
 import AdoptionEditInput from './AdoptionEditInput';
 import MyButton from '../../components/MyButton';
 import AdoptionTumbnail from './AdoptionThumbnail';
+import { useState } from 'react';
 
 const AdoptionEdit = () => {
 
     // const {id} = useParams();
     // console.log(`입력된 id : ${id}`);
+
+    const [job, setJob] = useState("");
 
     return (
         <div>

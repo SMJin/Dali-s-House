@@ -21,3 +21,8 @@
 .AdoptionEdit_right {
     padding: 50px;
 }
+
+.AdoptionEditInput_isEmpty {
+    color: red;
+    display: none;
+}
