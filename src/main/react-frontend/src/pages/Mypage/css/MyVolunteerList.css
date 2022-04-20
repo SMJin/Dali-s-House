@@ -1,0 +1,104 @@
+.MyVolunteerList {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .MyVolunteerList > .MyVolunteerListBox {
+    display: flex;
+    width: 70%;
+    height: 110px;
+    line-height: 130px;
+    border: 1px #eeeff1 solid;
+    border-radius: 2px;
+  }
+  
+  .MyVolunteerList > .MyVolunteerListBox > .left {
+    width: 100%;
+  }
+  
+  .MyVolunteerList > .MyVolunteerListBox > .left > .top {
+    display: flex;
+    height: 32%;
+    margin-top: 10px;
+  }
+  
+  .MyVolunteerList > .MyVolunteerListBox > .left > .top > .user_img {
+    width: 17%;
+    margin: auto;
+    margin-left: 15px;
+  }
+  
+  .MyVolunteerList > .MyVolunteerListBox > .left > .top > .user_img > .icon {
+    width: 100%;
+    float: left;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .MyVolunteerList > .MyVolunteerListBox > .left > .top > .user_text {
+    width: 80%;
+    margin-left: 15px;
+    vertical-align: middle;
+    line-height: 10%;
+  }
+  
+  .MyVolunteerList > .MyVolunteerListBox > .left > .top > .user_text > .detail {
+    display: flex;
+    line-height: auto;
+    
+}
+  
+  .MyVolunteerList > .MyVolunteerListBox > .left > .top > .user_text > .detail > h5 {
+    margin-top: -4px;
+    color:#b9bbc2;
+    
+    
+  }
+  
+  .MyVolunteerList > .MyVolunteerListBox > .left > .top > .user_text > .detail > h4 {
+    margin-top: 0px;
+    margin-left: 5px;
+    color: #b9bbc2;
+    font-size: 0.6em;
+  }
+  
+  .MyVolunteerList > .MyVolunteerListBox > .left > .middle {
+    height: 10%;
+    line-height: 10%;
+  }
+  
+  .MyVolunteerList > .MyVolunteerListBox > .left > .middle > p {
+    margin-top: 16px;
+    margin-left: 20px;
+    
+  }
+  
+  .MyVolunteerList > .MyVolunteerListBox > .left > .bottom {
+    height: 50%;
+    line-height: 50%;
+    margin-top: 5px;
+  }
+  
+  .MyVolunteerList > .MyVolunteerListBox > .left > .bottom > h4 {
+    margin-top: 16px;
+    margin-left: 102px;
+    color:  #77777d;
+    font-size: 0.8em;
+  }
+  
+  .MyVolunteerList > .MyVolunteerListBox > .right {
+    width: 1%;
+    height: 90%;
+    margin-top: 9px;
+    margin-left: 9px;
+    overflow: hidden;
+  }
+  
+  .MyVolunteerList > .MyVolunteerListBox > .user_img > .image {
+    width: 100%;
+    border-radius: 3px;
+  }
+  

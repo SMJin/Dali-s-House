@@ -1,0 +1,99 @@
+.mypage_menubar{ /*큰 메뉴*/
+    justify-content: left;
+    align-items: left;
+    border:none;
+    border:0px;
+    margin:0px;
+    padding:0px;
+    font-size:14px;
+    font-weight:bold;
+    margin-top: -40px;
+    }
+    
+    .mypage_menubar ul{ /*box 높이*/
+
+    justify-content: left;
+    align-items: left;
+    background:#FFFFFF;
+    width: 20%;
+    height:40px;
+    list-style:none;
+    margin:0;
+    padding:0;
+    }
+    
+    .mypage_menubar li{
+        
+    float:none;
+    padding:0px;
+    }
+    
+    .mypage_menubar li a{
+    background:#FFFFFF;
+    color:  #77777d;
+    display:block;
+    font-weight:normal;
+    line-height:45px;
+    margin:0px;
+    padding:0px 25px;
+    text-align:center;
+    text-decoration:none;
+    }
+    
+    .mypage_menubar li a:hover, .menubar ul li:hover a{
+    background: #FFFFFF;
+    color:#77777d;
+    text-decoration:none;
+    }
+    
+    .mypage_menubar li ul{
+    background: #FFFFFF;
+ /*   display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+    height:auto;
+    padding:0px;
+    margin:0px;
+    border:0px;
+
+    width: 50px;
+    z-index:50;
+    /*top:1em;
+    /*left:0;*/
+    }
+    
+    .mypage_menubar li:hover ul{
+    display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+    }
+    
+    .mypage_menubar li li {
+    background: #FFFFFF;
+    display:block;
+    float:none;
+    margin:0px;
+    padding:0px;
+    width:150px;
+    }
+    
+    .mypage_menubar li:hover li a{
+    background:none;
+    }
+    
+    .mypage_menubar li ul a{
+    display:block;
+    height:40px;
+    font-size:12px;
+    font-style:normal;
+    margin:0px;
+    padding:0px 10px 0px 15px;
+    text-align:left;
+    }
+    
+    .mypage_menubar li ul a:hover, .menubar li ul li:hover a{
+    background:indianred;
+    border:1px;
+    color:#ffffff;
+    text-decoration:none;
+    }
+    
+    .mypage_menubar p{
+    clear:left;
+    }
