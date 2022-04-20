@@ -10,6 +10,7 @@ import AdoptionEdit from "./pages/adoption/AdoptionEdit";
 import { useRef, useState } from 'react';
 import AdoptionThumbnailEdit from './pages/adoption/AdoptionThumbnailEdit';
 import MyVolunteer from './pages/Mypage/MyVolunteer';
+import VolunteerActivityEdit from './pages/volunteerActivity/VolunteerActivityEdit';
 
 // const dummyAdoptionList = [
 //   {
@@ -91,6 +92,7 @@ function App() {
           <Route path='/adoption/thumbnailEdit' element={<AdoptionThumbnailEdit onCreate={onCreateAdoptionThumbnail} />} />
           <Route path="/adoption/edit" element={<AdoptionEdit onCreate={null} />} />
           <Route path="/volunteerActivity" element={<VolunteerActivity />} />
+          <Route path='/volunteerActivity' element={<VolunteerActivityEdit />} />
           <Route path="/myPage" element={<MyPage />} />
           <Route path='/myVolunteer' element={<MyVolunteer />} />
         </Routes>

@@ -2,7 +2,7 @@ import "./css/AdoptionThumbnailEdit.css"
 import { useRef, useState } from 'react';
 import MyButton from '../../components/MyButton';
 import MyHeader from '../../components/MyHeader';
-import AdoptionEditInput from './AdoptionEditInput';
+import EditInput from '../../components/EditInput';
 import MyFooter from '../../components/MyFooter';
 import CrudButton from '../../components/CrudButton';
 
@@ -51,19 +51,19 @@ const AdoptionThumbnailEdit = ({onCreate}) => {
             <MyHeader />
             <div className='AdoptionThumbnail_form'>
                 <h2>입양 보낼 아이의 정보를 입력해주세요.</h2>
-                <AdoptionEditInput 
+                <EditInput 
                     type={'name'}
                     name="이름"
                     placeholder={"반려동물의 이름은 무엇인가요?"}
                     setState={adoptionThumbnail_state}
                 />
-                <AdoptionEditInput 
+                <EditInput 
                     type={'age'}
                     name="나이"
                     placeholder={"반려동물의 나이는 얼마인가요?"}
                     setState={adoptionThumbnail_state}
                 />
-                <AdoptionEditInput 
+                <EditInput 
                     type={'sex'}
                     name="성별"
                     placeholder={"반려동물의 성별은 무엇인가요?"}
