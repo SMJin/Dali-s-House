@@ -11,7 +11,6 @@ import MyVolunteer from "./pages/Mypage/MyVolunteer"
 import MyFavoriteVolunteer from "./pages/Mypage/MyFavoriteVolunteer"
 import { useRef, useState } from 'react';
 import AdoptionThumbnailEdit from './pages/adoption/AdoptionThumbnailEdit';
-import MyVolunteer from './pages/Mypage/MyVolunteer';
 import VolunteerActivityEdit from './pages/volunteerActivity/VolunteerActivityEdit';
 
 // const dummyAdoptionList = [
