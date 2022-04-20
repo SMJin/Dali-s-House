@@ -1,5 +1,5 @@
-import MyImage from '../../components/MyImage';
 import "./css/AdoptionBest.css"
+import MyImage from '../../components/MyImage';
 
 const AdoptionBest = ({name}) => {
     return (

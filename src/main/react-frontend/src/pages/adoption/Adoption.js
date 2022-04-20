@@ -6,7 +6,8 @@ import MyNav from "../volunteerActivity/MyNav";
 import AdoptionBest from "./AdoptionBest";
 import MyPagination from "../../components/MyPagination";
 
-const Adoption = () => {
+const Adoption = ({adoptionList}) => {
+
   const regionProps = {
     pageName: "입양연결",
     region1: "전국",
@@ -14,13 +15,13 @@ const Adoption = () => {
     region3: "전국",
   };
 
-  const adoptionThumbnailProps = {
-    name: "달리",
-    age: "8~9개월",
-    sex: "남아",
-    neutering: true,
-    identification: true,
-  };
+  // const adoptionThumbnailProps = {
+  //   name: "달리",
+  //   age: "8~9개월",
+  //   sex: "남아",
+  //   neutering: true,
+  //   identification: true,
+  // };
 
   return (
     <div>
@@ -30,13 +31,13 @@ const Adoption = () => {
       <div className="adoption_thumbnail_board">
         <div className='adoption_thumbnail_board_nav'>
           <MyNav {...regionProps} />
+          <h6>{adoptionList.length} 개의 게시물이 있습니다.</h6>
         </div>
         <div className='adoption_thumbnail_board_contents'>
-          <AdoptionThumbnail {...adoptionThumbnailProps} />
-          <AdoptionThumbnail {...adoptionThumbnailProps} />
-          <AdoptionThumbnail {...adoptionThumbnailProps} />
-          <AdoptionThumbnail {...adoptionThumbnailProps} />
-          <AdoptionThumbnail {...adoptionThumbnailProps} />
+          {console.log(adoptionList)}
+          {adoptionList.map((it) => (
+            <AdoptionThumbnail key={it.id} {...it} />
+          ))}
         </div>
       </div>
       <MyPagination />
@@ -44,5 +45,9 @@ const Adoption = () => {
     </div>
   );
 };
+
+Adoption.defaultProps = {
+  adoptionList: [],
+}
 
 export default Adoption;
