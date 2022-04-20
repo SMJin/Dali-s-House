@@ -12,6 +12,7 @@ import MyFavoriteVolunteer from "./pages/Mypage/MyFavoriteVolunteer"
 import { useRef, useState } from 'react';
 import AdoptionThumbnailEdit from './pages/adoption/AdoptionThumbnailEdit';
 import VolunteerActivityEdit from './pages/volunteerActivity/VolunteerActivityEdit';
+import VolunteerActivityThumbnailEdit from './pages/volunteerActivity/VolunteerActivityThumbnailEdit';
 
 // const dummyAdoptionList = [
 //   {
@@ -65,7 +66,9 @@ import VolunteerActivityEdit from './pages/volunteerActivity/VolunteerActivityEd
 function App() {
 
   const [adoptionList, setAdoptionList] = useState([]);
+  const [volunteerActivityList, setVolunteerActivityList] = useState([]);
   const adoptionThumbnail_id = useRef(0);
+  const volunteerActivityThumbnail_id = useRef(0);
 
   const onCreateAdoptionThumbnail = (name, age, sex, neutering, identification) => {
     const id = adoptionThumbnail_id.current;
@@ -82,6 +85,18 @@ function App() {
     setAdoptionList([newThumbnail, ...adoptionList])
   }
 
+  const onCreateVolunteerActivityThumbnail = (name, content) => {
+      const newThumbnail = {
+        id: volunteerActivityThumbnail_id.current,
+        name,
+        content,
+        imgUrl: "/assets/vol_img.png",
+        create_date: new Date().getTime(),
+      }
+      volunteerActivityThumbnail_id.current += 1;
+      setVolunteerActivityList([newThumbnail, ...volunteerActivityList])
+  }
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -92,7 +107,8 @@ function App() {
           <Route path="/adoption" element={<Adoption adoptionList={adoptionList} />} />
           <Route path='/adoption/thumbnail/edit' element={<AdoptionThumbnailEdit onCreate={onCreateAdoptionThumbnail} />} />
           <Route path="/adoption/edit" element={<AdoptionEdit onCreate={null} />} />
-          <Route path="/volunteeractivity" element={<VolunteerActivity />} />
+          <Route path="/volunteeractivity" element={<VolunteerActivity volunteerActivityList={volunteerActivityList} />} />
+          <Route path="/volunteeractivity/thumbnail/edit" element={<VolunteerActivityThumbnailEdit onCreate={onCreateVolunteerActivityThumbnail} />} />
           <Route path='/volunteeractivity/edit' element={<VolunteerActivityEdit />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/myvolunteer" element={<MyVolunteer />} />
