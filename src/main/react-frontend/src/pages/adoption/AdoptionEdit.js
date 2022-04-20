@@ -1,19 +1,33 @@
-import {useParams} from "react-router-dom";
+import "./css/AdoptionEdit.css";
+// import {useParams} from "react-router-dom";
 import MyHeader from "../../components/MyHeader";
 import MyFooter from "../../components/MyFooter";
 import CrudButton from "../../components/CrudButton";
-import "./css/AdoptionEdit.css";
 import AdoptionEditInput from './AdoptionEditInput';
 import MyButton from '../../components/MyButton';
 import AdoptionTumbnail from './AdoptionThumbnail';
 import { useState } from 'react';
 
-const AdoptionEdit = () => {
+const AdoptionEdit = ({onCreate}) => {
 
     // const {id} = useParams();
     // console.log(`입력된 id : ${id}`);
 
-    const [job, setJob] = useState("");
+    const [state, setState] = useState({
+        job: '',
+        income: '',
+    });
+
+    const adoptionState = (state_name, value) => {
+        setState({
+            ...state,
+            [state_name]: value,
+        })
+    }
+
+    // const handleSubmit = () => {
+    //     // onCreate(name, age, sex, neutering, identification)
+    // }
 
     return (
         <div>
@@ -27,11 +41,13 @@ const AdoptionEdit = () => {
                     type={'job'}
                     name="직업"
                     placeholder={"어떤 일을 하고 계신가요?"}
+                    setState={adoptionState}
                 />
                 <AdoptionEditInput
                     type={'income'}
                     name="수입"
                     placeholder={"한달 평균 수입은 어떻게 되시나요?"}
+                    setState={adoptionState}
                 />
                 <MyButton text={"+ 기타 정보 추가"} />    
             </div>
@@ -45,11 +61,13 @@ const AdoptionEdit = () => {
                     type={'species'}
                     name="품종"
                     placeholder={"키워본 반려동물의 종은 무엇인가요?"}
+                    setState={adoptionState}
                 />
                 <AdoptionEditInput
                     type={'period'}
                     name="기간"
                     placeholder={"같이 살았던 기간은 어느정도 인가요?"}
+                    setState={adoptionState}
                 />
                 <MyButton text={"+ 기타 정보 추가"} />
             </div>
@@ -60,21 +78,25 @@ const AdoptionEdit = () => {
                     type={'use_hour'}
                     name=""
                     placeholder={"하루에 몇 시간을 함께 보낼 수 있나요?"}
+                    setState={adoptionState}
                 />
                 <AdoptionEditInput 
                     type={'use_money'}
                     name=""
                     placeholder={"한달에 반려동물에게 얼마정도 사용하실 수 있나요?"}
+                    setState={adoptionState}
                 />
                 <AdoptionEditInput 
                     type={'use_family'}
                     name=""
                     placeholder={"가족 구성원은 몇 명인가요?"}
+                    setState={adoptionState}
                 />
                 <AdoptionEditInput 
                     type={'use_permission'}
                     name=""
                     placeholder={"가족 구성원 모두에게 허가를 받으셨나요?"}
+                    setState={adoptionState}
                 />
             </div>
                 <input type={'checkbox'} />

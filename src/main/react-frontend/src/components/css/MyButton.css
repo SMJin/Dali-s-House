@@ -21,3 +21,8 @@
     margin-right: 10px;
     margin-bottom: 20px;
 }
+
+.MyButton_true_false:focus {
+    border: solid 2px black;
+    color: black;
+}

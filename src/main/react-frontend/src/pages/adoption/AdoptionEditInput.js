@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
-import "./css/AdoptionEdit.css"
+import "./css/AdoptionEditInput.css"
 
-const AdoptionEditInput = ({type, name, placeholder}) => {
+const AdoptionEditInput = ({type, name, placeholder, setState}) => {
 
     const isEmptyInput = useRef();
     const [value, setValue] = useState("");
@@ -15,8 +15,9 @@ const AdoptionEditInput = ({type, name, placeholder}) => {
                         value={value}
                         onChange={(e) => {
                             setValue(e.target.value);
+                            setState(type, e.target.value);
                             if (e.target.value === '') {
-                                isEmptyInput.current.style = "display: inline"
+                                isEmptyInput.current.style = "display:inline"
                             } else {
                                 isEmptyInput.current.style = "display:none";
                             }
