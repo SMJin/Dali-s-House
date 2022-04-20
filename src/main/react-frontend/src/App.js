@@ -7,6 +7,8 @@ import Adoption from "./pages/adoption/Adoption";
 import VolunteerActivity from "./pages/volunteerActivity/VolunteerActivity";
 import MyPage from "./pages/Mypage/MyPage";
 import AdoptionEdit from "./pages/adoption/AdoptionEdit";
+import MyVolunteer from "./pages/Mypage/MyVolunteer"
+import MyFavoriteVolunteer from "./pages/Mypage/MyFavoriteVolunteer"
 import { useRef, useState } from 'react';
 import AdoptionThumbnailEdit from './pages/adoption/AdoptionThumbnailEdit';
 import MyVolunteer from './pages/Mypage/MyVolunteer';
@@ -91,6 +93,9 @@ function App() {
           <Route path='/adoption/thumbnailEdit' element={<AdoptionThumbnailEdit onCreate={onCreateAdoptionThumbnail} />} />
           <Route path="/adoption/edit" element={<AdoptionEdit onCreate={null} />} />
           <Route path="/volunteerActivity" element={<VolunteerActivity />} />
+          <Route path="/mypage" element={<MyPage />} />
+          <Route path="/myvolunteer" element={<MyVolunteer />} />
+          <Route path="/myfavoritevolunteer" element={<MyFavoriteVolunteer />} />
           <Route path="/myPage" element={<MyPage />} />
           <Route path='/myVolunteer' element={<MyVolunteer />} />
         </Routes>
