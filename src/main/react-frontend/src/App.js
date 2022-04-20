@@ -11,6 +11,7 @@ import MyVolunteer from "./pages/Mypage/MyVolunteer"
 import MyFavoriteVolunteer from "./pages/Mypage/MyFavoriteVolunteer"
 import { useRef, useState } from 'react';
 import AdoptionThumbnailEdit from './pages/adoption/AdoptionThumbnailEdit';
+import VolunteerActivityEdit from './pages/volunteerActivity/VolunteerActivityEdit';
 
 // const dummyAdoptionList = [
 //   {
@@ -89,14 +90,13 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/community" element={<Community />} />
           <Route path="/adoption" element={<Adoption adoptionList={adoptionList} />} />
-          <Route path='/adoption/thumbnailEdit' element={<AdoptionThumbnailEdit onCreate={onCreateAdoptionThumbnail} />} />
+          <Route path='/adoption/thumbnail/edit' element={<AdoptionThumbnailEdit onCreate={onCreateAdoptionThumbnail} />} />
           <Route path="/adoption/edit" element={<AdoptionEdit onCreate={null} />} />
-          <Route path="/volunteerActivity" element={<VolunteerActivity />} />
+          <Route path="/volunteeractivity" element={<VolunteerActivity />} />
+          <Route path='/volunteeractivity/edit' element={<VolunteerActivityEdit />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/myvolunteer" element={<MyVolunteer />} />
           <Route path="/myfavoritevolunteer" element={<MyFavoriteVolunteer />} />
-          <Route path="/myPage" element={<MyPage />} />
-          <Route path='/myVolunteer' element={<MyVolunteer />} />
         </Routes>
       </div>
     </BrowserRouter>
