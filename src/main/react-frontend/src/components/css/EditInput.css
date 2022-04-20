@@ -1,15 +1,15 @@
-.AdoptionEditInput {
+.EditInput {
     width: 100%;
     margin: 10px 0;
     border: none;
     border-bottom: 1px solid gray;
 }
 
-.AdoptionEditInput:focus {
+.EditInput:focus {
     outline: none;
 }
 
-.AdoptionEditInput_isEmpty {
+.EditInput_isEmpty {
     color: red;
     /* display: none; */
 }

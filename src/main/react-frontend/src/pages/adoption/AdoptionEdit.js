@@ -3,7 +3,7 @@ import "./css/AdoptionEdit.css";
 import MyHeader from "../../components/MyHeader";
 import MyFooter from "../../components/MyFooter";
 import CrudButton from "../../components/CrudButton";
-import AdoptionEditInput from './AdoptionEditInput';
+import EditInput from '../../components/EditInput';
 import MyButton from '../../components/MyButton';
 import AdoptionTumbnail from './AdoptionThumbnail';
 import { useState } from 'react';
@@ -37,13 +37,13 @@ const AdoptionEdit = ({onCreate}) => {
             <div className={['AdoptionEdit_form', 'AdoptionEdit_form_user'].join(" ")}>
             <h2>입양 신청서 작성</h2>
             <h3>보호자 정보를 입력해주세요</h3>
-                <AdoptionEditInput
+                <EditInput
                     type={'job'}
                     name="직업"
                     placeholder={"어떤 일을 하고 계신가요?"}
                     setState={adoptionState}
                 />
-                <AdoptionEditInput
+                <EditInput
                     type={'income'}
                     name="수입"
                     placeholder={"한달 평균 수입은 어떻게 되시나요?"}
@@ -57,13 +57,13 @@ const AdoptionEdit = ({onCreate}) => {
                 <h5>반려동물을 키워본 경험이 있나요?</h5>
                 <MyButton type={"true_false"} text={"있습니다"} />
                 <MyButton type={"true_false"} text={"없습니다"} />
-                <AdoptionEditInput
+                <EditInput
                     type={'species'}
                     name="품종"
                     placeholder={"키워본 반려동물의 종은 무엇인가요?"}
                     setState={adoptionState}
                 />
-                <AdoptionEditInput
+                <EditInput
                     type={'period'}
                     name="기간"
                     placeholder={"같이 살았던 기간은 어느정도 인가요?"}
@@ -74,25 +74,25 @@ const AdoptionEdit = ({onCreate}) => {
 
             <div className={['AdoptionEdit_form', 'AdoptionEdit_form_atmosphere'].join(" ")}>
                 <h3>입양하는 환경을 입력해주세요</h3>
-                <AdoptionEditInput 
+                <EditInput 
                     type={'use_hour'}
                     name=""
                     placeholder={"하루에 몇 시간을 함께 보낼 수 있나요?"}
                     setState={adoptionState}
                 />
-                <AdoptionEditInput 
+                <EditInput 
                     type={'use_money'}
                     name=""
                     placeholder={"한달에 반려동물에게 얼마정도 사용하실 수 있나요?"}
                     setState={adoptionState}
                 />
-                <AdoptionEditInput 
+                <EditInput 
                     type={'use_family'}
                     name=""
                     placeholder={"가족 구성원은 몇 명인가요?"}
                     setState={adoptionState}
                 />
-                <AdoptionEditInput 
+                <EditInput 
                     type={'use_permission'}
                     name=""
                     placeholder={"가족 구성원 모두에게 허가를 받으셨나요?"}

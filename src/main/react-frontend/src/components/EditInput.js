@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
-import "./css/AdoptionEditInput.css"
+import "./css/EditInput.css"
 
-const AdoptionEditInput = ({type, name, placeholder, setState}) => {
+const EditInput = ({type, name, placeholder, setState}) => {
 
     const isEmptyInput = useRef();
     const [value, setValue] = useState("");
@@ -9,8 +9,8 @@ const AdoptionEditInput = ({type, name, placeholder, setState}) => {
     return (
         <div>
             {name} <input
-                        className={["AdoptionEditInput", `AdoptionEditInput_${type}`].join(" ")} 
-                        name={`AdoptionEditInput_${type}`} 
+                        className={["EditInput", `EditInput_${type}`].join(" ")} 
+                        name={`${type}`} 
                         placeholder={placeholder} 
                         value={value}
                         onChange={(e) => {
@@ -24,17 +24,17 @@ const AdoptionEditInput = ({type, name, placeholder, setState}) => {
                         }}
                     />
             <span 
-                className='AdoptionEditInput_isEmpty'
+                className='EditInput_isEmpty'
                 ref={isEmptyInput}
             >{type} 값을 입력해주세요</span>
         </div>
     );
 }
 
-AdoptionEditInput.defaultProps = {
+EditInput.defaultProps = {
     type: 'default',
     name: '옵션',
     placeholder: '입력해주세요',
 }
 
-export default AdoptionEditInput;
+export default EditInput;
