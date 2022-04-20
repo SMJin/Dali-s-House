@@ -62,7 +62,7 @@ import MyVolunteer from './pages/Mypage/MyVolunteer';
 
 function App() {
 
-  const [dummyAdoptionList, setDummyAdoptionList] = useState([]);
+  const [adoptionList, setAdoptionList] = useState([]);
   const adoptionThumbnail_id = useRef(0);
 
   const onCreateAdoptionThumbnail = (name, age, sex, neutering, identification) => {
@@ -77,7 +77,7 @@ function App() {
       created_date: new Date().getTime(),
     }
     adoptionThumbnail_id.current += 1;
-    setDummyAdoptionList([...dummyAdoptionList, newThumbnail])
+    setAdoptionList([newThumbnail, ...adoptionList])
   }
 
   return (
@@ -87,7 +87,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/community" element={<Community />} />
-          <Route path="/adoption" element={<Adoption adoptionList={dummyAdoptionList} />} />
+          <Route path="/adoption" element={<Adoption adoptionList={adoptionList} />} />
           <Route path='/adoption/thumbnailEdit' element={<AdoptionThumbnailEdit onCreate={onCreateAdoptionThumbnail} />} />
           <Route path="/adoption/edit" element={<AdoptionEdit onCreate={null} />} />
           <Route path="/volunteerActivity" element={<VolunteerActivity />} />

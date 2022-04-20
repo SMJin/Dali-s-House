@@ -37,6 +37,13 @@ const AdoptionThumbnailEdit = ({onCreate}) => {
             ${state.identification}`
         );
         onCreate(state.name, state.age, state.sex, state.neutering, state.identification);
+        setState({
+            name: '',
+            age: '',
+            sex: '',
+            neutering: null,
+            identification: null,
+        });
     }
 
     return (
