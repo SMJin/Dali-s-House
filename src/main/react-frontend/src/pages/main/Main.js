@@ -23,6 +23,14 @@ const Main = () => {
     navigate(`/adoption`);
   };
 
+  const goSponsor = () => {
+    navigate(`/sponsor`);
+  };
+
+  const goMagazine = () => {
+    navigate(`/community/magazine`);
+  };
+
   return (
     <div className="main">
       <h1>메인 페이지</h1>
@@ -58,14 +66,14 @@ const Main = () => {
       <div>
         <MyTitle
           titleText={"소중한 후원을 요청드려요"}
-          totalbutton={<MyButton text={"전체보기"} />}
+          totalbutton={<MyButton text={"전체보기"} onClick={goSponsor} />}
         />
         <Slider_Spon />
       </div>
       <div>
         <MyTitle
           titleText={"3월 달리 매거진"}
-          totalbutton={<MyButton text={"전체보기"} />}
+          totalbutton={<MyButton text={"전체보기"} onClick={goMagazine} />}
         />
         <div class="main_magazine">
           <div className="main_magazine_content">

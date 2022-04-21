@@ -10,19 +10,25 @@ import SearchBox from "./SearchBox";
 import TopVolList from "./TopVolList";
 import MagazineList from "../main/MagazineList";
 import CommList from "./CommList";
+import { useNavigate } from "react-router-dom";
 
 const Community = () => {
+  const navigate = useNavigate();
+
   const [page, setPage] = useState(1);
 
   const handleClickPage = (page) => {
     setPage(page);
   };
 
+  const goMagazine = () => {
+    navigate(`/community/magazine`);
+  };
+
   return (
     <div className="Community">
       <h1>커뮤니티 페이지</h1>
       <MyHeader />
-      <h3>커뮤니티</h3>
       <SearchBox className="searchbox" />
       <div>
         <MyTitle titleText={"이번달 우수 봉사자"} />
@@ -31,7 +37,7 @@ const Community = () => {
       <div>
         <MyTitle
           titleText={"3월 달리 매거진"}
-          totalbutton={<MyButton text={"전체보기"} />}
+          totalbutton={<MyButton text={"전체보기"} onClick={goMagazine} />}
         />
         <MagazineList />
       </div>
