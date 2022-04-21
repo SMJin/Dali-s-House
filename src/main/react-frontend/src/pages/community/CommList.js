@@ -13,7 +13,7 @@ const listcategory = [
   { category_id: 5, category_descript: "팀원모집" },
 ];
 
-const CommList = () => {
+const CommList = ({ communityList }) => {
   const [category, setCategory] = useState(1);
 
   const handleClickCategory = (category) => {
@@ -32,7 +32,21 @@ const CommList = () => {
           />
         ))}
       </div>
-      <Comm_item
+      <h6>{communityList.length} 개의 게시물이 있습니다.</h6>
+
+      <MyPagination />
+    </div>
+  );
+};
+
+CommList.defaultProps = {
+  communityList: [],
+};
+
+export default CommList;
+
+/*
+<Comm_item
         id={1}
         name={"해피"}
         grade={"top"}
@@ -87,9 +101,4 @@ const CommList = () => {
         heart={19}
         reply={5}
       />
-      <MyPagination />
-    </div>
-  );
-};
-
-export default CommList;
+*/
