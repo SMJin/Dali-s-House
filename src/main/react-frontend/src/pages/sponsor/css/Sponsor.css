@@ -1,2 +1,11 @@
 .Sponsor {
+  margin: 0 15%;
+}
+
+.Sponsor > .title {
+  display: flex;
+}
+
+.Sponsor > .title > .MySearch {
+  margin: 20px 0px 0px 410px;
 }

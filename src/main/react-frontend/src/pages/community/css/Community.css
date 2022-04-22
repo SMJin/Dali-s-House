@@ -1,3 +1,7 @@
+.Community {
+  margin: 0 15%;
+}
+
 .Community > h3 {
   margin-left: 25px;
 }
@@ -6,36 +10,17 @@
   margin: 0px;
 }
 
+.Community > div > .MyTitle > .titleText {
+  margin-left: -1.5%;
+  width: 90%;
+}
+
 .Community > div {
   margin-top: 15px;
   margin-bottom: 10px;
 }
 
-.Community > div > .MyTitle > .titleText {
-  padding-left: 10.5%;
-  font-weight: bold;
-  font-size: 1em;
-  width: 80%;
-}
-
-.Community > div > .MyTitle > .totalbutton {
-  padding-right: 0%;
-  width: 20%;
-}
-
-.Community > div > .TopVolList {
-  margin-left: 9%;
-  width: 82%;
-}
-
-.Community > div > .MagazineList {
-  margin-left: 9%;
-  width: 81%;
-}
-
 .Community > div > .CommList {
-  margin-left: 10%;
-  width: 80%;
   margin-bottom: 6%;
 }
 

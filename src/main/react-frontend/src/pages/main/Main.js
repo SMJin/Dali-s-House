@@ -32,21 +32,21 @@ const Main = () => {
   };
 
   return (
-    <div className="main">
+    <div>
       <h1>메인 페이지</h1>
       <MyHeader />
-      <div>
-        <img
-          class="main_adv"
-          src={process.env.PUBLIC_URL + `/assets/main_adv.png`}
-        />
-      </div>
-      <div>
-        <MyTitle
-          titleText={"이번주 달리단 모집"}
-          totalbutton={<MyButton text={"전체보기"} onClick={goVolunteer} />}
-        />
-        <Slider_Volunteer />
+      <img
+        class="main_adv"
+        src={process.env.PUBLIC_URL + `/assets/main_adv.png`}
+      />
+      <div className="main">
+        <div>
+          <MyTitle
+            titleText={"이번주 달리단 모집"}
+            totalbutton={<MyButton text={"전체보기"} onClick={goVolunteer} />}
+          />
+          <Slider_Volunteer />
+        </div>
       </div>
       <div>
         <VolunteerSituation
@@ -56,29 +56,31 @@ const Main = () => {
           spon={7 + "," + 225}
         />
       </div>
-      <div>
-        <MyTitle
-          titleText={"새로운 가족을 찾아요!"}
-          totalbutton={<MyButton text={"전체보기"} onClick={goAdoption} />}
-        />
-        <Slider_Adoption />
-      </div>
-      <div>
-        <MyTitle
-          titleText={"소중한 후원을 요청드려요"}
-          totalbutton={<MyButton text={"전체보기"} onClick={goSponsor} />}
-        />
-        <Slider_Spon />
-      </div>
-      <div>
-        <MyTitle
-          titleText={"3월 달리 매거진"}
-          totalbutton={<MyButton text={"전체보기"} onClick={goMagazine} />}
-        />
-        <div class="main_magazine">
-          <div className="main_magazine_content">
-            <div>
-              <MagazineList />
+      <div className="main">
+        <div>
+          <MyTitle
+            titleText={"새로운 가족을 찾아요!"}
+            totalbutton={<MyButton text={"전체보기"} onClick={goAdoption} />}
+          />
+          <Slider_Adoption />
+        </div>
+        <div>
+          <MyTitle
+            titleText={"소중한 후원을 요청드려요"}
+            totalbutton={<MyButton text={"전체보기"} onClick={goSponsor} />}
+          />
+          <Slider_Spon />
+        </div>
+        <div>
+          <MyTitle
+            titleText={"3월 달리 매거진"}
+            totalbutton={<MyButton text={"전체보기"} onClick={goMagazine} />}
+          />
+          <div class="main_magazine">
+            <div className="main_magazine_content">
+              <div>
+                <MagazineList />
+              </div>
             </div>
           </div>
         </div>
