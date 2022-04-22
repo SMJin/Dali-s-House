@@ -1,0 +1,52 @@
+.MySearch {
+  display: flex;
+
+  width: 250px;
+  height: 30px;
+}
+
+.MySearch_input_box {
+  width: 170px;
+}
+
+.MySearch_input_box > .MySearch_input {
+  margin: 3px 0px 2px 5px;
+  width: 157px;
+  height: 24px;
+
+  font-size: 0.8em;
+
+  background-color: #f8f8fb;
+  border: none;
+}
+
+.MySearch_button_box {
+  display: flex;
+  cursor: pointer;
+
+  margin: 3px 0px 2px 0px;
+  width: 60px;
+  height: 25px;
+
+  background-color: #353437;
+}
+
+.MySearch_button_box > .button_icon {
+  margin: 3px 5px 4px 10px;
+  width: 20px;
+  height: 15px;
+}
+
+.MySearch_button_box > .button_icon > .button_icon_img {
+  width: 100%;
+}
+
+.MySearch_button_box > .button_text {
+  width: 45px;
+  height: 25px;
+
+  line-height: 25px;
+
+  font-size: 0.8em;
+  color: white;
+}

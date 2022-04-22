@@ -4,6 +4,7 @@ import "./css/CommList.css";
 import CommCate_item from "./component/CommCate_item";
 import Comm_item from "./component/Comm_item";
 import MyPagination from "../../components/MyPagination";
+import MySearch from "../../components/MySearch";
 
 const listcategory = [
   { category_id: 1, category_descript: "전체" },
@@ -32,6 +33,7 @@ const CommList = ({ communityList }) => {
           />
         ))}
       </div>
+      <MySearch />
       <h6>{communityList.length} 개의 게시물이 있습니다.</h6>
 
       <MyPagination />

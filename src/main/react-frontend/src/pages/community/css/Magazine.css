@@ -1,2 +1,11 @@
 .Magazine {
+  margin: 0 15%;
+}
+
+.Magazine > .title {
+  display: flex;
+}
+
+.Magazine > .title > .MySearch {
+  margin: 20px 0px 0px 410px;
 }

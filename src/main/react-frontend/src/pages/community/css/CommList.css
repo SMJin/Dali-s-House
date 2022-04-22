@@ -1,10 +1,9 @@
 .CommList {
-  width: 90%;
-  margin-left: 5%;
+  width: 100%;
   overflow: hidden;
 }
 
-.CommList > .category_wrapper {
+.category_wrapper {
   margin-left: 0.5%;
   margin-top: 0%;
   width: 25%;
@@ -12,4 +11,9 @@
   display: grid;
   grid-template-columns: repeat(5, auto);
   gap: 2%;
+}
+
+.CommList > .MySearch {
+  margin-left: 520px;
+  margin-top: -20px;
 }
