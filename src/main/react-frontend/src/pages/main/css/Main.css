@@ -1,3 +1,7 @@
+.main {
+  margin: 0 15%;
+}
+
 .main_adv {
   cursor: pointer;
 
@@ -75,7 +79,7 @@
 }
 
 .main_magazine > .main_magazine_content {
-  width: 80%;
+  width: 100%;
   height: 230px;
 }
 

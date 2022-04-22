@@ -14,7 +14,7 @@ const Slider_Volunteer = () => {
   };
   return (
     <div className="container">
-      <style>{cssstyle}</style>
+      <style>{cssstyle_v}</style>
       <Slider {...settings}>
         <div className="item">
           <Volunteer_item
@@ -81,11 +81,11 @@ const Slider_Volunteer = () => {
   );
 };
 
-const cssstyle = `
+const cssstyle_v = `
 .container {
   margin: 0 auto;
-  padding: 50px 40px 30px 40px;
-  width: 50%;
+  padding: 5px 0px 30px 0px;
+  width: 100%;
 }
 .slick-next:before, .slick-prev:before {
   color: #f34949;

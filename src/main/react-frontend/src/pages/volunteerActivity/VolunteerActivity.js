@@ -6,7 +6,7 @@ import MyFooter from "../../components/MyFooter";
 import MyPagination from "../../components/MyPagination";
 import Tag from "./Tag";
 
-const VolunteerActivity = () => {
+const VolunteerActivity = ({volunteerActivityList}) => {
   const regionProps = {
     pageName: "봉사활동",
     region1: "전국",
@@ -14,11 +14,11 @@ const VolunteerActivity = () => {
     region3: "전국",
   };
 
-  const volunteerActivityThumbnailProps = {
-    imgUrl: "/assets/vol_img.png",
-    title: "아직 엄마 품이 필요한 고양이들에게 사랑을 나누어 주세요.",
-    content: "사랑냥이 보호센터",
-  };
+  // const volunteerActivityThumbnailProps = {
+  //   imgUrl: "/assets/vol_img.png",
+  //   title: "아직 엄마 품이 필요한 고양이들에게 사랑을 나누어 주세요.",
+  //   content: "사랑냥이 보호센터",
+  // };
 
   return (
     <div className="VolunteerActivity">
@@ -70,13 +70,19 @@ const VolunteerActivity = () => {
       <div className="VolunteerActivity_thumbnail_board">
         <div className="VolunteerActivity_thumbnail_board_nav">
           <MyNav {...regionProps} />
+          <h6>{volunteerActivityList.length} 개의 게시물이 있습니다.</h6>
         </div>
         <div className="VolunteerActivity_thumbnail_board_content">
+          {
+            volunteerActivityList.map((it) => (
+              <VolunteerActivityThumbnail key={it.id} {...it} />
+            ))
+          }
+          {/* <VolunteerActivityThumbnail {...volunteerActivityThumbnailProps} />
           <VolunteerActivityThumbnail {...volunteerActivityThumbnailProps} />
           <VolunteerActivityThumbnail {...volunteerActivityThumbnailProps} />
           <VolunteerActivityThumbnail {...volunteerActivityThumbnailProps} />
-          <VolunteerActivityThumbnail {...volunteerActivityThumbnailProps} />
-          <VolunteerActivityThumbnail {...volunteerActivityThumbnailProps} />
+          <VolunteerActivityThumbnail {...volunteerActivityThumbnailProps} /> */}
         </div>
       </div>
       <MyPagination />
