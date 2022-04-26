@@ -1,13 +1,12 @@
 package com.example.dalihouse.controller;
 
 import com.example.dalihouse.model.Article;
-import com.example.dalihouse.model.ArticleRequestDto;
-import com.example.dalihouse.model.ArticleRepository;
+import com.example.dalihouse.dto.ArticleRequestDto;
+import com.example.dalihouse.repository.ArticleRepository;
 import com.example.dalihouse.service.ArticleService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.List;
 
 @RequiredArgsConstructor

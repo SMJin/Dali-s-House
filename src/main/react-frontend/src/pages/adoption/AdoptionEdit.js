@@ -25,10 +25,6 @@ const AdoptionEdit = ({onCreate}) => {
         })
     }
 
-    // const handleSubmit = () => {
-    //     // onCreate(name, age, sex, neutering, identification)
-    // }
-
     return (
         <div>
         <MyHeader />
