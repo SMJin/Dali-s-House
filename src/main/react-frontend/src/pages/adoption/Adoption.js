@@ -10,6 +10,12 @@ import axios from "axios";
 
 const Adoption = () => {
 
+    useEffect(() => {
+        fetch('/adoption')
+            .then(r => console.log(r.json()))
+            .catch(e => console.log(e));
+    }, [])
+
     const regionProps = {
     pageName: "입양연결",
     region1: "전국",

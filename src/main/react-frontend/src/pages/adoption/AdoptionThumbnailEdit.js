@@ -1,5 +1,5 @@
 import "./css/AdoptionThumbnailEdit.css"
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import axios from "axios";
 import MyButton from '../../components/MyButton';
 import MyHeader from '../../components/MyHeader';
@@ -7,7 +7,7 @@ import EditInput from '../../components/EditInput';
 import MyFooter from '../../components/MyFooter';
 import CrudButton from '../../components/CrudButton';
 
-const AdoptionThumbnailEdit = ({onCreate}) => {
+const AdoptionThumbnailEdit = () => {
 
     const [state, setState] = useState({
         name: '',
@@ -61,7 +61,6 @@ const AdoptionThumbnailEdit = ({onCreate}) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            // contentType: 'application/json',
             data: data,
         }).then((res) => {
             console.log(res);
