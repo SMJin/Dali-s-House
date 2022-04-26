@@ -1,8 +1,8 @@
 package com.example.dalihouse.service;
 
 import com.example.dalihouse.model.Article;
-import com.example.dalihouse.model.ArticleRepository;
-import com.example.dalihouse.model.ArticleRequestDto;
+import com.example.dalihouse.repository.ArticleRepository;
+import com.example.dalihouse.dto.ArticleRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

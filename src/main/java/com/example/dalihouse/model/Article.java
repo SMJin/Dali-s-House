@@ -1,5 +1,6 @@
 package com.example.dalihouse.model;
 
+import com.example.dalihouse.dto.ArticleRequestDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 

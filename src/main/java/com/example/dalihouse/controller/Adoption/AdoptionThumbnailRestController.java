@@ -11,12 +11,12 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
-public class AdoptionThumbnailController {
+public class AdoptionThumbnailRestController {
     private final AdoptionThumbnailRepository repository;
     private final AdoptionThumbnailService service;
 
     @PostMapping("/api/adoptionThumbnails")
-    public AdoptionThumbnail createAdoptionThumbnail(AdoptionThumbnailDto dto) {
+    public AdoptionThumbnail createAdoptionThumbnail(@RequestBody AdoptionThumbnailDto dto) {
         AdoptionThumbnail adoptionThumbnail = new AdoptionThumbnail(dto);
         return repository.save(adoptionThumbnail);
     }

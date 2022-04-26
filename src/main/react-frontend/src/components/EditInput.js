@@ -32,8 +32,8 @@ const EditInput = ({type, name, placeholder, setState}) => {
 }
 
 EditInput.defaultProps = {
-    type: 'default',
-    name: '옵션',
+    type: 'input',
+    name: '작성란',
     placeholder: '입력해주세요',
 }
 
