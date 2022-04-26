@@ -36,6 +36,7 @@
 
 ###### tmp img component -> real component
 
-###### adoption edit page (Author by. SMJ)
+###### frontend :: adoption edit page (Author by. SMJ)
 
-###### volunteer edit page (Author by. SMJ)
+###### frontend :: volunteer edit page (Author by. SMJ)
+###### backend :: adoptionThumbnail axios communication (Author by. SMJ)
