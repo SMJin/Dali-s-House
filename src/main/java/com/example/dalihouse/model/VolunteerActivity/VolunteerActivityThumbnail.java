@@ -22,7 +22,7 @@ public class VolunteerActivityThumbnail extends Timestamped {
     @Column(nullable = false)
     private String content;
 
-    @Column(nullable = true)
+    @Column(nullable = false)
     private Long authorId;
 
     @Column(nullable = false)

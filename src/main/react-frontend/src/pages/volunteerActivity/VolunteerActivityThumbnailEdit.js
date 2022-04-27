@@ -1,10 +1,10 @@
 import { useState } from 'react';
+import axios from "axios";
 import CrudButton from '../../components/CrudButton';
 import EditInput from '../../components/EditInput';
 import MyFooter from '../../components/MyFooter';
 import MyHeader from '../../components/MyHeader';
 import "./css/VolunteerActivityThumbnailEdit.css"
-import axios from "axios";
 
 const VolunteerActivityThumbnailEdit = () => {
 
@@ -98,11 +98,11 @@ const VolunteerActivityThumbnailEdit = () => {
                     placeholder={'내용을 입력해주세요.'}
                     setState={setVolunteerActivityThumbnail}
                 />
-                {/*<CrudButton*/}
-                {/*    text={'신청서 제출하기'}*/}
-                {/*    type={'submit'}*/}
-                {/*    onClick={handleSubmit}*/}
-                {/*/>*/}
+                <CrudButton
+                    text={'신청서 제출하기'}
+                    type={'submit'}
+                    onClick={handleSubmit}
+                />
             </div>
             <MyFooter />
         </div>

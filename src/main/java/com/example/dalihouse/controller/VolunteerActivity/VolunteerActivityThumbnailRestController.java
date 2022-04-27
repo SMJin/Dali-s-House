@@ -17,7 +17,7 @@ public class VolunteerActivityThumbnailRestController {
     private final VolunteerActivityThumbnailService service;
 
     @PostMapping("/api/volunteerActivity/thumbnails")
-    public VolunteerActivityThumbnail createVolunteerActivityThumbnail(VolunteerActivityThumbnailDto dto) {
+    public VolunteerActivityThumbnail createVolunteerActivityThumbnail(@RequestBody VolunteerActivityThumbnailDto dto) {
         VolunteerActivityThumbnail volunteerActivityThumbnail = new VolunteerActivityThumbnail(dto);
         return repository.save(volunteerActivityThumbnail);
     }
