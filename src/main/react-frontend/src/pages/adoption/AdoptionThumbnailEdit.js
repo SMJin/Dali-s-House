@@ -52,7 +52,7 @@ const AdoptionThumbnailEdit = () => {
             "sex": Boolean(`${state.ageYear}`),
             "neutering": Boolean(`${state.neutering}`),
             "identification": Boolean(`${state.identification}`),
-            "imgUrl": " "
+            "imgUrl": " ",
         };
         console.log(data);
         axios({

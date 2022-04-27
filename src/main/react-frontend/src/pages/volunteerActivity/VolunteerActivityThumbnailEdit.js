@@ -4,12 +4,19 @@ import EditInput from '../../components/EditInput';
 import MyFooter from '../../components/MyFooter';
 import MyHeader from '../../components/MyHeader';
 import "./css/VolunteerActivityThumbnailEdit.css"
+import axios from "axios";
 
-const VolunteerActivityThumbnailEdit = ({onCreate}) => {
+const VolunteerActivityThumbnailEdit = () => {
 
     const [state, setState] = useState({
         title: '',
         content: '',
+        authorId: null,
+        startTime: null,
+        endTime: null,
+        place: '',
+        limitNumOfPeople: null,
+        imgUrl: '',
     });
 
     const setVolunteerActivityThumbnail = (state_name, value) => {
@@ -20,19 +27,59 @@ const VolunteerActivityThumbnailEdit = ({onCreate}) => {
     }
 
     const handleSubmit = () => {
-        if (state.title === '' || state.content === ' ') {
-            alert("입력이 되지 않은 값이 있습니다 !")
-            return;
+        // if (state.title === '' || state.content === '' ||
+        //     state.authorId === null || state.startTime === null || state.endTime === null ||
+        //     state.place === '' || state.limitNumOfPeople === null || state.imgUrl === '') {
+        //     alert("입력이 되지 않은 값이 있습니다 !")
+        //     return;
+        // }
+        // alert(`제출되었습니다. :
+        //     ${state.title},
+        //     ${state.content},
+        //     ${state.authorId},
+        //     ${state.startTime},
+        //     ${state.endTime},
+        //     ${state.place},
+        //     ${state.limitNumOfPeople},
+        //     ${state.imgUrl}
+        // `);
+
+        const data = {
+            "title": `${state.title}`,
+            "content": `${state.content}`,
+            "authorId": 1,
+            "startTime": 220422,
+            endTime: 220427,
+            place: `단국대학교`,
+            limitNumOfPeople: 10,
+            imgUrl: '/assets/vol_img.png',
+            create_date: new Date().getTime(),
         }
-        alert(`제출되었습니다. : 
-            ${state.title}, 
-            ${state.content}
-        `);
-        onCreate(state.name, state.content);
-        setState({
-            name: '',
-            age: '',
+
+        console.log(data);
+        axios({
+            url: '/api/volunteerActivityThumbnails',
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: data,
+        }).then((res) => {
+            console.log(res);
+        }).catch((err) => {
+            console.log(err);
         });
+
+        // setState({
+        //     title: '',
+        //     content: '',
+        //     authorId: null,
+        //     startTime: null,
+        //     endTime: null,
+        //     place: '',
+        //     limitNumOfPeople: null,
+        //     imgUrl: ''
+        // });
     }
 
     return (
