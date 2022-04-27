@@ -1,5 +1,6 @@
 package com.example.dalihouse.model.VolunteerActivity;
 
+import com.example.dalihouse.dto.VolunteerActivity.VolunteerActivityThumbnailDto;
 import com.example.dalihouse.model.Timestamped;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -38,5 +39,28 @@ public class VolunteerActivityThumbnail extends Timestamped {
 
     @Column(nullable = false)
     private String imgUrl;
+
+    public VolunteerActivityThumbnail(VolunteerActivityThumbnailDto dto) {
+        this.title = dto.getTitle();
+        this.content = dto.getContent();
+        this.authorId = dto.getAuthorId();
+        this.startTime = dto.getStartTime();
+        this.endTime = dto.getEndTime();
+        this.place = dto.getPlace();
+        this.limitNumOfPeople = dto.getLimitNumOfPeople();
+        this.imgUrl = dto.getImgUrl();
+    }
+
+    public VolunteerActivityThumbnail update(VolunteerActivityThumbnailDto dto) {
+        this.title = dto.getTitle();
+        this.content = dto.getContent();
+        this.authorId = dto.getAuthorId();
+        this.startTime = dto.getStartTime();
+        this.endTime = dto.getEndTime();
+        this.place = dto.getPlace();
+        this.limitNumOfPeople = dto.getLimitNumOfPeople();
+        this.imgUrl = dto.getImgUrl();
+        return this;
+    }
 
 }
