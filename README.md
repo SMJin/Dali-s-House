@@ -40,3 +40,4 @@
 
 ###### frontend :: volunteer edit page (Author by. SMJ)
 ###### backend :: adoptionThumbnail axios communication (Author by. SMJ)
+###### backend :: volunteerActivityThumbnail axios communication (Author by. SMJ)
