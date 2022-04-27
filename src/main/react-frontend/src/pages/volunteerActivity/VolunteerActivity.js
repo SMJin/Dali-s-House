@@ -5,8 +5,10 @@ import VolunteerActivityThumbnail from "./VolunteerActivityThumbnail";
 import MyFooter from "../../components/MyFooter";
 import MyPagination from "../../components/MyPagination";
 import Tag from "./Tag";
+import {useEffect, useState} from "react";
+import axios from "axios";
 
-const VolunteerActivity = ({volunteerActivityList}) => {
+const VolunteerActivity = () => {
   const regionProps = {
     pageName: "봉사활동",
     region1: "전국",
@@ -19,6 +21,19 @@ const VolunteerActivity = ({volunteerActivityList}) => {
   //   title: "아직 엄마 품이 필요한 고양이들에게 사랑을 나누어 주세요.",
   //   content: "사랑냥이 보호센터",
   // };
+
+    const [volunteerActivityThumbnailList, setVolunteerActivityThumbnailList] = useState([]);
+
+    useEffect(
+        () => {
+            axios({
+                url: '/api/volunteerActivity/thumbnails',
+                method: 'GET',
+            }).then((res) => {
+                setVolunteerActivityThumbnailList(res.data);
+            })
+        }, []
+    )
 
   return (
     <div className="VolunteerActivity">
@@ -70,19 +85,14 @@ const VolunteerActivity = ({volunteerActivityList}) => {
       <div className="VolunteerActivity_thumbnail_board">
         <div className="VolunteerActivity_thumbnail_board_nav">
           <MyNav {...regionProps} />
-          <h6>{volunteerActivityList.length} 개의 게시물이 있습니다.</h6>
+          <h6>{volunteerActivityThumbnailList.length} 개의 게시물이 있습니다.</h6>
         </div>
         <div className="VolunteerActivity_thumbnail_board_content">
           {
-            volunteerActivityList.map((it) => (
+              volunteerActivityThumbnailList.map((it) => (
               <VolunteerActivityThumbnail key={it.id} {...it} />
             ))
           }
-          {/* <VolunteerActivityThumbnail {...volunteerActivityThumbnailProps} />
-          <VolunteerActivityThumbnail {...volunteerActivityThumbnailProps} />
-          <VolunteerActivityThumbnail {...volunteerActivityThumbnailProps} />
-          <VolunteerActivityThumbnail {...volunteerActivityThumbnailProps} />
-          <VolunteerActivityThumbnail {...volunteerActivityThumbnailProps} /> */}
         </div>
       </div>
       <MyPagination />

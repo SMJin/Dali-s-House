@@ -49,16 +49,15 @@ const VolunteerActivityThumbnailEdit = () => {
             "content": `${state.content}`,
             "authorId": 1,
             "startTime": 220422,
-            endTime: 220427,
-            place: `단국대학교`,
-            limitNumOfPeople: 10,
-            imgUrl: '/assets/vol_img.png',
-            create_date: new Date().getTime(),
+            "endTime": 220427,
+            "place": "단국대학교",
+            "limitNumOfPeople": 10,
+            "imgUrl": "/assets/vol_img.png"
         }
 
         console.log(data);
         axios({
-            url: '/api/volunteerActivityThumbnails',
+            url: '/api/volunteerActivity/thumbnails',
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -99,11 +98,11 @@ const VolunteerActivityThumbnailEdit = () => {
                     placeholder={'내용을 입력해주세요.'}
                     setState={setVolunteerActivityThumbnail}
                 />
-                <CrudButton
-                    text={'신청서 제출하기'}
-                    type={'submit'}
-                    onClick={handleSubmit}
-                />
+                {/*<CrudButton*/}
+                {/*    text={'신청서 제출하기'}*/}
+                {/*    type={'submit'}*/}
+                {/*    onClick={handleSubmit}*/}
+                {/*/>*/}
             </div>
             <MyFooter />
         </div>

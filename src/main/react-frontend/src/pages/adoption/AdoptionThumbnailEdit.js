@@ -143,13 +143,7 @@ const AdoptionThumbnailEdit = () => {
                     onClick={() => {state.identification = false;}}
                 />
 
-                <div>
-                    <CrudButton 
-                        text={'제출하기'}
-                        type={'submit'}
-                        onClick={handleSubmit}
-                    />
-                </div>
+
             </div>
             <MyFooter />
         </div>

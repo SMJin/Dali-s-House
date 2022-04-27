@@ -27,12 +27,12 @@ public class VolunteerActivityThumbnailRestController {
         return repository.findAll();
     }
 
-    @PutMapping("/api/VolunteerActivity/thumbnails/{id}")
+    @PutMapping("/api/volunteerActivity/thumbnails/{id}")
     public VolunteerActivityThumbnail updateVolunteerActivityThumbnail(@PathVariable Long id, @RequestBody VolunteerActivityThumbnailDto dto) {
         return service.update(id, dto);
     }
 
-    @DeleteMapping("/api/VolunteerActivity/thumbnails/{id}")
+    @DeleteMapping("/api/volunteerActivity/thumbnails/{id}")
     public Long deleteVolunteerActivityThumbnail(@PathVariable Long id) {
         repository.deleteById(id);
         return id;
