@@ -1,0 +1,216 @@
+.join {
+  margin-left: 15%;
+  width: 70%;
+  text-align: center;
+}
+
+div > .join > h2 {
+  margin: 50px 0px 40px 0px;
+}
+
+div > .join > hr {
+  border-top: 2px solid #000000;
+  margin: 5px 0px 20px 0px;
+}
+
+.left_type {
+  width: 20%;
+  height: 35px;
+  line-height: 35px;
+
+  font-weight: bold;
+
+  margin: 10px 0px 10px 0px;
+
+  text-align: left;
+}
+
+.middle_input {
+  width: 56%;
+  height: 35px;
+  line-height: 35px;
+
+  margin: 10px 2% 10px 2%;
+}
+
+.right_button {
+  width: 20%;
+  height: 35px;
+  line-height: 35px;
+
+  margin: 10px 0px 10px 0px;
+}
+
+.join_ID {
+  display: flex;
+  width: 100%;
+}
+.newID {
+  width: 99%;
+  height: 33px;
+
+  font-family: AppleFont;
+
+  border: 1px solid #d5d7db;
+  border-radius: 2px;
+}
+input::placeholder {
+  color: #d5d7db;
+}
+.GoCRButton {
+  width: 100%;
+  height: 100%;
+
+  font-family: AppleFont;
+  font-weight: bold;
+  border: 1px solid #ff7373;
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255, 0);
+  color: #ff7373;
+}
+
+.join_PW {
+  display: flex;
+}
+.newPW {
+  width: 99%;
+  height: 33px;
+
+  font-family: AppleFont;
+
+  border: 1px solid #d5d7db;
+  border-radius: 2px;
+}
+
+.join_PW_confirm {
+  display: flex;
+}
+.confirmPW {
+  width: 99%;
+  height: 33px;
+
+  font-family: AppleFont;
+
+  border: 1px solid #d5d7db;
+  border-radius: 2px;
+}
+
+.join_name {
+  display: flex;
+}
+.newName {
+  width: 99%;
+  height: 33px;
+
+  font-family: AppleFont;
+
+  border: 1px solid #d5d7db;
+  border-radius: 2px;
+}
+
+.join_email {
+  display: flex;
+}
+.newEmail {
+  width: 99%;
+  height: 33px;
+
+  font-family: AppleFont;
+
+  border: 1px solid #d5d7db;
+  border-radius: 2px;
+}
+
+.join_hp {
+  display: flex;
+}
+.newHP {
+  width: 99%;
+  height: 33px;
+
+  font-family: AppleFont;
+
+  border: 1px solid #d5d7db;
+  border-radius: 2px;
+}
+.GoVCButton {
+  width: 100%;
+  height: 100%;
+
+  font-family: AppleFont;
+  font-weight: bold;
+  border: 1px solid #ff7373;
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255, 0);
+  color: #ff7373;
+}
+
+.join_address {
+  display: flex;
+}
+.GoFindADRButton {
+  width: 100%;
+  height: 100%;
+
+  font-family: AppleFont;
+  font-weight: bold;
+  border: 1px solid #ff7373;
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255, 0);
+  color: #ff7373;
+}
+
+.join_sex {
+  display: flex;
+}
+.sex_male {
+  width: 49%;
+  height: 100%;
+  margin-right: 1%;
+
+  font-family: AppleFont;
+  font-weight: bold;
+  border: 1px solid #ff7373;
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255, 0);
+  color: #ff7373;
+}
+.sex_female {
+  width: 49%;
+  height: 100%;
+  margin-left: 1%;
+
+  font-family: AppleFont;
+  font-weight: bold;
+  border: 1px solid #ff7373;
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255, 0);
+  color: #ff7373;
+}
+
+.join_birth {
+  display: flex;
+}
+.newBirth {
+  width: 100%;
+  height: 33px;
+
+  font-family: AppleFont;
+
+  border: 1px solid #d5d7db;
+  border-radius: 2px;
+}
+
+.GoJoinButton {
+  width: 200px;
+  height: 40px;
+
+  margin-top: 30px;
+
+  font-family: AppleFont;
+  font-weight: bold;
+  border: none;
+  border-radius: 2px;
+  background-color: #ff7373;
+  color: white;
+}
