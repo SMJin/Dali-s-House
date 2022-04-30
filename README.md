@@ -38,6 +38,14 @@
 
 ###### frontend :: adoption edit page (Author by. SMJ)
 
+###### frontend :: create magazine page (Author by. YJI)
+###### frontend :: create sponsor page (Author by. YJI)
+
 ###### frontend :: volunteer edit page (Author by. SMJ)
 ###### backend :: adoptionThumbnail axios communication (Author by. SMJ)
 ###### backend :: volunteerActivityThumbnail axios communication (Author by. SMJ)
+
+### 22.04.30
+
+###### frontend :: create join page (Author by. YJI)
+###### frontend :: create login page (Author by. YJI)
