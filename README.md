@@ -22,14 +22,16 @@
 
 ### 22. 04. 11
 
-###### Main page (Author by. YJI)
-###### Community page (Author by. YJI)
-
 ###### Volunteer Activity page (Author by. SMJ)
 
 ###### Component (MyFooter)
 
 ###### Volunteer Activity Page Component (VolunteerActivity(main), VolunteerActivityThumbnail, MyNav)
+
+### 22. 04. 11 ~ 14
+
+###### Main page (Author by. YJI)
+###### Community page (Author by. YJI)
 
 ### 22.04.15 ~ 28
 
