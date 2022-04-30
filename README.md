@@ -53,3 +53,8 @@
 
 ###### frontend :: create join page (Author by. YJI)
 ###### frontend :: create login page (Author by. YJI)
+
+### 22.05.01
+
+###### frontend :: create FindID page (Author by. YJI)
+###### frontend :: create FindPW page (Author by. YJI)
