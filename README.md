@@ -22,7 +22,8 @@
 
 ### 22. 04. 11
 
-###### Main page (Author by. Ji in)
+###### Main page (Author by. YJI)
+###### Community page (Author by. YJI)
 
 ###### Volunteer Activity page (Author by. SMJ)
 
@@ -40,6 +41,7 @@
 
 ###### frontend :: create magazine page (Author by. YJI)
 ###### frontend :: create sponsor page (Author by. YJI)
+###### frontend :: add carousel function (Author by. YJI)
 
 ###### frontend :: volunteer edit page (Author by. SMJ)
 ###### backend :: adoptionThumbnail axios communication (Author by. SMJ)
