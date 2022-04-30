@@ -7,7 +7,9 @@ const Join = () => {
     <div>
       <h1>회원가입 페이지</h1>
       <MyHeader />
-      <div className="join"></div>
+      <div className="join">
+        <h2>회원가입</h2>
+      </div>
       <MyFooter />
     </div>
   );
