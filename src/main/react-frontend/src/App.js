@@ -14,8 +14,10 @@ import VolunteerActivityEdit from "./pages/volunteerActivity/VolunteerActivityEd
 import VolunteerActivityThumbnailEdit from "./pages/volunteerActivity/VolunteerActivityThumbnailEdit";
 import Sponsor from "./pages/sponsor/Sponsor";
 import Magazine from "./pages/community/Magazine";
-import Login from "./pages/main/Login";
-import Join from "./pages/main/Join";
+import Login from "./pages/user/Login";
+import Join from "./pages/user/Join";
+import FindID from "./pages/user/FindID";
+import FindPW from "./pages/user/FindPW";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/login" element={<Login />} />
           <Route path="/join" element={<Join />} />
+          <Route path="/find/id" element={<FindID />} />
+          <Route path="/find/password" element={<FindPW />} />
           <Route path="/community" element={<Community />} />
           <Route path="/adoption" element={<Adoption />} />
           <Route
