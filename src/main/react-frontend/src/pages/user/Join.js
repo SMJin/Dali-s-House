@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import MyFooter from "../../components/MyFooter";
 import MyHeader from "../../components/MyHeader";
@@ -21,6 +21,46 @@ const Join = () => {
     alert("주소 찾기");
   };
 
+  const [id, setId] = useState("");
+
+  const checkId = (e) => {
+    const regex = /^[a-z|A-Z|0-9\b]{0,10}$/;
+
+    if (regex.test(e.target.value)) {
+      setId(e.target.value);
+    }
+  };
+
+  const [name, setName] = useState("");
+
+  const checkName = (e) => {
+    const regex = /^[ㄱ-ㅎ|가-힣\b]{0,5}$/;
+
+    if (regex.test(e.target.value)) {
+      setName(e.target.value);
+    }
+  };
+
+  const [number, setNumber] = useState("");
+
+  const checkNumber = (e) => {
+    const regex = /^[0-9\b]{0,11}$/;
+
+    if (regex.test(e.target.value)) {
+      setNumber(e.target.value);
+    }
+  };
+
+  const [email, setEmail] = useState("");
+
+  const checkEmail = (e) => {
+    const regex = /^[0-9|a-z|A-Z|@|.\b]{0,30}$/;
+
+    if (regex.test(e.target.value)) {
+      setEmail(e.target.value);
+    }
+  };
+
   return (
     <div>
       <h1>회원가입 페이지</h1>
@@ -34,8 +74,12 @@ const Join = () => {
             <div className="middle_input">
               <input
                 className="newID"
-                placeholder="5자 이상의 영문 혹은 영문과 숫자를 조합"
+                placeholder="5자 이상 10자 이하의 영문 혹은 영문과 숫자를 조합"
                 type="text"
+                value={id}
+                minLength="5"
+                maxLength="10"
+                onChange={checkId}
               />
             </div>
             <div className="right_button">
@@ -73,6 +117,8 @@ const Join = () => {
                 className="newName"
                 placeholder="이름을 입력해주세요"
                 type="text"
+                value={name}
+                onChange={checkName}
               />
             </div>
             <div className="right_button"></div>
@@ -84,6 +130,8 @@ const Join = () => {
                 className="newEmail"
                 placeholder="예: dalishouse@naver.com"
                 type="text"
+                value={email}
+                onChange={checkEmail}
               />
             </div>
             <div className="right_button">
@@ -97,9 +145,11 @@ const Join = () => {
             <div className="middle_input">
               <input
                 className="newHP"
+                value={number}
                 placeholder="숫자만 입력해주세요"
                 type="text"
                 maxlength="11"
+                onChange={checkNumber}
               />
             </div>
             <div className="right_button">
