@@ -9,7 +9,10 @@ div > .join > h2 {
 }
 
 div > .join > hr {
-  border-top: 2px solid #000000;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-top: 2px solid #585858;
   margin: 5px 0px 20px 0px;
 }
 
