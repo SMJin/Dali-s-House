@@ -8,6 +8,8 @@ const Join = () => {
   const goJoin = () => {
     if (id.length == 0) {
       alert("아이디를 입력해주세요.");
+    } else if (password.length == 0) {
+      alert("비밀번호를 입력해주세요.");
     } else if (name.length == 0) {
       alert("이름을 입력해주세요.");
     } else if (email.length == 0) {
@@ -16,6 +18,8 @@ const Join = () => {
       alert("휴대폰 번호를 입력해주세요.");
     } else if (`${idValid}` == 0) {
       alert("아이디를 올바르게 입력해주세요.");
+    } else if (`${passwordValid}` == 0) {
+      alert("비밀번호를 올바르게 입력해주세요.");
     } else if (`${nameValid}` == 0) {
       alert("이름을 올바르게 입력해주세요.");
     } else if (`${emailValid}` == 0) {
@@ -59,6 +63,39 @@ const Join = () => {
       setIdValid(0);
     } else {
       setIdValid(1);
+    }
+  };
+
+  const [password, setPassword] = useState("");
+  const [passwordValid, setPasswordValid] = useState(0);
+
+  const checkPassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const IsPassword = () => {
+    if (password.length < 5) {
+      alert("너무 짧습니다.");
+      setPasswordValid(0);
+    } else {
+      setPasswordValid(1);
+    }
+  };
+
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [confirmpasswordValid, setConfirmPasswordValid] = useState(0);
+
+  const checkConfirmPassword = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+
+  const IsConfirmPassword = () => {
+    if (password != confirmPassword) {
+      alert("비밀번호가 일치하지 않습니다.");
+      setConfirmPassword("");
+      setConfirmPasswordValid(0);
+    } else {
+      setConfirmPasswordValid(1);
     }
   };
 
@@ -167,6 +204,9 @@ const Join = () => {
                 placeholder="비밀번호를 입력해주세요"
                 type="password"
                 maxLength="15"
+                value={password}
+                onChange={checkPassword}
+                onBlur={IsPassword}
               />
             </div>
             <div className="right_button"></div>
@@ -179,6 +219,9 @@ const Join = () => {
                 placeholder="비밀번호를 한번 더 입력해주세요"
                 type="password"
                 maxLength="15"
+                value={confirmPassword}
+                onChange={checkConfirmPassword}
+                onBlur={IsConfirmPassword}
               />
             </div>
             <div className="right_button"></div>
