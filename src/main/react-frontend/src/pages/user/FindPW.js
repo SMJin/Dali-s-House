@@ -16,16 +16,36 @@ const FindPW = () => {
     setWay("휴대폰 번호");
     setWayID(1);
     setPostposition("를");
+    setInputValue("");
+    setInputValid(0);
   };
 
   const goFindByEmail = () => {
     setWay("이메일");
     setWayID(0);
     setPostposition("을");
+    setInputValue("");
+    setInputValid(0);
   };
 
   const goFindPW = () => {
-    alert("비밀번호 찾기");
+    if (id.length == 0) {
+      alert("아이디를 입력해주세요.");
+    } else if (inputValue.length == 0) {
+      if (`${wayID}` == 1) {
+        alert("휴대폰 번호를 입력해주세요.");
+      } else alert("이메일을 입력해주세요.");
+    } else if (`${inputValid}` == 0) {
+      if (`${wayID}` == 1) {
+        alert("휴대폰 번호를 올바르게 입력해주세요.");
+      } else {
+        alert("이메일 주소를 올바르게 입력해주세요.");
+      }
+    } else {
+      if (`${wayID}` == 1) {
+        alert("입력하신 번호로 임시 비밀번호가 발송되었습니다.");
+      } else alert("입력하신 메일 주소로 임시 비밀번호가 발송되었습니다.");
+    }
   };
 
   const goFindID = () => {
@@ -42,7 +62,16 @@ const FindPW = () => {
     }
   };
 
+  const IsID = (e) => {
+    var regExp = /^[a-z|A-Z|0-9\b]{5,10}$/;
+    if (!regExp.test(e.target.value)) {
+      alert("아이디가 너무 짧습니다. 확인 후 다시 입력해주세요.");
+      setId("");
+    }
+  };
+
   const [inputValue, setInputValue] = useState("");
+  const [inputValid, setInputValid] = useState("");
 
   const onChange = (e) => {
     const regex1 = /^[0-9\b]{0,11}$/;
@@ -59,6 +88,27 @@ const FindPW = () => {
     }
   };
 
+  const onBlur = (e) => {
+    const regex1 = /^[0-9\b]{10,11}$/;
+    var regExp2 =
+      /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+    if (`${wayID}` == 1) {
+      if (!regex1.test(e.target.value)) {
+        alert("번호가 너무 짧습니다. 확인 후 다시 입력해주세요.");
+        setInputValid(1);
+      } else {
+        setInputValid(1);
+      }
+    } else {
+      if (!regExp2.test(e.target.value)) {
+        alert("이메일 형식이 올바르지 않습니다.");
+        setInputValid(1);
+      } else {
+        setInputValid(1);
+      }
+    }
+  };
+
   return (
     <div>
       <h1>비밀번호 찾기 페이지</h1>
@@ -66,14 +116,10 @@ const FindPW = () => {
       <div className="findPW">
         <h2>비밀번호 찾기</h2>
         <div>
-          <button
-            className="byPhoneNumber"
-            onClick={goFindByPhoneNumber}
-            id={"number"}
-          >
+          <button className="byPhoneNumber" onClick={goFindByPhoneNumber}>
             휴대폰 인증
           </button>
-          <button className="byEmail" onClick={goFindByEmail} id={"email"}>
+          <button className="byEmail" onClick={goFindByEmail}>
             이메일 인증
           </button>
         </div>
@@ -85,6 +131,7 @@ const FindPW = () => {
             placeholder="아이디를 입력하세요"
             value={id}
             onChange={checkId}
+            onBlur={IsID}
           ></input>
         </div>
         <div>
@@ -95,6 +142,7 @@ const FindPW = () => {
             placeholder={`${way}${postposition} 입력하세요`}
             value={inputValue}
             onChange={onChange}
+            onBlur={onBlur}
           ></input>
         </div>
         <button className="goFindPw" onClick={goFindPW}>
