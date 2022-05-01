@@ -74,7 +74,7 @@ const Join = () => {
             <div className="middle_input">
               <input
                 className="newID"
-                placeholder="5자 이상 10자 이하의 영문 혹은 영문과 숫자를 조합"
+                placeholder="5자 이상 10자 이하의 영문 혹은 숫자를 조합해주세요"
                 type="text"
                 value={id}
                 minLength="5"
