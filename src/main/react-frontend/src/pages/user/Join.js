@@ -95,6 +95,8 @@ const Join = () => {
                 className="newPW"
                 placeholder="비밀번호를 입력해주세요"
                 type="password"
+                minLength="8"
+                maxLength="15"
               />
             </div>
             <div className="right_button"></div>
