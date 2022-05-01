@@ -1,10 +1,13 @@
 import "./css/FindPW.css";
 
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import MyFooter from "../../components/MyFooter";
 import MyHeader from "../../components/MyHeader";
 
 const FindPW = () => {
+  const navigate = useNavigate();
+
   const [way, setWay] = useState("휴대폰 번호");
   const [postposition, setPostposition] = useState("를");
 
@@ -20,6 +23,20 @@ const FindPW = () => {
 
   const goFindPW = () => {
     alert("비밀번호 찾기");
+  };
+
+  const goFindID = () => {
+    navigate(`/find/id`);
+  };
+
+  const [id, setId] = useState("");
+
+  const checkId = (e) => {
+    const regex = /^[a-z|A-Z|0-9\b]{0,10}$/;
+
+    if (regex.test(e.target.value)) {
+      setId(e.target.value);
+    }
   };
 
   return (
@@ -46,6 +63,8 @@ const FindPW = () => {
             className="findPwInput"
             type="text"
             placeholder="아이디를 입력하세요"
+            value={id}
+            onChange={checkId}
           ></input>
         </div>
         <div>
@@ -58,6 +77,9 @@ const FindPW = () => {
         </div>
         <button className="goFindPw" onClick={goFindPW}>
           확인
+        </button>
+        <button className="goFindID" onClick={goFindID}>
+          아이디 찾기
         </button>
       </div>
       <MyFooter />
