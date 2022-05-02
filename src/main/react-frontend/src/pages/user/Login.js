@@ -14,6 +14,7 @@ const Login = () => {
 
   const goLogin = () => {
     alert("로그인이 되었습니다!");
+    navigate(`/`);
   };
 
   const goFindID = () => {
@@ -25,13 +26,18 @@ const Login = () => {
   };
 
   const [id, setId] = useState("");
+  const [password, setPassword] = useState("");
 
-  const checkId = (e) => {
+  const onChangeId = (e) => {
     const regex = /^[a-z|A-Z|0-9\b]{0,10}$/;
 
     if (regex.test(e.target.value)) {
       setId(e.target.value);
     }
+  };
+
+  const onChangePW = (e) => {
+    setPassword(e.target.value);
   };
 
   return (
@@ -46,9 +52,8 @@ const Login = () => {
             placeholder="아이디를 입력하세요"
             type="text"
             value={id}
-            minLength="5"
             maxLength="10"
-            onChange={checkId}
+            onChange={onChangeId}
           />
         </div>
         <div>
@@ -56,8 +61,9 @@ const Login = () => {
             className="inputPW"
             type="password"
             placeholder="비밀번호를 입력하세요"
-            minLength="8"
             maxLength="15"
+            value={password}
+            onChange={onChangePW}
           />
         </div>
         <div>
@@ -70,9 +76,14 @@ const Login = () => {
           </button>
         </div>
         <div>
-          <button className="loginButton" onClick={goLogin}>
-            로그인
-          </button>
+          <input
+            className="loginButton"
+            type="button"
+            value="로그인"
+            id="login_button"
+            disabled={!(id.length && password.length)}
+            onClick={goLogin}
+          />
           <button className="joinButton" onClick={goJoin}>
             회원가입
           </button>

@@ -42,7 +42,7 @@ const Join = () => {
     const idCurrent = e.target.value;
     setId(idCurrent);
     if (!idRegex.test(idCurrent)) {
-      setIdMessage("5글자 이상 입력해주세요!");
+      setIdMessage("5글자 이상의 영문과 숫자만 입력해주세요!");
       setIsId(false);
     } else {
       setIdMessage("올바른 아이디 형식입니다.");
@@ -154,9 +154,7 @@ const Join = () => {
           ></input>
         </div>
         <div className="join_item_message">
-          <span
-            className={`${IsId ? "join_input_success" : "join_input_error"}`}
-          >
+          <span className={`${IsId ? "input_success" : "input_error"}`}>
             {idMessage}
           </span>
         </div>
@@ -170,11 +168,7 @@ const Join = () => {
           ></input>
         </div>
         <div className="join_item_message">
-          <span
-            className={`${
-              IsPassword ? "join_input_success" : "join_input_error"
-            }`}
-          >
+          <span className={`${IsPassword ? "input_success" : "input_error"}`}>
             {passwordMessage}
           </span>
         </div>
@@ -189,9 +183,7 @@ const Join = () => {
         </div>
         <div className="join_item_message">
           <span
-            className={`${
-              IsPasswordConfirm ? "join_input_success" : "join_input_error"
-            }`}
+            className={`${IsPasswordConfirm ? "input_success" : "input_error"}`}
           >
             {passwordConfirmMessage}
           </span>
@@ -207,9 +199,7 @@ const Join = () => {
           ></input>
         </div>
         <div className="join_item_message">
-          <span
-            className={`${IsName ? "join_input_success" : "join_input_error"}`}
-          >
+          <span className={`${IsName ? "input_success" : "input_error"}`}>
             {nameMessage}
           </span>
         </div>
@@ -223,11 +213,7 @@ const Join = () => {
           ></input>
         </div>
         <div className="join_item_message">
-          <span
-            className={`${
-              IsNumber ? "join_input_success" : "join_input_error"
-            }`}
-          >
+          <span className={`${IsNumber ? "input_success" : "input_error"}`}>
             {numberMessage}
           </span>
         </div>
@@ -241,9 +227,7 @@ const Join = () => {
           ></input>
         </div>
         <div className="join_item_message">
-          <span
-            className={`${IsEmail ? "join_input_success" : "join_input_error"}`}
-          >
+          <span className={`${IsEmail ? "input_success" : "input_error"}`}>
             {emailMessage}
           </span>
         </div>
@@ -256,7 +240,6 @@ const Join = () => {
             className="join_submitButton"
             type="button"
             value="가입하기"
-            id="join_button"
             disabled={
               !(
                 IsId &&
@@ -269,7 +252,7 @@ const Join = () => {
               )
             }
             onClick={goJoin}
-          ></input>
+          />
         </div>
       </div>
       <MyFooter />
