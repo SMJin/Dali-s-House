@@ -34,16 +34,18 @@ div > .login > h2 {
   margin-left: 135px;
 
   font-family: AppleFont;
-  font-weight: bold;
   background-color: rgb(255, 255, 255, 0);
   border: none;
+
+  cursor: pointer;
 }
 
 .findPWButton {
   font-family: AppleFont;
-  font-weight: bold;
   background-color: rgb(255, 255, 255, 0);
   border: none;
+
+  cursor: pointer;
 }
 
 .loginButton {
@@ -60,6 +62,11 @@ div > .login > h2 {
   background-color: #ff7373;
 
   cursor: pointer;
+}
+
+.loginButton:disabled {
+  background-color: #e2e2e2;
+  cursor: Default;
 }
 
 .joinButton {

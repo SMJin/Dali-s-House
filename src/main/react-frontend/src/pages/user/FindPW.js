@@ -1,7 +1,7 @@
 import "./css/FindPW.css";
 
 import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import MyFooter from "../../components/MyFooter";
 import MyHeader from "../../components/MyHeader";
 
@@ -9,43 +9,37 @@ const FindPW = () => {
   const navigate = useNavigate();
 
   const [way, setWay] = useState("휴대폰 번호");
-  const [wayID, setWayID] = useState(1);
+  const [wayID, setWayID] = useState(true);
   const [postposition, setPostposition] = useState("를");
+  const [byPhone, setByPhone] = useState(true);
+  const [byEmail, setByEmail] = useState(false);
 
   const goFindByPhoneNumber = () => {
     setWay("휴대폰 번호");
-    setWayID(1);
+    setWayID(true);
     setPostposition("를");
-    setInputValue("");
-    setInputValid(0);
+    setInput("");
+    setInputMessage("");
+    setIsInput(false);
+    setByPhone(true);
+    setByEmail(false);
   };
 
   const goFindByEmail = () => {
     setWay("이메일");
-    setWayID(0);
+    setWayID(false);
     setPostposition("을");
-    setInputValue("");
-    setInputValid(0);
+    setInput("");
+    setInputMessage("");
+    setIsInput(false);
+    setByPhone(false);
+    setByEmail(true);
   };
 
   const goFindPW = () => {
-    if (id.length == 0) {
-      alert("아이디를 입력해주세요.");
-    } else if (inputValue.length == 0) {
-      if (`${wayID}` == 1) {
-        alert("휴대폰 번호를 입력해주세요.");
-      } else alert("이메일을 입력해주세요.");
-    } else if (`${inputValid}` == 0) {
-      if (`${wayID}` == 1) {
-        alert("휴대폰 번호를 올바르게 입력해주세요.");
-      } else {
-        alert("이메일 주소를 올바르게 입력해주세요.");
-      }
-    } else {
-      if (`${wayID}` == 1) {
-        alert("입력하신 번호로 임시 비밀번호가 발송되었습니다.");
-      } else alert("입력하신 메일 주소로 임시 비밀번호가 발송되었습니다.");
-    }
+    if (wayID) {
+      alert("입력하신 번호로 임시 비밀번호가 발송되었습니다.");
+    } else alert("입력하신 메일 주소로 임시 비밀번호가 발송되었습니다.");
   };
 
   const goFindID = () => {
@@ -53,58 +47,52 @@ const FindPW = () => {
   };
 
   const [id, setId] = useState("");
+  const [input, setInput] = useState("");
 
-  const checkId = (e) => {
-    const regex = /^[a-z|A-Z|0-9\b]{0,10}$/;
+  const [idMessage, setIdMessage] = useState("");
+  const [inputMessage, setInputMessage] = useState("");
 
-    if (regex.test(e.target.value)) {
-      setId(e.target.value);
+  const [IsId, setIsId] = useState(false);
+  const [IsInput, setIsInput] = useState("");
+
+  const onChangeId = useCallback((e) => {
+    const idRegex = /^[a-z|A-Z|0-9\b]{5,10}$/;
+    const idCurrent = e.target.value;
+    setId(idCurrent);
+    if (!idRegex.test(idCurrent)) {
+      setIdMessage("5글자 이상의 영문과 숫자만 입력해주세요!");
+      setIsId(false);
+    } else {
+      setIdMessage("올바른 아이디 형식입니다.");
+      setIsId(true);
     }
-  };
+  }, []);
 
-  const IsID = (e) => {
-    var regExp = /^[a-z|A-Z|0-9\b]{5,10}$/;
-    if (!regExp.test(e.target.value)) {
-      alert("아이디가 너무 짧습니다. 확인 후 다시 입력해주세요.");
-      setId("");
-    }
-  };
+  const onChangeInput = (e) => {
+    const numberRegex = /^[0-9\b]{0,11}$/;
+    const emailRegex =
+      /([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    const inputCurrent = e.target.value;
 
-  const [inputValue, setInputValue] = useState("");
-  const [inputValid, setInputValid] = useState("");
-
-  const onChange = (e) => {
-    const regex1 = /^[0-9\b]{0,11}$/;
-    const regex2 = /^[0-9|a-z|A-Z|@|.\b]{0,30}$/;
-
-    if (`${wayID}` == 1) {
-      if (regex1.test(e.target.value)) {
-        setInputValue(e.target.value);
+    if (wayID) {
+      if (numberRegex.test(inputCurrent)) {
+        setInput(inputCurrent);
+      }
+      if (inputCurrent.length < 10) {
+        setInputMessage("너무 짧습니다.");
+        setIsInput(false);
+      } else {
+        setInputMessage("올바른 휴대폰 번호 형식입니다.");
+        setIsInput(true);
       }
     } else {
-      if (regex2.test(e.target.value)) {
-        setInputValue(e.target.value);
-      }
-    }
-  };
-
-  const onBlur = (e) => {
-    const regex1 = /^[0-9\b]{10,11}$/;
-    var regExp2 =
-      /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
-    if (`${wayID}` == 1) {
-      if (!regex1.test(e.target.value)) {
-        alert("번호가 너무 짧습니다. 확인 후 다시 입력해주세요.");
-        setInputValid(1);
+      setInput(inputCurrent);
+      if (!emailRegex.test(inputCurrent)) {
+        setInputMessage("이메일 형식이 틀렸습니다. 다시 확인해주세요!");
+        setIsInput(false);
       } else {
-        setInputValid(1);
-      }
-    } else {
-      if (!regExp2.test(e.target.value)) {
-        alert("이메일 형식이 올바르지 않습니다.");
-        setInputValid(1);
-      } else {
-        setInputValid(1);
+        setInputMessage("올바른 이메일 형식입니다.");
+        setIsInput(true);
       }
     }
   };
@@ -116,10 +104,16 @@ const FindPW = () => {
       <div className="findPW">
         <h2>비밀번호 찾기</h2>
         <div>
-          <button className="byPhoneNumber" onClick={goFindByPhoneNumber}>
+          <button
+            className={`${byPhone ? "button_on" : "button_off"}`}
+            onClick={goFindByPhoneNumber}
+          >
             휴대폰 인증
           </button>
-          <button className="byEmail" onClick={goFindByEmail}>
+          <button
+            className={`${byEmail ? "button_on" : "button_off"}`}
+            onClick={goFindByEmail}
+          >
             이메일 인증
           </button>
         </div>
@@ -130,24 +124,37 @@ const FindPW = () => {
             type="text"
             placeholder="아이디를 입력하세요"
             value={id}
-            onChange={checkId}
-            onBlur={IsID}
+            maxLength="10"
+            onChange={onChangeId}
           ></input>
+        </div>
+        <div className="find_item_message">
+          <span className={`${IsId ? "input_success" : "input_error"}`}>
+            {idMessage}
+          </span>
         </div>
         <div>
-          <div className="findPwTitle">{way}</div>
+          <div className="findIdTitle">{way}</div>
           <input
-            className="findPwInput"
+            className="findIdInput"
             type="text"
             placeholder={`${way}${postposition} 입력하세요`}
-            value={inputValue}
-            onChange={onChange}
-            onBlur={onBlur}
-          ></input>
+            value={input}
+            onChange={onChangeInput}
+          />
+          <div className="find_item_message">
+            <span className={`${IsInput ? "input_success" : "input_error"}`}>
+              {inputMessage}
+            </span>
+          </div>
         </div>
-        <button className="goFindPw" onClick={goFindPW}>
-          확인
-        </button>
+        <input
+          className="goFindPw"
+          type="button"
+          value="확인"
+          disabled={!(IsId && IsInput)}
+          onClick={goFindPW}
+        />
         <button className="goFindID" onClick={goFindID}>
           아이디 찾기
         </button>
