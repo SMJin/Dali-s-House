@@ -58,3 +58,8 @@
 
 ###### frontend :: create FindID page (Author by. YJI)
 ###### frontend :: create FindPW page (Author by. YJI)
+
+
+### 22.05.02 ~ 03
+###### frontend :: Join/Login/FindID/FindPW examine of input value's effectiveness (Author by. YJI)
+###### frontend :: Join/Login/FindID/FindPW implement dynamic functions (Author by. YJI)
