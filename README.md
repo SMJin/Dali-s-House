@@ -28,10 +28,19 @@
 
 ###### Volunteer Activity Page Component (VolunteerActivity(main), VolunteerActivityThumbnail, MyNav)
 
+
+### 22. 04. 19 ~ 22
+
+###### mypage (Aythor by. Jungyeon)
+
+###### mypage Component(MyVolunteer, MyFavoriteVolunteer, MyPageMenu, MyVolunteerList)
+
+
 ### 22. 04. 11 ~ 14
 
 ###### Main page (Author by. YJI)
 ###### Community page (Author by. YJI)
+
 
 ### 22.04.15 ~ 28
 
