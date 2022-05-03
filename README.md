@@ -72,3 +72,7 @@
 ### 22.05.02 ~ 03
 ###### frontend :: Join/Login/FindID/FindPW examine of input value's effectiveness (Author by. YJI)
 ###### frontend :: Join/Login/FindID/FindPW implement dynamic functions (Author by. YJI)
+
+### 22.05.04
+###### frontend :: adoptionThumbnail page axios communication (Author by. SMJ)
+###### backend :: adoptionThumbnail Seoul Open Api 연동 (Author by. SMJ)
