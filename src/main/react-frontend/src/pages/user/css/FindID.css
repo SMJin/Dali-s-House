@@ -1,0 +1,145 @@
+.findID {
+  width: 30%;
+  height: 500px;
+  margin-left: 35%;
+
+  text-align: center;
+}
+
+div > .findID > h2 {
+  margin: 50px 0px 40px 0px;
+}
+
+.byPhoneNumber {
+  width: 50%;
+  height: 35px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid #d5d7db;
+
+  background-color: rgb(255, 255, 255, 0);
+  cursor: pointer;
+
+  font-family: AppleFont;
+}
+
+.byEmail {
+  width: 50%;
+  height: 35px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid #d5d7db;
+
+  background-color: rgb(255, 255, 255, 0);
+  cursor: pointer;
+
+  font-family: AppleFont;
+}
+
+.findIdTitle {
+  float: left;
+  height: 35px;
+  line-height: 35px;
+  margin: 10px 0px 5px 0px;
+
+  font-family: AppleFont;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.findIdInput {
+  width: 98%;
+  height: 35px;
+  margin: 5px 0px 10px 0px;
+
+  font-family: AppleFont;
+
+  border-radius: 2px;
+  border: 1px solid #d5d7db;
+}
+
+.goFindId {
+  width: 100%;
+  height: 50px;
+
+  margin-top: 25px;
+
+  font-family: AppleFont;
+
+  font-weight: bold;
+  color: white;
+
+  border-radius: 2px;
+  border: none;
+  background-color: #ff7373;
+  cursor: pointer;
+}
+
+.goFindId:disabled {
+  background-color: #e2e2e2;
+  cursor: Default;
+}
+
+.goFindPW {
+  width: 100%;
+  height: 50px;
+
+  margin-top: 5px;
+
+  border: 1px solid #ff7373;
+  border-radius: 2.5px;
+
+  font-family: AppleFont;
+  font-weight: bold;
+  background-color: white;
+  color: #ff7373;
+
+  cursor: pointer;
+}
+
+.findid_message {
+  font-size: 0.7em;
+  text-align: left;
+}
+
+.find_item_message {
+  font-size: 0.7em;
+  height: 15px;
+  line-height: 15px;
+  text-align: left;
+}
+
+.goFindId:disabled {
+  background-color: #e2e2e2;
+  cursor: Default;
+}
+
+.button_on {
+  width: 50%;
+  height: 35px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid #ff7373;
+
+  background-color: rgb(255, 255, 255, 0);
+  cursor: pointer;
+
+  font-family: AppleFont;
+}
+
+.button_off {
+  width: 50%;
+  height: 35px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid #d5d7db;
+
+  background-color: rgb(255, 255, 255, 0);
+  cursor: pointer;
+
+  font-family: AppleFont;
+}

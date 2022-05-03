@@ -1,4 +1,4 @@
-package com.example.dalihouse.model;
+package com.example.dalihouse.dto;
 
 import lombok.Getter;
 
