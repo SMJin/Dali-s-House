@@ -1,0 +1,100 @@
+.findPW {
+  width: 30%;
+  height: 500px;
+  margin-left: 35%;
+
+  text-align: center;
+}
+
+div > .findPW > h2 {
+  margin: 50px 0px 40px 0px;
+}
+
+.findPwTitle {
+  float: left;
+  height: 35px;
+  line-height: 35px;
+  margin: 10px 0px 5px 0px;
+
+  font-family: AppleFont;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.findPwInput {
+  width: 98%;
+  height: 35px;
+  margin: 5px 0px 10px 0px;
+
+  font-family: AppleFont;
+
+  border-radius: 2px;
+  border: 1px solid #d5d7db;
+}
+
+.goFindPw {
+  width: 100%;
+  height: 50px;
+
+  margin-top: 25px;
+
+  font-family: AppleFont;
+
+  font-weight: bold;
+  color: white;
+
+  border-radius: 2px;
+  border: none;
+  background-color: #ff7373;
+  cursor: pointer;
+}
+
+.goFindID {
+  width: 100%;
+  height: 50px;
+
+  margin-top: 5px;
+
+  border: 1px solid #ff7373;
+  border-radius: 2.5px;
+
+  font-family: AppleFont;
+  font-weight: bold;
+  background-color: white;
+  color: #ff7373;
+
+  cursor: pointer;
+}
+
+.goFindPw:disabled {
+  background-color: #e2e2e2;
+  cursor: Default;
+}
+
+.button_on {
+  width: 50%;
+  height: 35px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid #ff7373;
+
+  background-color: rgb(255, 255, 255, 0);
+  cursor: pointer;
+
+  font-family: AppleFont;
+}
+
+.button_off {
+  width: 50%;
+  height: 35px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid #d5d7db;
+
+  background-color: rgb(255, 255, 255, 0);
+  cursor: pointer;
+
+  font-family: AppleFont;
+}

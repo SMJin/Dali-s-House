@@ -52,7 +52,7 @@ const AdoptionThumbnailEdit = () => {
             "sex": Boolean(`${state.ageYear}`),
             "neutering": Boolean(`${state.neutering}`),
             "identification": Boolean(`${state.identification}`),
-            "imgUrl": " "
+            "imgUrl": " ",
         };
         console.log(data);
         axios({
@@ -144,7 +144,7 @@ const AdoptionThumbnailEdit = () => {
                 />
 
                 <div>
-                    <CrudButton 
+                    <CrudButton
                         text={'제출하기'}
                         type={'submit'}
                         onClick={handleSubmit}

@@ -1,0 +1,86 @@
+.login {
+  margin-left: 25%;
+  width: 50%;
+  text-align: center;
+}
+
+div > .login > h2 {
+  margin: 50px 0px 40px 0px;
+}
+
+.inputID {
+  width: 55%;
+  height: 45px;
+  margin: 10px 0px 5px 0px;
+
+  font-family: AppleFont;
+
+  border: 1px solid #d5d7db;
+  border-radius: 2.5px;
+}
+
+.inputPW {
+  width: 55%;
+  height: 45px;
+  margin: 5px 0px 10px 0px;
+
+  font-family: AppleFont;
+
+  border: 1px solid #d5d7db;
+  border-radius: 2.5px;
+}
+
+.findIDButton {
+  margin-left: 135px;
+
+  font-family: AppleFont;
+  background-color: rgb(255, 255, 255, 0);
+  border: none;
+
+  cursor: pointer;
+}
+
+.findPWButton {
+  font-family: AppleFont;
+  background-color: rgb(255, 255, 255, 0);
+  border: none;
+
+  cursor: pointer;
+}
+
+.loginButton {
+  width: 55%;
+  height: 45px;
+  margin: 20px 0px 5px 0px;
+
+  border: none;
+  border-radius: 2.5px;
+
+  font-family: AppleFont;
+  font-weight: bold;
+  color: white;
+  background-color: #ff7373;
+
+  cursor: pointer;
+}
+
+.loginButton:disabled {
+  background-color: #e2e2e2;
+  cursor: Default;
+}
+
+.joinButton {
+  width: 55%;
+  height: 45px;
+  margin: 5px 0px 10px 0px;
+
+  border: 1px solid #ff7373;
+  border-radius: 2.5px;
+
+  font-family: AppleFont;
+  font-weight: bold;
+  background-color: white;
+  color: #ff7373;
+
+  cursor: pointer;
+}

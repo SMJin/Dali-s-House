@@ -1,0 +1,84 @@
+.join {
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+}
+
+div > .join > h2 {
+  margin: 50px 0px 40px 0px;
+}
+
+div > .join > hr {
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-top: 2px solid #585858;
+  margin: 5px 0px 25px 0px;
+}
+
+.join_item {
+  display: flex;
+}
+
+.join_item_title {
+  width: 120px;
+  height: 38px;
+  line-height: 38px;
+  margin-left: 80px;
+
+  font-weight: bold;
+  font-size: 0.97em;
+  text-align: left;
+}
+
+.join > .join_item > input {
+  width: 250px;
+  height: 35px;
+  line-height: 35px;
+
+  font-family: AppleFont;
+  border: 1px solid #d5d7db;
+  border-radius: 2px;
+}
+
+.join_item_message {
+  margin-left: 202px;
+  height: 30px;
+  line-height: 30px;
+
+  font-size: 0.8em;
+  text-align: left;
+}
+
+.join_privacyCheck {
+  margin-top: 10px;
+}
+
+.join_submitButton {
+  width: 300px;
+  height: 50px;
+
+  margin-top: 20px;
+
+  font-family: AppleFont;
+  font-weight: bold;
+  border: none;
+  border-radius: 2px;
+  background-color: #ff7373;
+  color: white;
+
+  cursor: pointer;
+}
+
+.join_submitButton:disabled {
+  background-color: #e2e2e2;
+  cursor: Default;
+}
+
+.input_success {
+  color: rgb(65, 65, 157);
+}
+
+.input_error {
+  color: red;
+}

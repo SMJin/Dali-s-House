@@ -1,0 +1,15 @@
+div > .mypage_myfavoritemyvolunteer > span {
+    display: flex;
+    margin-left: 30%;
+    margin-top: 3%;
+}
+
+/*찜한 봉사 리스트 */
+.mypage_myfavoritemyvolunteer > .mypage_myfavoritemyvolunteer_list > .MyVolunteerList_image {
+    height: 20%;
+    width: 800px;
+    border-radius: 2px;
+    margin-left: 250px;
+    margin-top: -20px;
+
+}

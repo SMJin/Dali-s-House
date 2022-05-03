@@ -21,6 +21,14 @@ const MyHeader = () => {
     navigate(`/community`);
   };
 
+  const goLogin = () => {
+    navigate(`/login`);
+  };
+
+  const goJoin = () => {
+    navigate(`/join`);
+  };
+
   return (
     <header>
       <div>
@@ -37,10 +45,10 @@ const MyHeader = () => {
         <MyButton text={"커뮤니티"} type={"head_menus"} onClick={goCommunity} />
       </div>
       <div>
-        <MyButton text={"LOGIN"} type={"head_login"} />
+        <MyButton text={"LOGIN"} type={"head_login"} onClick={goLogin} />
       </div>
       <div>
-        <MyButton text={"JOIN"} type={"head_login"} />
+        <MyButton text={"JOIN"} type={"head_login"} onClick={goJoin} />
       </div>
     </header>
   );

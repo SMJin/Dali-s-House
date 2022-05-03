@@ -22,13 +22,25 @@
 
 ### 22. 04. 11
 
-###### Main page (Author by. Ji in)
-
 ###### Volunteer Activity page (Author by. SMJ)
 
 ###### Component (MyFooter)
 
 ###### Volunteer Activity Page Component (VolunteerActivity(main), VolunteerActivityThumbnail, MyNav)
+
+
+### 22. 04. 19 ~ 22
+
+###### mypage (Aythor by. Jungyeon)
+
+###### mypage Component(MyVolunteer, MyFavoriteVolunteer, MyPageMenu, MyVolunteerList)
+
+
+### 22. 04. 11 ~ 14
+
+###### Main page (Author by. YJI)
+###### Community page (Author by. YJI)
+
 
 ### 22.04.15 ~ 28
 
@@ -36,6 +48,27 @@
 
 ###### tmp img component -> real component
 
-###### adoption edit page (Author by. SMJ)
+###### frontend :: adoption edit page (Author by. SMJ)
 
-###### volunteer edit page (Author by. SMJ)
+###### frontend :: create magazine page (Author by. YJI)
+###### frontend :: create sponsor page (Author by. YJI)
+###### frontend :: add carousel function (Author by. YJI)
+
+###### frontend :: volunteer edit page (Author by. SMJ)
+###### backend :: adoptionThumbnail axios communication (Author by. SMJ)
+###### backend :: volunteerActivityThumbnail axios communication (Author by. SMJ)
+
+### 22.04.30
+
+###### frontend :: create join page (Author by. YJI)
+###### frontend :: create login page (Author by. YJI)
+
+### 22.05.01
+
+###### frontend :: create FindID page (Author by. YJI)
+###### frontend :: create FindPW page (Author by. YJI)
+
+
+### 22.05.02 ~ 03
+###### frontend :: Join/Login/FindID/FindPW examine of input value's effectiveness (Author by. YJI)
+###### frontend :: Join/Login/FindID/FindPW implement dynamic functions (Author by. YJI)
