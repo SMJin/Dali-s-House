@@ -37,7 +37,7 @@ public class SeoulOpenApi {
         int status = httpStatus.value();
         String response = responseEntity.getBody();
         System.out.println("Response status: " + status);
-        System.out.println(response);
+//        System.out.println(response);
 
         return response;
     }
@@ -63,7 +63,7 @@ public class SeoulOpenApi {
         String result = seoulOpenApi.search(1, 1);
 
         List<AdoptionThumbnailDto> resultList = seoulOpenApi.fromJSONtoItems(result);
-        System.out.println(resultList);
+//        System.out.println(resultList);
     }
 
 }

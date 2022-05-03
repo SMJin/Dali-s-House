@@ -1,7 +1,7 @@
 import MyImage from "../../components/MyImage";
 import "./css/AdoptionThumbnail.css"
 
-const AdoptionThumbnail = ({name, species, breedOf, entryDate, sex, age, videoUrl, imgUrl}) => {
+const AdoptionThumbnail = ({name, species, breedOf, entryDate, sex, age, weight, adoptionStatus, tempProtect, videoUrl, imgUrl, details}) => {
 
     return (
       <div className="adoption_thumbnail">

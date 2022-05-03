@@ -34,8 +34,18 @@ public class AdoptionThumbnail extends Timestamped {
     @Column(nullable = false)
     private String age;
 
-    @Column(nullable = false)
+    private double weight;
+
+    private String adoptionStatus;
+
+    private String tempProtect;
+
     private String videoUrl;
+
+    private String imgUrl;
+
+    @Column(nullable = false)
+    private String details;
 
     public AdoptionThumbnail(AdoptionThumbnailDto dto) {
         this.name = dto.getName();
@@ -44,7 +54,14 @@ public class AdoptionThumbnail extends Timestamped {
         this.entryDate = dto.getEntryDate();
         this.sex = dto.getSex();
         this.age = dto.getAge();
+        this.weight = dto.getWeight();
+        this.adoptionStatus = dto.getAdoptionStatus();
+        this.tempProtect = dto.getTempProtect();
         this.videoUrl = dto.getVideoUrl();
+        String youtube = "youtu.be/";
+        String videoId = videoUrl.substring(videoUrl.lastIndexOf(youtube)+youtube.length());
+        this.imgUrl = "https://img.youtube.com/vi/"+videoId+"/mqdefault.jpg";
+        this.details = dto.getDetails();
     }
 
     public AdoptionThumbnail update(AdoptionThumbnailDto dto) {
@@ -54,7 +71,14 @@ public class AdoptionThumbnail extends Timestamped {
         this.entryDate = dto.getEntryDate();
         this.sex = dto.getSex();
         this.age = dto.getAge();
+        this.weight = dto.getWeight();
+        this.adoptionStatus = dto.getAdoptionStatus();
+        this.tempProtect = dto.getTempProtect();
         this.videoUrl = dto.getVideoUrl();
+        String youtube = "youtu.be/";
+        String videoId = videoUrl.substring(videoUrl.lastIndexOf(youtube)+youtube.length());
+        this.imgUrl = "https://img.youtube.com/vi/"+videoId+"/mqdefault.jpg";
+        this.details = dto.getDetails();
         return this;
     }
 

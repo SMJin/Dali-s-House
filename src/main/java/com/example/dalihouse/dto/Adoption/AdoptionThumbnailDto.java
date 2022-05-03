@@ -11,7 +11,12 @@ public class AdoptionThumbnailDto {
     private String entryDate;
     private String sex;
     private String age;
+    private double weight;
+    private String adoptionStatus;
+    private String tempProtect;
     private String videoUrl;
+    private String imgUrl;
+    private String details;
 
     public AdoptionThumbnailDto(JSONObject itemJson) {
         this.name = itemJson.getString("NM");
@@ -20,6 +25,14 @@ public class AdoptionThumbnailDto {
         this.entryDate = itemJson.getString("ENTRNC_DATE");
         this.sex = itemJson.getString("SEXDSTN");
         this.age = itemJson.getString("AGE");
-        this.videoUrl = itemJson.getString("INTRCN_CN");
+        this.weight = itemJson.getDouble("BDWGH");
+        this.adoptionStatus = itemJson.getString("ADP_STTUS");
+        this.tempProtect = itemJson.getString("TMPR_PRTC_STTUS");
+        this.videoUrl = itemJson.getString("INTRCN_MVP_URL");
+        String youtube = "youtu.be/";
+        String videoId = videoUrl.substring(videoUrl.lastIndexOf(youtube)+youtube.length());
+//        System.out.println(videoId);
+        this.imgUrl = "https://img.youtube.com/vi/"+videoId+"/mqdefault.jpg";
+        this.details = itemJson.getString("INTRCN_CN");
     }
 }
