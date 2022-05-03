@@ -20,46 +20,41 @@ public class AdoptionThumbnail extends Timestamped {
     private String name;
 
     @Column(nullable = false)
+    private String species;
+
+    @Column(nullable = false)
     private String breedOf;
 
     @Column(nullable = false)
-    private int ageYear;
+    private String entryDate;
 
     @Column(nullable = false)
-    private int ageMonth;
+    private String sex;
 
     @Column(nullable = false)
-    private boolean sex;
+    private String age;
 
     @Column(nullable = false)
-    private boolean neutering;
-
-    @Column(nullable = false)
-    private boolean identification;
-
-    @Column(nullable = false)
-    private String imgUrl;
+    private String videoUrl;
 
     public AdoptionThumbnail(AdoptionThumbnailDto dto) {
         this.name = dto.getName();
+        this.species = dto.getSpecies();
         this.breedOf = dto.getBreedOf();
-        this.ageYear = dto.getAgeYear();
-        this.ageMonth = dto.getAgeMonth();
-        this.sex = dto.isSex();
-        this.neutering = dto.isNeutering();
-        this.identification = dto.isIdentification();
-        this.imgUrl = dto.getImgUrl();
+        this.entryDate = dto.getEntryDate();
+        this.sex = dto.getSex();
+        this.age = dto.getAge();
+        this.videoUrl = dto.getVideoUrl();
     }
 
     public AdoptionThumbnail update(AdoptionThumbnailDto dto) {
         this.name = dto.getName();
+        this.species = dto.getSpecies();
         this.breedOf = dto.getBreedOf();
-        this.ageYear = dto.getAgeYear();
-        this.ageMonth = dto.getAgeMonth();
-        this.sex = dto.isSex();
-        this.neutering = dto.isNeutering();
-        this.identification = dto.isIdentification();
-        this.imgUrl = dto.getImgUrl();
+        this.entryDate = dto.getEntryDate();
+        this.sex = dto.getSex();
+        this.age = dto.getAge();
+        this.videoUrl = dto.getVideoUrl();
         return this;
     }
 
