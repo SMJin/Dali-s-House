@@ -1,6 +1,5 @@
 import MyHeader from "../../components/MyHeader";
 import MyFooter from "../../components/MyFooter";
-// import MyTitle from "../../components/MyTitle";
 import SearchBox from "./SearchBox";
 import MyPageMenu from "./MyPageMenu";
 import "./css/MyPage.css";

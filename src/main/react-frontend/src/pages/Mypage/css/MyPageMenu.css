@@ -7,7 +7,8 @@
     padding:0px;
     font-size:14px;
     font-weight:bold;
-    margin-top: -45px; /*위랑 여백*/ 
+    margin-top: 0px; /*위랑 여백*/ 
+    margin-left: 70px;
     }
     
     .mypage_menubar ul{ /*box 높이*/
