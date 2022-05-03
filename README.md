@@ -30,6 +30,13 @@
 
 ###### Volunteer Activity Page Component (VolunteerActivity(main), VolunteerActivityThumbnail, MyNav)
 
+### 22. 04. 19 ~ 22
+
+###### mypage (Aythor by. Jungyeon)
+
+###### mypage Component(MyVolunteer, MyFavoriteVolunteer, MyPageMenu, MyVolunteerList)
+
+
 ### 22.04.15 ~ 28
 
 ###### edit overall page layout
