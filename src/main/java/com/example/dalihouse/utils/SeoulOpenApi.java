@@ -4,11 +4,13 @@ import com.example.dalihouse.dto.Adoption.AdoptionThumbnailDto;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.http.*;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class SeoulOpenApi {
 
     public String search(int startIdx, int endIdx) {
@@ -42,7 +44,8 @@ public class SeoulOpenApi {
 
     public List<AdoptionThumbnailDto> fromJSONtoItems(String result) {
         JSONObject json = new JSONObject(result);
-        JSONArray items = json.getJSONArray("row");
+        JSONObject json2 = json.getJSONObject("TbAdpWaitAnimalView");
+        JSONArray items = json2.getJSONArray("row");
 
         List<AdoptionThumbnailDto> itemDtoList = new ArrayList<>();
 
@@ -56,7 +59,11 @@ public class SeoulOpenApi {
     }
 
     public static void main(String[] args) throws IOException {
+        SeoulOpenApi seoulOpenApi = new SeoulOpenApi();
+        String result = seoulOpenApi.search(1, 1);
 
+        List<AdoptionThumbnailDto> resultList = seoulOpenApi.fromJSONtoItems(result);
+        System.out.println(resultList);
     }
 
 }
