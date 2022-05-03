@@ -15,11 +15,11 @@ public class AdoptionThumbnailRestController {
     private final AdoptionThumbnailRepository repository;
     private final AdoptionThumbnailService service;
 
-    @PostMapping("/api/adoptionThumbnails")
-    public AdoptionThumbnail createAdoptionThumbnail(@RequestBody AdoptionThumbnailDto dto) {
-        AdoptionThumbnail adoptionThumbnail = new AdoptionThumbnail(dto);
-        return repository.save(adoptionThumbnail);
-    }
+//    @PostMapping("/api/adoptionThumbnails")
+//    public AdoptionThumbnail createAdoptionThumbnail(@RequestBody AdoptionThumbnailDto dto) {
+//        AdoptionThumbnail adoptionThumbnail = new AdoptionThumbnail(dto);
+//        return repository.save(adoptionThumbnail);
+//    }
 
     @GetMapping("/api/adoptionThumbnails")
     public List<AdoptionThumbnail> getAdoptionThumbnail() {
