@@ -20,46 +20,65 @@ public class AdoptionThumbnail extends Timestamped {
     private String name;
 
     @Column(nullable = false)
+    private String species;
+
+    @Column(nullable = false)
     private String breedOf;
 
     @Column(nullable = false)
-    private int ageYear;
+    private String entryDate;
 
     @Column(nullable = false)
-    private int ageMonth;
+    private String sex;
 
     @Column(nullable = false)
-    private boolean sex;
+    private String age;
 
-    @Column(nullable = false)
-    private boolean neutering;
+    private double weight;
 
-    @Column(nullable = false)
-    private boolean identification;
+    private String adoptionStatus;
 
-    @Column(nullable = false)
+    private String tempProtect;
+
+    private String videoUrl;
+
     private String imgUrl;
+
+    @Column(nullable = false)
+    private String details;
 
     public AdoptionThumbnail(AdoptionThumbnailDto dto) {
         this.name = dto.getName();
+        this.species = dto.getSpecies();
         this.breedOf = dto.getBreedOf();
-        this.ageYear = dto.getAgeYear();
-        this.ageMonth = dto.getAgeMonth();
-        this.sex = dto.isSex();
-        this.neutering = dto.isNeutering();
-        this.identification = dto.isIdentification();
-        this.imgUrl = dto.getImgUrl();
+        this.entryDate = dto.getEntryDate();
+        this.sex = dto.getSex();
+        this.age = dto.getAge();
+        this.weight = dto.getWeight();
+        this.adoptionStatus = dto.getAdoptionStatus();
+        this.tempProtect = dto.getTempProtect();
+        this.videoUrl = dto.getVideoUrl();
+        String youtube = "youtu.be/";
+        String videoId = videoUrl.substring(videoUrl.lastIndexOf(youtube)+youtube.length());
+        this.imgUrl = "https://img.youtube.com/vi/"+videoId+"/mqdefault.jpg";
+        this.details = dto.getDetails();
     }
 
     public AdoptionThumbnail update(AdoptionThumbnailDto dto) {
         this.name = dto.getName();
+        this.species = dto.getSpecies();
         this.breedOf = dto.getBreedOf();
-        this.ageYear = dto.getAgeYear();
-        this.ageMonth = dto.getAgeMonth();
-        this.sex = dto.isSex();
-        this.neutering = dto.isNeutering();
-        this.identification = dto.isIdentification();
-        this.imgUrl = dto.getImgUrl();
+        this.entryDate = dto.getEntryDate();
+        this.sex = dto.getSex();
+        this.age = dto.getAge();
+        this.weight = dto.getWeight();
+        this.adoptionStatus = dto.getAdoptionStatus();
+        this.tempProtect = dto.getTempProtect();
+        this.videoUrl = dto.getVideoUrl();
+        String youtube = "youtu.be/";
+        String videoId = videoUrl.substring(videoUrl.lastIndexOf(youtube)+youtube.length());
+        this.imgUrl = "https://img.youtube.com/vi/"+videoId+"/mqdefault.jpg";
+        this.details = dto.getDetails();
         return this;
     }
 

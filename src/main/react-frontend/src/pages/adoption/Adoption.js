@@ -28,7 +28,7 @@ const Adoption = () => {
     useEffect(
         () => {
             axios({
-                url: '/api/adoptionThumbnails',
+                url: '/api/adoptionThumbnails/1/10',
                 method: 'GET',
             }).then((res) => {
                 setAdoptionThumbnailList(res.data);
