@@ -1,46 +1,43 @@
 import "./css/MyPageHeader.css";
-import MyButton from "../../components/MyButton";
-import { useNavigate } from "react-router-dom";
 
 const MyPageHeader = () => {
-  const navigate = useNavigate();
 
-  const goMain = () => {
-    navigate(`/`);
-  };
+return (
+  <body>
+    <div class="mypage_header_menubar">
+    <ul>
+      <p>
+      <li><a href="/" id="current">달리네집</a></li>
+      </p>
+      <li><a href="VolunteerActivity">봉사활동</a>
+        <ul>
+          <li><a href="MyVolunteer">나의 봉사</a></li>
+          <li><a href="MyFavoriteVolunteer">찜한 봉사</a></li>
+          <li><a href="#">봉사인증서 발급</a></li>
+        </ul>
+      </li>
 
-  const goVolunteer = () => {
-    navigate(`/volunteerActivity`);
-  };
+      <li><a href="Adoption">입양연결</a>
+        <ul>
+          <li><a href="#">하위1</a></li>
+          <li><a href="#">하위2</a></li>
+          <li><a href="#">하위3</a></li>
+        </ul>
+      </li>
 
-  const goAdoption = () => {
-    navigate(`/adoption`);
-  };
+      <li><a href="Community">커뮤니티</a>
+        <ul>
+          <li><a href="#">하위1</a></li>
+          <li><a href="#">하위2</a></li>
+          <li><a href="#">하위3</a></li>
+        </ul>
+      </li>
 
-  const goCommunity = () => {
-    navigate(`/community`);
-  };
-
-  return (
-    <header>
-      <div>
-        <MyButton text={"달리네집"} type={"head_logo"} onClick={goMain} />
-      </div>
-
-      <div>
-        <MyButton text={"봉사활동"} type={"head_menus"} onClick={goVolunteer} />
-      </div>
-      <div>
-        <MyButton text={"입양연결"} type={"head_menus"} onClick={goAdoption} />
-      </div>
-      <div>
-        <MyButton text={"커뮤니티"} type={"head_menus"} onClick={goCommunity} />
-      </div>
-      <div>
-        <MyButton text={"마이페이지"} type={"head_mypage"} />
-      </div>
-    </header>
-  );
-};
+      <li><a href="Mypage">마이페이지</a></li>
+    </ul>
+  </div>
+</body>
+);
+}
 
 export default MyPageHeader;

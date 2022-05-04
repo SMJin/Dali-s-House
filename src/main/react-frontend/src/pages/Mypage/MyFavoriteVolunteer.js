@@ -1,4 +1,4 @@
-import MyHeader from "../../components/MyHeader";
+import MyPageHeader from "./MyPageHeader";
 import MyFooter from "../../components/MyFooter";
 import SearchBox from "./SearchBox";
 import "./css/MyFavoriteVolunteer.css";
@@ -10,7 +10,7 @@ const MyFavoriteVolunteer = () => {
     return (
         <div>
             <h1>봉사활동 - 찜한 봉사</h1>
-            <MyHeader />
+            <MyPageHeader />
             <div className="mypage_myfavoritemyvolunteer">
             <SearchBox className="mypage_searchbox" />
             
