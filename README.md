@@ -79,3 +79,7 @@
 
 ### 22.05.04 ~ 05
 ###### frontend :: 커뮤니티 작성한 글 커뮤니티 페이지에 노출시키기 (Author by. YJI)
+
+### 22.05.06
+###### frontend :: create community post edit page (Author by. YJI)
+
