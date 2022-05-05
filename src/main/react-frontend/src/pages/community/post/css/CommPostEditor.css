@@ -36,13 +36,27 @@ div > .Community_New > h2 {
   margin-top: 5px;
 }
 
-.closeButtonWrapper {
+.ButtonWrapper {
   align-items: end;
+  width: 120px;
+  display: flex;
+}
+
+.deleteButton {
   width: 60px;
+  height: 100%;
+
+  font-family: AppleFont;
+  font-weight: bold;
+  color: red;
+
+  border: none;
+  background-color: rgb(255, 255, 255, 0%);
+  cursor: pointer;
 }
 
 .closeButton {
-  width: 100%;
+  width: 60px;
   height: 100%;
 
   font-family: AppleFont;

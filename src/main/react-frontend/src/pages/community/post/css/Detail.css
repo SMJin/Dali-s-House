@@ -1,0 +1,165 @@
+.Community_Detail {
+  width: 650px;
+
+  margin-top: 20px;
+  margin-left: 205px;
+  text-align: center;
+}
+
+.detailPostTop {
+  display: flex;
+  justify-content: right;
+}
+
+.detailCloseButton {
+  font-family: AppleFont;
+  font-weight: bold;
+
+  border: none;
+  background-color: rgb(255, 255, 255, 0%);
+  cursor: pointer;
+}
+
+.detailPostMiddle {
+  height: 220px;
+  display: flex;
+}
+
+.detailPostTextWrapper {
+  width: 410px;
+}
+
+.detailPostUserInfo {
+  display: flex;
+
+  height: 60px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.detailUserImgWrapper {
+  width: 46px;
+  height: 46px;
+  border-radius: 100%;
+  /* margin-top: 22px;*/
+  margin-left: 14px;
+  margin-right: 15px;
+  overflow: hidden;
+}
+
+.detailUserImg {
+  width: 100%;
+}
+
+.detailUserName {
+  text-align: left;
+  height: 20px;
+  margin-bottom: 2px;
+
+  font-weight: bold;
+}
+
+.detailUserGrade {
+  display: flex;
+  height: 20px;
+  line-height: 20px;
+
+  color: #77777d;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.detailPostDate {
+  height: 20px;
+  line-height: 20px;
+  margin-left: 10px;
+
+  color: #b9bbc2;
+
+  font-weight: 500;
+}
+
+.detailPostTitle {
+  text-align: left;
+
+  height: 30px;
+  line-height: 30px;
+
+  font-weight: bold;
+
+  padding-left: 25px;
+  padding-right: 10px;
+
+  overflow: hidden;
+  margin-top: 0px;
+}
+
+.detailPostContent {
+  text-align: left;
+
+  height: 110px;
+
+  padding-left: 25px;
+  padding-right: 10px;
+
+  overflow: hidden;
+}
+
+.detailPostImageWrapper {
+  justify-content: end;
+  border-radius: 2px;
+  margin: 10px;
+
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.detailPostImage {
+  width: 100%;
+}
+
+.detailPostBottom {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  height: 40px;
+}
+
+.detailPostHeartNReplyWrapper {
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+
+  margin-left: 12px;
+}
+
+.detailPostButtonWrapper {
+  height: 30px;
+  line-height: 30px;
+  margin-right: 5px;
+}
+
+.detailPostDeleteButton {
+  font-family: AppleFont;
+  font-weight: bold;
+  color: red;
+
+  border: none;
+  background-color: rgb(255, 255, 255, 0%);
+  cursor: pointer;
+}
+
+.detailPostEditButton {
+  font-family: AppleFont;
+  font-weight: bold;
+  color: #a4a4a4;
+
+  border: none;
+  background-color: rgb(255, 255, 255, 0%);
+  cursor: pointer;
+}

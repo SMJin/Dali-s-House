@@ -19,17 +19,28 @@ const PostItem = ({
   const strDate = new Date(parseInt(date)).toLocaleDateString();
   const timeGap = Date.now() - parseInt(date);
 
+  const onError = (e) => {
+    e.target.src = `/assets/communityPost/userImage/icon.png`;
+  };
+
   return (
     <div className="PostItem">
       <div className="postItemTop">
         <div className="text_wrapper">
           <div className="userInfo">
             <div className="userImgWrapper">
-              <img
+              {/* <img
                 className="userImg"
                 src={process.env.PUBLIC_URL + `/assets/icon.png`}
+              /> */}
+              <img
+                className="userImg"
+                src={
+                  process.env.PUBLIC_URL +
+                  `/assets/communityPost/userImage/icon${id}.png`
+                }
+                onError={onError}
               />
-              {/* <img src={process.env.PUBLIC_URL + `/assets/icon${userId}.png`} /> */}
             </div>
             <div className="userInfoText">
               <div className="userName">{(userName = "userName")}</div>
@@ -63,13 +74,17 @@ const PostItem = ({
           </div>
         </div>
         <div className="image_wrapper">
-          <img
+          {/* <img
             className="postImg"
             src={process.env.PUBLIC_URL + `/assets/community_img.png`}
-          />
-          {/* <img
-            src={process.env.PUBLIC_URL + `/assets/community_img${id}.png`}
           /> */}
+          <img
+            className="postImg"
+            src={
+              process.env.PUBLIC_URL +
+              `/assets/communityPost/PostImage/community_img${id}.png`
+            }
+          />
         </div>
       </div>
       <div className="postItemBottom">
