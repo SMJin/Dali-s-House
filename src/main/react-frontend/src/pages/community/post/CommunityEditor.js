@@ -32,7 +32,7 @@ const CommPostEditor = ({ isEdit, originData }) => {
     setContent(e.target.value);
   };
 
-  const { onCreate, onEdit } = useContext(CommunityDispatchContext);
+  const { onCreate, onEdit, onRemove } = useContext(CommunityDispatchContext);
 
   const onClick = () => {
     const date = Date.now();
@@ -46,11 +46,18 @@ const CommPostEditor = ({ isEdit, originData }) => {
       if (!isEdit) {
         onCreate(date, category, title, content);
       } else {
-        onEdit(originData.Id, date, category, title, content);
+        onEdit(originData.id, date, category, title, content);
       }
     }
 
-    navigate("/community", { replace: true });
+    navigate(-1, { replace: true });
+  };
+
+  const handleRemove = () => {
+    if (window.confirm("정말 삭제하시겠습니까?")) {
+      onRemove(originData.id);
+      navigate("/community", { replace: true });
+    }
   };
 
   useEffect(() => {
@@ -78,11 +85,14 @@ const CommPostEditor = ({ isEdit, originData }) => {
               />
             ))}
           </div>
-          <div className="closeButtonWrapper">
+          <div className="ButtonWrapper">
+            <button className="deleteButton" onClick={handleRemove}>
+              삭제하기
+            </button>
             <button
               className="closeButton"
               onClick={() => {
-                navigate("/community");
+                navigate(-1, { replace: true });
               }}
             >
               × 닫기
