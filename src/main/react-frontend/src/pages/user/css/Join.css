@@ -41,6 +41,11 @@ div > .join > hr {
   border-radius: 2px;
 }
 
+.join > .join_item > input:focus {
+  outline: 1px solid #ff7373;
+  border: 1px solid #ff7373;
+}
+
 .join_item_message {
   margin-left: 202px;
   height: 30px;

@@ -1,0 +1,140 @@
+.Community_New {
+  width: 650px;
+
+  margin-left: 250px;
+  text-align: center;
+}
+
+div > .Community_New > h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  border-bottom: 2px solid black;
+}
+
+.writingTop {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.selectCategoryWrapper {
+  align-items: start;
+
+  width: 200px;
+
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 5px;
+
+  margin-left: 2px;
+  margin-top: 5px;
+}
+
+.closeButtonWrapper {
+  align-items: end;
+  width: 60px;
+}
+
+.closeButton {
+  width: 100%;
+  height: 100%;
+
+  font-family: AppleFont;
+  font-weight: bold;
+
+  border: none;
+  background-color: rgb(255, 255, 255, 0%);
+  cursor: pointer;
+}
+
+.writingMiddle {
+  height: 300px;
+  align-items: center;
+}
+
+.inputPostTitleWrapper {
+  height: 50px;
+}
+
+.inputPostTitle {
+  width: 621px;
+  height: 35px;
+
+  font-family: AppleFont;
+  border: 1.8px solid #a4a4a4;
+  border-radius: 2px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.inputPostTitle:focus {
+  outline: 1px solid #ff5252;
+  border: 1px solid #ff5252;
+  border-radius: 2px;
+}
+
+.inputPostContentWrapper {
+  height: 200px;
+}
+
+.inputPostContent {
+  margin-top: 5px;
+  width: 624px;
+  height: 165px;
+
+  font-family: AppleFont;
+
+  border: 1.8px solid #a4a4a4;
+  border-radius: 2px;
+
+  resize: none;
+  padding: 10px;
+}
+
+.inputPostContent:focus {
+  outline: 1px solid #ff5252;
+  border: 1px solid #ff5252;
+  border-radius: 2px;
+}
+
+.addImgWrapper {
+  height: 50px;
+  line-height: 50px;
+  text-align: left;
+  padding-left: 10px;
+
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.writingBottom {
+  margin-top: 10px;
+}
+
+.goWriteButton {
+  width: 100%;
+  height: 50px;
+  margin-left: 2px;
+
+  border: 1px solid #ff5252;
+  background-color: rgb(255, 255, 255, 0%);
+  color: #ff5252;
+
+  font-family: AppleFont;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.goWriteButton:disabled {
+  border: 1px solid #e2e2e2;
+  color: #e2e2e2;
+  cursor: Default;
+}

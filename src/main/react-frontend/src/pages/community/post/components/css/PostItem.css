@@ -1,0 +1,144 @@
+.PostItem {
+  height: 250px;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px #eeeff1 solid;
+  border-radius: 2px;
+
+  margin-bottom: 10px;
+}
+
+.postItemTop {
+  height: 220px;
+  display: flex;
+}
+
+.text_wrapper {
+  width: 530px;
+}
+
+.userInfo {
+  display: flex;
+
+  height: 80px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.userImgWrapper {
+  width: 46px;
+  height: 46px;
+  border-radius: 100%;
+  margin-top: 22px;
+  margin-left: 14px;
+  margin-right: 15px;
+  overflow: hidden;
+}
+
+.userImg {
+  width: 100%;
+}
+
+.userName {
+  height: 20px;
+  margin-top: 25px;
+  margin-bottom: 2px;
+
+  font-weight: bold;
+}
+
+.userGrade {
+  display: flex;
+  height: 20px;
+  line-height: 20px;
+
+  color: #77777d;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.writtenDate {
+  height: 20px;
+  line-height: 20px;
+  margin-left: 10px;
+
+  color: #b9bbc2;
+
+  font-weight: 500;
+}
+
+.postTitle {
+  height: 30px;
+  line-height: 30px;
+
+  font-weight: bold;
+
+  padding-left: 25px;
+  padding-right: 10px;
+
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.postContent {
+  height: 110px;
+
+  padding-left: 25px;
+  padding-right: 10px;
+
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image_wrapper {
+  justify-content: end;
+  border-radius: 2px;
+  margin: 10px;
+
+  width: 200px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.postImg {
+  width: 100%;
+}
+
+.postItemBottom {
+  height: 30px;
+  display: flex;
+}
+
+.heartAndReplyWrapper {
+  justify-content: start;
+  width: 85%;
+  height: 30px;
+  line-height: 30px;
+
+  margin-top: -5px;
+}
+
+.postEditButtonWrapper {
+  justify-content: end;
+  width: 15%;
+  height: 30px;
+}
+
+.postEditButton {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: right;
+  margin-top: -5px;
+
+  font-family: AppleFont;
+  font-weight: bold;
+
+  border: none;
+  color: #8e8e8e;
+  background-color: rgb(255, 255, 255, 0%);
+
+  cursor: pointer;
+}
