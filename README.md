@@ -76,3 +76,6 @@
 ### 22.05.04
 ###### frontend :: adoptionThumbnail page axios communication (Author by. SMJ)
 ###### backend :: adoptionThumbnail Seoul Open Api 연동 (Author by. SMJ)
+
+### 22.05.04 ~ 05
+###### frontend :: 커뮤니티 작성한 글 커뮤니티 페이지에 노출시키기 (Author by. YJI)
