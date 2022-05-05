@@ -17,3 +17,23 @@
   margin-left: 520px;
   margin-top: -20px;
 }
+
+.commNew {
+  cursor: pointer;
+  margin-left: 576px;
+
+  width: 60px;
+  height: 25px;
+
+  margin-top: 19px;
+
+  font-family: AppleFont;
+  font-size: 0.8em;
+  color: white;
+  border: none;
+  background-color: #353437;
+}
+
+.listUpper {
+  display: flex;
+}

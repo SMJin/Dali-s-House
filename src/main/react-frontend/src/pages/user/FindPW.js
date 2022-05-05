@@ -60,7 +60,7 @@ const FindPW = () => {
     const idCurrent = e.target.value;
     setId(idCurrent);
     if (!idRegex.test(idCurrent)) {
-      setIdMessage("5글자 이상의 영문과 숫자만 입력해주세요!");
+      setIdMessage("영문, 숫자만 가능합니다(5~10자).");
       setIsId(false);
     } else {
       setIdMessage("올바른 아이디 형식입니다.");
@@ -136,7 +136,7 @@ const FindPW = () => {
         <div>
           <div className="findIdTitle">{way}</div>
           <input
-            className="findIdInput"
+            className="findPwInput"
             type="text"
             placeholder={`${way}${postposition} 입력하세요`}
             value={input}

@@ -147,7 +147,7 @@ const Join = () => {
           <div className="join_item_title">아이디</div>
           <input
             value={id}
-            placeholder=" 10자 이하의 영문 혹은 숫자를 입력해주세요"
+            placeholder="영문, 숫자만 가능합니다(5~10자)"
             type="text"
             maxLength="10"
             onChange={onChangeId}

@@ -6,8 +6,8 @@
 .HeartnReply > .icon {
   cursor: pointer;
   width: 15px;
-  height: 16px;
-  line-height: 16px;
+  /* height: 16px;
+  line-height: 16px; */
 }
 
 .HeartnReply > .icon > .heart {

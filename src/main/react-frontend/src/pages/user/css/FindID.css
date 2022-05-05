@@ -51,13 +51,18 @@ div > .findID > h2 {
 
 .findIdInput {
   width: 98%;
-  height: 35px;
+  height: 40px;
   margin: 5px 0px 10px 0px;
 
   font-family: AppleFont;
 
   border-radius: 2px;
   border: 1px solid #d5d7db;
+}
+
+.findIdInput:focus {
+  outline: 1px solid #ff7373;
+  border: 1px solid #ff7373;
 }
 
 .goFindId {
