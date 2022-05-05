@@ -82,4 +82,6 @@
 
 ### 22.05.06
 ###### frontend :: create community post edit page (Author by. YJI)
+###### frontend :: create community post detail page (Author by. YJI)
+
 
