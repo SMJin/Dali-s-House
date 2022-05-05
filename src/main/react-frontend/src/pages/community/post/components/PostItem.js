@@ -30,7 +30,7 @@ const PostItem = ({
               {/* <img src={process.env.PUBLIC_URL + `/assets/icon${userId}.png`} /> */}
             </div>
             <div className="userInfoText">
-              <div className="userName">{(userName = "해피")}</div>
+              <div className="userName">{(userName = "userName")}</div>
               <div className="userGrade">
                 {userGrade === "bot"
                   ? "초보"
