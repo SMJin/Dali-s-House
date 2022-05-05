@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import HeartnReply from "../../component/HeartnReply";
 import "./css/PostItem.css";
@@ -16,6 +17,7 @@ const PostItem = ({
 }) => {
   const navigate = useNavigate();
   const strDate = new Date(parseInt(date)).toLocaleDateString();
+  const timeGap = Date.now() - parseInt(date);
 
   return (
     <div className="PostItem">
@@ -38,7 +40,15 @@ const PostItem = ({
                   ? "우수"
                   : "명예"}{" "}
                 달리단
-                <div className="writtenDate">{strDate}</div>
+                <div className="writtenDate">
+                  {timeGap > 86400000
+                    ? strDate
+                    : timeGap > 3600000
+                    ? Math.floor(timeGap / 3600000) + "시간 전"
+                    : timeGap > 60000
+                    ? Math.floor(timeGap / 60000) + "분 전"
+                    : "방금전"}
+                </div>
               </div>
             </div>
           </div>
