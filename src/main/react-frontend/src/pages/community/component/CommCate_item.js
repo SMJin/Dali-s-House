@@ -6,6 +6,7 @@ const CommCate_item = ({
   onClick,
   isSelected,
 }) => {
+  console.log(category_id, isSelected);
   return (
     <div
       onClick={() => onClick(category_id)}

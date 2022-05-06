@@ -26,10 +26,10 @@ div > .Community_New > h2 {
 .selectCategoryWrapper {
   align-items: start;
 
-  width: 200px;
+  width: 210px;
 
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
   gap: 5px;
 
   margin-left: 2px;
@@ -38,7 +38,6 @@ div > .Community_New > h2 {
 
 .ButtonWrapper {
   align-items: end;
-  width: 120px;
   display: flex;
 }
 
@@ -110,6 +109,8 @@ div > .Community_New > h2 {
 
   resize: none;
   padding: 10px;
+
+  white-space: pre;
 }
 
 .inputPostContent:focus {

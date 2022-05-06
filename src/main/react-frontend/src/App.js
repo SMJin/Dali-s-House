@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useEffect, useReducer, useRef } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Main from "./pages/main/Main";
@@ -18,7 +19,6 @@ import Login from "./pages/user/Login";
 import Join from "./pages/user/Join";
 import FindID from "./pages/user/FindID";
 import FindPW from "./pages/user/FindPW";
-import React, { useReducer, useRef } from "react";
 import Community_New from "./pages/community/post/New";
 import Community_Edit from "./pages/community/post/Edit";
 import Community_Detail from "./pages/community/post/Detail";
@@ -54,102 +54,26 @@ const reducer = (state, action) => {
 export const CommunityStateContext = React.createContext();
 export const CommunityDispatchContext = React.createContext();
 
-const dummyData = [
-  {
-    id: 1,
-    category: 1,
-    title: "title 1",
-    content: "content 1",
-    date: 1638969241901,
-    heart: 25,
-    reply: 25,
-  },
-  {
-    id: 2,
-    category: 2,
-    title: "title 2",
-    content: "content 2",
-    date: 1638969241902,
-    heart: 24,
-    reply: 24,
-  },
-  {
-    id: 3,
-    category: 3,
-    title: "title 3",
-    content: "content 3",
-    date: 1638969241903,
-    heart: 23,
-    reply: 23,
-  },
-  {
-    id: 4,
-    category: 4,
-    title: "title 4",
-    content: "content 4",
-    date: 1638969241904,
-    heart: 22,
-    reply: 22,
-  },
-  {
-    id: 5,
-    category: 1,
-    title: "title 5",
-    content: "content 5",
-    date: 1638969241905,
-    heart: 21,
-    reply: 21,
-  },
-  {
-    id: 6,
-    category: 2,
-    title: "title 6",
-    content: "content 6",
-    date: 1638969241906,
-    heart: 15,
-    reply: 15,
-  },
-  {
-    id: 7,
-    category: 3,
-    title: "title 7",
-    content: "content 7",
-    date: 1638969241907,
-    heart: 14,
-    reply: 14,
-  },
-  {
-    id: 8,
-    category: 4,
-    title: "title 8",
-    content: "content 8",
-    date: 1638969241908,
-    heart: 13,
-    reply: 13,
-  },
-  {
-    id: 9,
-    category: 1,
-    title: "title 9",
-    content: "content 9",
-    date: 1638969241909,
-    heart: 12,
-    reply: 12,
-  },
-  {
-    id: 10,
-    category: 2,
-    title: "title 10",
-    content: "content 10",
-    date: 1638969241910,
-    heart: 11,
-    reply: 11,
-  },
-];
-
 function App() {
-  const [data, dispatch] = useReducer(reducer, dummyData);
-  const dataId = useRef(data.length + 1);
+  const [data, dispatch] = useReducer(reducer, []);
+
+  useEffect(() => {
+    const localData = localStorage.getItem("community");
+    if (localData) {
+      const postList = JSON.parse(localData).sort(
+        (a, b) => parseInt(b.id) - parseInt(a.id)
+      );
+
+      if (postList.length >= 1) {
+        dataId.current = parseInt(postList[0].id) + 1;
+        dispatch({ type: "INIT", data: postList });
+      }
+    }
+  }, []);
+
+  const dataId = useRef(1);
+  //const dataId = useRef(data.length + 1);
+
   // CREATE
   const onCreate = (date, category, title, content) => {
     dispatch({

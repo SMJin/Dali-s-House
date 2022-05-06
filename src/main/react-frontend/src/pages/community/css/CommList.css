@@ -6,11 +6,11 @@
 .category_wrapper {
   margin-left: 0.5%;
   margin-top: 0%;
-  width: 25%;
+  width: 230px;
 
   display: grid;
-  grid-template-columns: repeat(5, auto);
-  gap: 2%;
+  grid-template-columns: repeat(6, auto);
+  gap: 3px;
 }
 
 .CommList > .MySearch {
@@ -36,4 +36,7 @@
 
 .listUpper {
   display: flex;
+
+  justify-content: space-between;
+  align-items: center;
 }

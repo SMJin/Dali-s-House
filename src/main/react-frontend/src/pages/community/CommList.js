@@ -9,16 +9,17 @@ import PostList from "./post/components/PostList";
 import { useNavigate } from "react-router-dom";
 
 const listcategory = [
-  { category_id: 5, category_descript: "전체" },
-  { category_id: 1, category_descript: "봉사질문" },
-  { category_id: 2, category_descript: "후기" },
-  { category_id: 3, category_descript: "고민" },
-  { category_id: 4, category_descript: "팀원모집" },
+  { category_id: 1, category_descript: "전체" },
+  { category_id: 2, category_descript: "봉사질문" },
+  { category_id: 3, category_descript: "후기" },
+  { category_id: 4, category_descript: "고민" },
+  { category_id: 5, category_descript: "팀원모집" },
+  { category_id: 6, category_descript: "잡담" },
 ];
 
 const CommList = ({ communityList }) => {
   const navigate = useNavigate();
-  const [category, setCategory] = useState(5);
+  const [category, setCategory] = useState(1);
 
   const handleClickCategory = (category) => {
     setCategory(category);
@@ -30,10 +31,10 @@ const CommList = ({ communityList }) => {
 
   useEffect(() => {
     if (postList.length >= 1) {
-      if (category == 5) {
+      if (category == 1) {
         setData(postList);
       } else {
-        setData(postList.filter((it) => category == it.category));
+        setData(postList.filter((it) => category - 1 == it.category));
       }
     }
   }, [postList, category]);

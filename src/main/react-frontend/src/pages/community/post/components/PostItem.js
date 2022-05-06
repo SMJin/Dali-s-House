@@ -19,10 +19,6 @@ const PostItem = ({
   const strDate = new Date(parseInt(date)).toLocaleDateString();
   const timeGap = Date.now() - parseInt(date);
 
-  const onError = (e) => {
-    e.target.src = `/assets/communityPost/userImage/icon.png`;
-  };
-
   return (
     <div className="PostItem">
       <div className="postItemTop">
@@ -39,7 +35,6 @@ const PostItem = ({
                   process.env.PUBLIC_URL +
                   `/assets/communityPost/userImage/icon${id}.png`
                 }
-                onError={onError}
               />
             </div>
             <div className="userInfoText">
@@ -63,7 +58,7 @@ const PostItem = ({
               </div>
             </div>
           </div>
-          <div className="postTitle">{title.slice(0, 20)}</div>
+          <div className="postTitle">{title.slice(0, 40)}</div>
           <div
             className="postContent"
             onClick={() => {
