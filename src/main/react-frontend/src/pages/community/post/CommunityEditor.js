@@ -12,6 +12,7 @@ const listcategory = [
   { category_id: 2, category_descript: "후기" },
   { category_id: 3, category_descript: "고민" },
   { category_id: 4, category_descript: "팀원모집" },
+  { category_id: 5, category_descript: "잡담" },
 ];
 
 const CommPostEditor = ({ isEdit, originData }) => {
@@ -86,9 +87,11 @@ const CommPostEditor = ({ isEdit, originData }) => {
             ))}
           </div>
           <div className="ButtonWrapper">
-            <button className="deleteButton" onClick={handleRemove}>
-              삭제하기
-            </button>
+            {isEdit && (
+              <button className="deleteButton" onClick={handleRemove}>
+                삭제하기
+              </button>
+            )}
             <button
               className="closeButton"
               onClick={() => {

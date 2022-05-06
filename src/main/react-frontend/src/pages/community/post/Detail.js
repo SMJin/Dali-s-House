@@ -12,8 +12,6 @@ const Community_Detail = ({ originData }) => {
   const { id } = useParams();
   const postList = useContext(CommunityStateContext);
   const [data, setData] = useState();
-  const strDate = new Date(parseInt(data.date)).toLocaleDateString();
-  const timeGap = Date.now() - parseInt(data.date);
 
   const { onRemove } = useContext(CommunityDispatchContext);
 
@@ -42,6 +40,8 @@ const Community_Detail = ({ originData }) => {
   if (!data) {
     return <div className="CommunityDetailPage">로딩중입니다...</div>;
   } else {
+    const strDate = new Date(parseInt(data.date)).toLocaleDateString();
+    const timeGap = Date.now() - parseInt(data.date);
     return (
       <div>
         <h1>커뮤니티 글 상세 페이지</h1>
