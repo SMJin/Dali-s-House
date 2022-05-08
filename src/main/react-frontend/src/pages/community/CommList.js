@@ -42,17 +42,20 @@ const CommList = ({ communityList }) => {
 
   return (
     <div className="CommList">
-      <div className="category_wrapper">
-        {listcategory.map((it) => (
-          <CommCate_item
-            key={it.category_id}
-            {...it}
-            onClick={handleClickCategory}
-            isSelected={it.category_id === category}
-          />
-        ))}
+      <div className="topWrapper">
+        <div className="category_wrapper">
+          {listcategory.map((it) => (
+            <CommCate_item
+              key={it.category_id}
+              {...it}
+              onClick={handleClickCategory}
+              isSelected={it.category_id === category}
+            />
+          ))}
+        </div>
+        <MySearch />
       </div>
-      <MySearch />
+
       <div className="listUpper">
         <h6>{data.length} 개의 게시물이 있습니다.</h6>
         <button

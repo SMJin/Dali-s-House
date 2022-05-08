@@ -110,7 +110,7 @@ div > .Community_New > h2 {
   resize: none;
   padding: 10px;
 
-  white-space: pre;
+  white-space: pre-line;
 }
 
 .inputPostContent:focus {
