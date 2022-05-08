@@ -3,16 +3,17 @@
   margin: 0px;
   padding-top: 3%;
   padding-bottom: 15px;
+
+  justify-content: space-between;
+  align-items: center;
 }
 
 .MyTitle > .titleText {
   font-weight: bold;
   font-size: 1em;
-  padding-left: 2%;
-  width: 88%;
+  padding-left: 10px;
 }
 
 .MyTitle > .totalbutton {
   padding-right: 0%;
-  width: 10%;
 }

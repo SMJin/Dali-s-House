@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import CommCate_item from "../component/CommCate_item";
 import { useContext, useEffect, useState } from "react";
 import { CommunityDispatchContext } from "../../../App";
+import axios from "axios";
 
 const listcategory = [
   { category_id: 1, category_descript: "봉사질문" },
@@ -37,7 +38,6 @@ const CommPostEditor = ({ isEdit, originData }) => {
 
   const onClick = () => {
     const date = Date.now();
-    console.log(date);
 
     if (
       window.confirm(
@@ -50,6 +50,21 @@ const CommPostEditor = ({ isEdit, originData }) => {
         onEdit(originData.id, date, category, title, content);
       }
     }
+
+    // axios({
+    //   url: "/api/communityPosts",
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   data: data,
+    // })
+    //   .then((res) => {
+    //     console.log(res);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
 
     navigate(-1, { replace: true });
   };
