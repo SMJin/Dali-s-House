@@ -28,10 +28,12 @@
 
 ###### Volunteer Activity Page Component (VolunteerActivity(main), VolunteerActivityThumbnail, MyNav)
 
-
 ### 22. 04. 19 ~ 22
 
 ###### mypage (Aythor by. Jungyeon)
+
+### 22. 05. 07
+###### AWS EC2 연결 http://54.234.14.19/ (Author by. SMJ)
 
 ###### mypage Component(MyVolunteer, MyFavoriteVolunteer, MyPageMenu, MyVolunteerList)
 
