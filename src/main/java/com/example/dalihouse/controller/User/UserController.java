@@ -42,12 +42,12 @@ public class UserController {
     }
 
     @PostMapping("/user/find/id/phone")
-    public User findIdByPhone(@RequestBody FindIdByPhoneDto dto) {
+    public String findIdByPhone(@RequestBody FindIdByPhoneDto dto) {
         return userService.findIdByPhone(dto);
     }
 
     @PostMapping("/user/find/id/email")
-    public User findIdByEmail(@RequestBody FindIdByEmailDto dto) {
+    public String findIdByEmail(@RequestBody FindIdByEmailDto dto) {
         return userService.findIdByEmail(dto);
     }
 

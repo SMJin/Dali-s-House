@@ -53,15 +53,17 @@ public class UserService {
     }
 
     @Transactional
-    public User findIdByPhone(FindIdByPhoneDto dto) {
-        return userRepository.findByUsernameAndPhone(dto.getUsername(), dto.getPhone()).orElseThrow(
+    public String findIdByPhone(FindIdByPhoneDto dto) {
+        User user = userRepository.findByUsernameAndPhone(dto.getUsername(), dto.getPhone()).orElseThrow(
                 () -> new NullPointerException("일치하는 아이디가 없습니다.")
         );
+        return user.getUserId();
     }
 
-    public User findIdByEmail(FindIdByEmailDto dto) {
-        return userRepository.findByUsernameAndEmail(dto.getUsername(), dto.getEmail()).orElseThrow(
+    public String findIdByEmail(FindIdByEmailDto dto) {
+        User user = userRepository.findByUsernameAndEmail(dto.getUsername(), dto.getEmail()).orElseThrow(
                 () -> new NullPointerException("일치하는 아이디가 없습니다.")
         );
+        return user.getUserId();
     }
 }
