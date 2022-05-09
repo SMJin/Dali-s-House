@@ -1,9 +1,6 @@
 package com.example.dalihouse.controller.User;
 
-import com.example.dalihouse.dto.User.FindIdByEmailDto;
-import com.example.dalihouse.dto.User.FindIdByPhoneDto;
-import com.example.dalihouse.dto.User.LoginRequestDto;
-import com.example.dalihouse.dto.User.SignupRequestDto;
+import com.example.dalihouse.dto.User.*;
 import com.example.dalihouse.model.User.User;
 import com.example.dalihouse.repository.User.UserRepository;
 import com.example.dalihouse.service.User.UserService;
@@ -49,6 +46,16 @@ public class UserController {
     @PostMapping("/user/find/id/email")
     public String findIdByEmail(@RequestBody FindIdByEmailDto dto) {
         return userService.findIdByEmail(dto);
+    }
+
+    @PostMapping("/user/find/password/phone")
+    public User findPasswordByPhone(@RequestBody FindPasswordByPhoneDto dto) {
+        return userService.findPasswordByPhone(dto);
+    }
+
+    @PostMapping("/user/find/password/email")
+    public User findPasswordByEmail(@RequestBody FindPasswordByEmailDto dto) {
+        return userService.findPasswordByEmail(dto);
     }
 
 }
