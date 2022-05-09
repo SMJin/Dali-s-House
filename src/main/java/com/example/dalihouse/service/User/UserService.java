@@ -1,12 +1,14 @@
 package com.example.dalihouse.service.User;
 
+import com.example.dalihouse.dto.User.FindIdByPhoneDto;
 import com.example.dalihouse.dto.User.LoginRequestDto;
-import com.example.dalihouse.dto.User.SignupRequestDto;
 import com.example.dalihouse.model.User.User;
 import com.example.dalihouse.repository.User.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.expression.ExpressionException;
 import org.springframework.stereotype.Service;
+
+import javax.transaction.Transactional;
 
 @RequiredArgsConstructor
 @Service
@@ -36,6 +38,7 @@ public class UserService {
         return true;
     }
 
+    @Transactional
     public User login(LoginRequestDto dto) {
         User user = userRepository.findByUserId(dto.getUserId()).orElseThrow(
                 () -> new NullPointerException("일치하는 아이디가 없습니다.")
@@ -48,4 +51,10 @@ public class UserService {
         return user;
     }
 
+    @Transactional
+    public User findIdByPhone(FindIdByPhoneDto dto) {
+        return userRepository.findByUsernameAndPhone(dto.getUsername(), dto.getPhone()).orElseThrow(
+                () -> new NullPointerException("일치하는 아이디가 없습니다.")
+        );
+    }
 }
