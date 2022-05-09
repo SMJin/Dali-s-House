@@ -16,8 +16,8 @@ public class UserController {
     private final UserRepository userRepository;
     private final UserService userService;
 
-    @PostMapping("/user/login")
-    public User login(@RequestBody SignupRequestDto dto) {
+    @PostMapping("/user/signup")
+    public User signup(@RequestBody SignupRequestDto dto) {
         userService.checkPermission(dto.isPermission());
         userService.checkPhone(dto.getPhone());
         userService.checkEmail(dto.getEmail());
