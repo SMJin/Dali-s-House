@@ -1,13 +1,15 @@
 package com.example.dalihouse.controller.User;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import com.example.dalihouse.model.User.User;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class UserController {
+//
+//    @PostMapping("/login")
+//    public User login() {
+//        return "index";
+//    }
 
-    @GetMapping("/user/login")
-    public String login() {
-        return "index";
-    }
 }
