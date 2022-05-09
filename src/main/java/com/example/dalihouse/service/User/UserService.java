@@ -1,5 +1,6 @@
 package com.example.dalihouse.service.User;
 
+import com.example.dalihouse.dto.User.FindIdByEmailDto;
 import com.example.dalihouse.dto.User.FindIdByPhoneDto;
 import com.example.dalihouse.dto.User.LoginRequestDto;
 import com.example.dalihouse.model.User.User;
@@ -54,6 +55,12 @@ public class UserService {
     @Transactional
     public User findIdByPhone(FindIdByPhoneDto dto) {
         return userRepository.findByUsernameAndPhone(dto.getUsername(), dto.getPhone()).orElseThrow(
+                () -> new NullPointerException("일치하는 아이디가 없습니다.")
+        );
+    }
+
+    public User findIdByEmail(FindIdByEmailDto dto) {
+        return userRepository.findByUsernameAndEmail(dto.getUsername(), dto.getEmail()).orElseThrow(
                 () -> new NullPointerException("일치하는 아이디가 없습니다.")
         );
     }

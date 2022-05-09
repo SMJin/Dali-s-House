@@ -1,5 +1,6 @@
 package com.example.dalihouse.controller.User;
 
+import com.example.dalihouse.dto.User.FindIdByEmailDto;
 import com.example.dalihouse.dto.User.FindIdByPhoneDto;
 import com.example.dalihouse.dto.User.LoginRequestDto;
 import com.example.dalihouse.dto.User.SignupRequestDto;
@@ -43,6 +44,11 @@ public class UserController {
     @PostMapping("/user/find/id/phone")
     public User findIdByPhone(@RequestBody FindIdByPhoneDto dto) {
         return userService.findIdByPhone(dto);
+    }
+
+    @PostMapping("/user/find/id/email")
+    public User findIdByEmail(@RequestBody FindIdByEmailDto dto) {
+        return userService.findIdByEmail(dto);
     }
 
 }
