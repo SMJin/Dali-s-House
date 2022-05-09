@@ -1,5 +1,6 @@
 package com.example.dalihouse.model.User;
 
+import com.example.dalihouse.dto.User.SignupRequestDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -33,5 +34,14 @@ public class User {
 
     @Column(nullable = false)
     private boolean permission;
+
+    public User(SignupRequestDto dto) {
+        this.userId = dto.getUserId();
+        this.password = dto.getPassword();
+        this.username = dto.getUsername();
+        this.phone = dto.getPhone();
+        this.email = dto.getEmail();
+        this.permission = dto.isPermission();
+    }
 
 }
