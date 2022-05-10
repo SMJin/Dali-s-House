@@ -1,16 +1,30 @@
 div > .mypage_myfavoritemyvolunteer > span {
     display: flex;
-    margin-left: 30%;
+    margin-left: 25%;
     margin-top: 3%;
+    font-size: 16px;
 
 }
 
 /*찜한 봉사 리스트 */
-.mypage_myfavoritemyvolunteer > .mypage_myfavoritemyvolunteer_list > .MyVolunteerList_image {
-    height: 20%;
-    width: 800px;
+.MyVolunteerList_image {
+    height: 900px;
+    width: 100%;
     border-radius: 2px;
-    margin-left: 250px;
-    margin-top: -220px;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    padding-top: 10px;
+   
+}
+.mypage_myfavoritemyvolunteer_list {
+    display: flex;
+    align-items: right;
+   
+}
 
+.MyFavoriteVolunteer > .mypage_myfavoritemyvolunteer > .MySearch { 
+    float: right;
+    margin-top: -11px;
+    margin-right: 130px;
 }

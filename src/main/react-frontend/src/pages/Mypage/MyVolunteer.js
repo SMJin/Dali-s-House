@@ -1,10 +1,10 @@
-import MyPageHeader from "./MyPageHeader";
+import MyHeader from "../../components/MyHeader";
 import MyFooter from "../../components/MyFooter";
-import SearchBox from "./SearchBox";
 import MyVolunteerList from "./MyVolunteerList";
 import "./css/MyVolunteer.css";
 import MyPageMenu from "./MyPageMenu";
 import MyPagination from "../../components/MyPagination";
+import MySearch from "../../components/MySearch";
 
 
 
@@ -14,11 +14,10 @@ const MyVolunteer = () => {
 return (
     <div className = "MyVolunteer">
         <h1>봉사활동 - 나의 봉사</h1><br/>
-        <MyPageHeader />
+        <MyHeader />
         <div className="mypage_myvolunteer">
-        <SearchBox className="mypage_searchbox" />
         <span><b>나의 봉사</b></span>
-
+        <MySearch />
         <MyPageMenu />
     </div>
 <div>
