@@ -4,7 +4,6 @@ import "./css/MyPage.css";
 import MyPageHeader from "./MyPageHeader";
 import MyPageMenu from "./MyPageMenu";
 
-
 const MyPage = () => {
 
 return (
@@ -21,8 +20,3 @@ return (
         </div>
 
         <MyFooter />
-    </div>
-    );
-};
-
-export default MyPage;
