@@ -7,16 +7,16 @@ import MyFooter from "../../components/MyFooter";
 import MyHeader from "../../components/MyHeader";
 
 const Login = () => {
-  useEffect(() => {
-    axios({
-      url: "/api/user/login",
-      method: "POST",
-      data: {
-        userId: "id",
-        password: "password",
-      },
-    });
-  }, []);
+  // useEffect(() => {
+  //   axios({
+  //     url: "/api/user/login",
+  //     method: "POST",
+  //     data: {
+  //       userId: "id",
+  //       password: "password",
+  //     },
+  //   });
+  // }, []);
 
   const navigate = useNavigate();
 
@@ -25,8 +25,22 @@ const Login = () => {
   };
 
   const goLogin = () => {
-    alert("로그인이 되었습니다!");
-    navigate(`/`);
+    axios({
+      url: "/user/login",
+      method: "POST",
+      data: {
+        "userId": `${id}`,
+        "password": `${password}`,
+      },
+    }).then((res) => {
+      console.log(res);
+      alert("로그인이 되었습니다!");
+      navigate(`/`);
+    }).catch((res) => {
+      console.log(res);
+      console.log(id);
+      console.log(password);
+    });
   };
 
   const goFindID = () => {

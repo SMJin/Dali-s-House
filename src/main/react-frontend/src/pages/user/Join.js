@@ -14,8 +14,6 @@ const Join = () => {
 
   const navigate = useNavigate();
   const goJoin = () => {
-    alert("가입이 완료되었습니다!");
-    navigate(`/`);
     onUserCreate(id, password, name, number, email);
     axios({
       url: "/user/signup",
@@ -28,6 +26,12 @@ const Join = () => {
         "email": `${email}`,
         "permission": `${agree}`,
       },
+    }).then((res) => {
+      console.log(res);
+      alert("가입이 완료되었습니다!");
+      navigate(`/`);
+    }).catch((res) => {
+      console.log(res);
     });
   };
 
