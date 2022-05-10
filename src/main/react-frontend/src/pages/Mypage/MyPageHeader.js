@@ -3,10 +3,12 @@ import "./css/MyPageHeader.css";
 const MyPageHeader = () => {
 
 return (
-  <header>
-    <div class="MyPageHeader">
+  <body>
+    <div class="mypage_header_menubar">
     <ul>
+      <p>
       <li><a href="/" id="current">달리네집</a></li>
+      </p>
       <li><a href="VolunteerActivity">봉사활동</a>
         <ul>
           <li><a href="MyVolunteer">나의 봉사</a></li>
@@ -34,7 +36,7 @@ return (
       <li><a href="Mypage">마이페이지</a></li>
     </ul>
   </div>
-</header>
+</body>
 );
 }
 

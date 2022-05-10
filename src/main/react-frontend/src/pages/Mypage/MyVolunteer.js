@@ -12,25 +12,25 @@ const MyVolunteer = () => {
     
 
 return (
-    <div className = "MyVolunteer">
+    <div>
         <h1>봉사활동 - 나의 봉사</h1><br/>
         <MyPageHeader />
         <div className="mypage_myvolunteer">
-        <SearchBox className="mypage_searchbox" />
-        <span><b>나의 봉사</b></span>
-
-        <MyPageMenu />
-    </div>
-<div>
-    <div className = "mypage_myvolunteer_list">
-
-        <MyVolunteerList />
-        <MyVolunteerList />
-        <MyVolunteerList />
-        <MyVolunteerList />
-        <MyVolunteerList />
-        <MyVolunteerList />
         
+
+        <SearchBox className="mypage_searchbox" />
+            <span className="mypage_myvolunteer_left"><b>나의 봉사</b></span>
+        <div className = "mypage_myvolunteer_list">
+        
+        <MyPageMenu />
+
+        <MyVolunteerList />
+        <MyVolunteerList />
+        <MyVolunteerList />
+        <MyVolunteerList />
+        <MyVolunteerList />
+        <MyVolunteerList />
+
         </div>
         </div>
         <MyPagination />

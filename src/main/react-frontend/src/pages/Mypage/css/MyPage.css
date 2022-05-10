@@ -1,16 +1,14 @@
-span {
-    display: flex;
-    margin-left: 30%;
-    margin-top: 20px;
+.MyPage {
+  background-color: white;
+  margin: 0px;
 }
-.mypage_header hr{
-margin-top: -660px;
-width: 100%;
-border-bottom: 0px;
-text-align: left;
-margin-left: 0px;
-border-color: #e2e2e2;
-border-style: solid;
 
-} 
-
+.mypage_header hr {
+  margin-top: -660px;
+  width: 100%;
+  border-bottom: 0px;
+  text-align: left;
+  margin-left: 0px;
+  border-color: #e2e2e2;
+  border-style: solid;
+}

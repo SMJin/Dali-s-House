@@ -1,110 +1,100 @@
-
-
-.menu_wrapper{
-   width: 20%;
-   display: flex;
-   align-items:left;
- }
- 
-.menu_wrapper div {
-   display : flex;
-   padding:0px;
-   width: 100%;
-   font-size:14px;
-   font-weight:bold;
+.mypage_menubar {
+  /*큰 메뉴*/
+  justify-content: left;
+  align-items: left;
+  border: none;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 0px; /*위랑 여백*/
+  margin-left: 70px;
 }
 
-.MypageMenu { /*큰 메뉴*/
-   justify-content: left;
-   align-items: left;
-   border:none;
-   border:0px;
-   margin:0px;
-   padding:0px;
-   font-size:14px;
-   font-weight:bold;
-   margin-top: 0px; /*위랑 여백*/ 
-   margin-left: 30px;
-   
+.mypage_menubar ul {
+  /*box 높이*/
+
+  justify-content: left;
+  align-items: left;
+  background: #ffffff;
+  width: 14%; /*상위 메뉴 위치 조정*/
+  height: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.MypageMenu ul{ /*box 높이*/
-
-   justify-content: left;
-   align-items: center;
-   background:#FFFFFF;
-   width: 100%; /*상위 메뉴 위치 조정*/ 
-   height:100%;
-   list-style:none;
-   margin:0;
-   padding:0;
+.mypage_menubar li {
+  float: none;
+  padding: 0px;
 }
 
-.MypageMenu li{
-
-   float:none;
-   padding:0px;
+.mypage_menubar li a {
+  background: #ffffff;
+  color: #77777d;
+  display: block;
+  font-weight: normal;
+  line-height: 45px;
+  margin: 0px;
+  padding: 0px 25px;
+  text-align: center;
+  text-decoration: none;
 }
 
-.MypageMenu li a{
-   background:#FFFFFF;
-   color:  #77777d;
-   display:block;
-   font-weight:normal;
-   line-height:35px;
-   margin:0px;
-   padding:0px 30px;
-   text-align:left;
-   text-decoration:none;
+.mypage_menubar li a:hover,
+.menubar ul li:hover a {
+  background: #ffffff;
+  color: #77777d;
+  text-decoration: none;
 }
 
-.MypageMenu li a:hover, .MypageMenu ul li:hover a{
-   background: #FFFFFF;
-   color:#77777d;
-   text-decoration:none;
+.mypage_menubar li ul {
+  background: #ffffff;
+  /* display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  width: 50px;
+  z-index: 50;
 }
 
-.MypageMenu li ul{
-   background: #FFFFFF;
- /* display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
-   height:auto;
-   padding:0px;
-   margin:0px;
-   border:0px;
-   width: 100%px;
-   z-index:50;
+.mypage_menubar li:hover ul {
+  display: block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
 }
 
-.MypageMenu li:hover ul{
-    display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+.mypage_menubar li li {
+  background: #ffffff;
+  display: block;
+  float: none;
+  margin: 0px;
+  padding: 0px;
+  width: 150px;
 }
 
-.MypageMenu li li {
-   background: #FFFFFF;
-   display:block;
-   float:none;
-   margin:0px;
-   padding:0px;
-   width:100%px;
+.mypage_menubar li:hover li a {
+  background: none;
 }
 
-.MypageMenu li:hover li a{
-   background:none;
+.mypage_menubar li ul a {
+  display: block;
+  height: 40px;
+  font-size: 12px;
+  font-style: normal;
+  margin: 0px;
+  padding: 0px 10px 0px 15px;
+  text-align: left;
 }
 
-.MypageMenu li ul a{
-   display:block;
-   height:35px;
-   font-size:12px;
-   font-style:normal;
-   margin:0px;
-   padding:0px 10px 0px 15px;
-   text-align:left;
+.mypage_menubar li ul a:hover,
+.menubar li ul li:hover a {
+  background: #77777d;
+  border: 1px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.MypageMenu li ul a:hover, .MypageMenu li ul li:hover a{
-   background:#77777d;
-   border:1px;
-   color:#ffffff;
-   text-decoration:none;
+.mypage_menubar p {
+  clear: left;
 }

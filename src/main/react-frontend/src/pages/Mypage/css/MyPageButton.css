@@ -1,0 +1,7 @@
+.MyPageButton {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    color: dimgray;
+    font-weight: bold;
+}
