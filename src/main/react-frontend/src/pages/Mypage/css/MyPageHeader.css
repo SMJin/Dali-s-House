@@ -1,123 +1,112 @@
-.mypage_header_menubar{ /*큰 메뉴*/
+@media (min-width:1292px) {
+  header{
+    width: 1282px;
+  }
+}
 
-    border:2px;
-    margin:0px;
+@media (max-width:1292px) {
+header{
+    width: 110vw;
+  }
+}
+
+header{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items:center;
+    border-bottom: 1px solid #e2e2e2;
+  }
+  
+header > div {
+    display : flex;
     padding:0px;
     width: 100%;
     font-size:14px;
     font-weight:bold;
 
+  }
+
+.MyPageHeader ul{ /*큰 메뉴*/
+  height:30px;
+  background:#FFFFFF;
+  list-style:none;
+  display: flex;
+  margin:0;
+  padding:0;
+
+
 }
-    
-
-    .mypage_header_menubar ul{ /*box 높이*/
-    background:#FFFFFF;
-    height:0px;
-    list-style:none;
-    margin:0;
-
-    }
-    
-    .mypage_header_menubar li{
-    float:left;
-    padding:50px;
-
-    }
-        
-    /*달리네집*/
-    .mypage_header_menubar ul p li a{
-        background:#FFFFFF;
-        color:  #ff7373;
-        display:block;
-        font-weight:normal;
-        line-height:50px;
-        margin:0px;
-        padding:0px 25px;
-        text-align:center;
-        text-decoration:none;
-        font-weight: bold;
-        margin-left: 70px;
-        margin-top: -350px;
-
-        }
-
-
-    /*상위 메뉴들*/
-    .mypage_header_menubar li a{
+.MyPageHeader li{
+  float:none;
+  padding: 5px;
+  }
+.MyPageHeader ul li a{
     background:#FFFFFF;
     color:  #77777d;
     display:block;
     font-weight:normal;
-    line-height:50px;
+    line-height:30px;
     margin:0px;
-    padding:0px 25px;
+    padding:0px 60px;
     text-align:center;
     text-decoration:none;
     font-weight: bold;
-    margin-top: -350px;
 
     }
+.MyPageHeader li a:hover, .MyPageHeader ul li:hover a{
+  background: #FFFFFF;
+  color:#77777d;
+  text-decoration:none;
+}
+  
+.MyPageHeader ul li a:hover, .MyPageHeader ul li:hover a{
+  background: #FFFFFF;
+  color:#ff7373;
+  text-decoration:none;
+  }
 
-
-    .mypage_header_menubar li a:hover, .mypage_header_menubar ul li:hover a{
-    background: #FFFFFF;
-    color:#77777d;
-    text-decoration:none;
-    }
-
-    .mypage_header_menubar ul p li a:hover, .mypage_header_menubar ul p li:hover a{
-        background: #FFFFFF;
-        color:#ff7373;
-        text-decoration:none;
-        }
-    
-    .mypage_header_menubar li ul{
+.MyPageHeader li ul{
     background: #FFFFFF;
     display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
-    height:auto;
-    padding:0px;
+    height:100px;
+    padding:15px;
     margin:0px;
     border:0px;
     position: absolute;
-    width: 200px;
-    z-index:200;
+    width: 150px;
+    z-index:150;
     
     }
-    
-    .mypage_header_menubar li:hover ul{
+.MyPageHeader li:hover ul{
     display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
-    }
-    
-    .mypage_header_menubar li li {
-    background: #FFFFFF;
-    display:block;
-    float:none;
-    margin:0px;
-    padding:0px;
-    width:200px;
+  }
+.MyPageHeader li li {
+  background: #FFFFFF;
+  display:block;
+  float:none;
+  margin:0px;
+  padding:0px;
+  width:170px;
+}
 
-    }
-    
-    .mypage_header_menubar li:hover li a .mypage_header_menubar li:hover li p{
-    background:none;
-    }
-    
-    .mypage_header_menubar li ul a{ /*하위메뉴*/
-    display:block;
-    height:43px;
-    font-size:12px;
-    font-style:normal;
-    margin:0px;
-    padding:0px 10px 0px 15px;
-    text-align:left;
-    }
-    
-    /*하위 메뉴 배경*/
-    .mypage_header_menubar li ul a:hover, .mypage_header_menubar li ul li:hover a{
-    background:indianred;
-    border:1px;
-    color:#ffffff;
-    text-decoration:none;
-    }
-    
- 
+.MyPageHeader li:hover li a{
+  background:none;
+  }
+
+.MyPageHeader li ul a{ /*하위메뉴*/
+  display:block;
+  height:40px;
+  font-size:12px;
+  font-style:normal;
+  margin:0px;
+  padding:5px 10px 0px 15px;
+  text-align:left;
+}
+.MyPageHeader li ul a:hover,.MyPageHeader li ul li:hover a{
+  background:indianred;
+  border:1px;
+  color:#ffffff;
+  text-decoration:none;
+  }
+

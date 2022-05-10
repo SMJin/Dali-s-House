@@ -1,9 +1,8 @@
-.MyPage {
-    background-color: white;
-    margin: 0px;
-    
+span {
+    display: flex;
+    margin-left: 30%;
+    margin-top: 20px;
 }
-
 .mypage_header hr{
 margin-top: -660px;
 width: 100%;

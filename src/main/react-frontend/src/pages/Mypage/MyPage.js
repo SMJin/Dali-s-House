@@ -6,31 +6,20 @@ import MyPageMenu from "./MyPageMenu";
 
 
 const MyPage = () => {
-    
-
 
 return (
     <div className = "Mypage">
-        <div className = "mypage_header">
         <h1>마이페이지</h1>
         <MyPageHeader />
-        <hr/>
-    </div>
+        <div className="mypage_wrapper">
+        <SearchBox className="mypage_searchbox" />
+        <span><b>마이페이지</b></span>
+        <MyPageMenu />
 
-        <div className="my_volunteer"><br />
+
         
-        <SearchBox className="searchbox" />
-        <MyPageMenu/>
-
         </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>  
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+
         <MyFooter />
     </div>
     );
