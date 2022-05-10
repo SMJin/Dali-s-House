@@ -10,7 +10,7 @@
     <ul>
       <li><a href="MyVolunteer">나의 봉사</a></li>
       <li><a href="MyFavoriteVolunteer">찜한 봉사</a></li>
-      <li><a href="#">봉사인증서 발급</a></li>
+      <li><a href="MyVolunteerCertificate">봉사인증서 발급</a></li>
       </ul>
   </li>
   <li><a href="#">후원 기부</a></li>

@@ -1,0 +1,89 @@
+.MyVolunteerCertificate{
+    width: 100%;
+    height: 800px;
+
+}
+
+.MyVolunteerCertificate >.MyVolunteerCertificate_wrapper > .CertList_wrapper {
+    padding-top: 20px;
+    width: 60%;
+    flex-grow:1;
+    justify-content: right;
+    margin-right: 140px;
+    float: right;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    height: 100%;
+}
+
+.MyVolunteerCertificate >.MyVolunteerCertificate_wrapper > .CertList_wrapper > .CertList_list_wrapper{
+    margin-bottom: 10px;
+    width: 100%;
+    border: 1px;
+    border-radius: 5px;
+    border-color: #e2e2e2;
+    border-style: solid;
+    cursor: pointer;  
+    justify-content: center;
+    height: 75px;
+
+}
+
+span {
+    width: 20%;
+    display: flex;
+    margin-left: 24.5%;
+    margin-top: 20px;
+    display: flex;
+    font-size: 16px;
+  
+}
+
+.list_lssuance_text {
+    margin-top: 5px;
+    font-size: 10px;
+    color:#ff7373;
+    font-weight: bold;
+    padding: 5px;
+    margin-left: 3px;
+
+} 
+
+.list_title_text {
+    font-weight: bold;
+    font-size: 13px;
+    padding: 2px;
+    margin-left: 5px;
+
+
+}
+
+.list_date_text {
+    color:#77777d;
+    font-size: 9px;
+    padding: 3px;
+    margin-left: 5px;
+
+
+}
+
+footer {
+    height: 100px;
+    padding-top: 590px;
+
+
+}
+
+.MyVolunteerCertificate > .MySearch { 
+    float: right;
+    margin-top: -25px;
+    margin-right: 130px;
+}
+
+.checkbox {
+    font-size: 12px;
+    align-items: center;
+    margin-left: 290px;
+    margin-top: 7px;
+} 
+

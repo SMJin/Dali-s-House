@@ -9,6 +9,10 @@ import VolunteerActivity from "./pages/volunteerActivity/VolunteerActivity";
 import MyPage from "./pages/Mypage/MyPage";
 import AdoptionEdit from "./pages/adoption/AdoptionEdit";
 import MyVolunteer from "./pages/Mypage/MyVolunteer";
+
+import CertificateDetail from "./pages/Mypage/CertificateDetail";
+import MyVolunteerCertificate from "./pages/Mypage/MyVolunteerCertificate";
+
 import MyFavoriteVolunteer from "./pages/Mypage/MyFavoriteVolunteer";
 import AdoptionThumbnailEdit from "./pages/adoption/AdoptionThumbnailEdit";
 import VolunteerActivityEdit from "./pages/volunteerActivity/VolunteerActivityEdit";
@@ -231,6 +235,8 @@ function App() {
                   />
                   <Route path="/community/magazine" element={<Magazine />} />
                   <Route path="/sponsor" element={<Sponsor />} />
+                <Route path="/certificatedetail" element={<CertificateDetail />} />
+                <Route path="/myvolunteercertificate" element={<MyVolunteerCertificate />} />
                 </Routes>
               </div>
             </BrowserRouter>

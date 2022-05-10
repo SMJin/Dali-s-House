@@ -1,6 +1,6 @@
 import MyFooter from "../../components/MyFooter";
 import "./css/MyPage.css";
-import MyPageHeader from "./MyPageHeader";
+import MyHeader from "../../components/MyHeader";
 import MyPageMenu from "./MyPageMenu";
 
 const MyPage = () => {
@@ -8,7 +8,7 @@ const MyPage = () => {
 return (
     <div className = "Mypage">
         <h1>마이페이지</h1>
-        <MyPageHeader />
+        <MyHeader />
         <div className="mypage_wrapper">
         <span><b>마이페이지</b></span>
         <MyPageMenu />

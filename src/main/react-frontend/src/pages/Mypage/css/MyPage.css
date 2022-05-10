@@ -1,16 +1,19 @@
-span {
-    display: flex;
-    margin-left: 30%;
-    margin-top: 20px;
-}
-.mypage_header hr{
-margin-top: -660px;
-width: 100%;
-border-bottom: 0px;
-text-align: left;
-margin-left: 0px;
-border-color: #e2e2e2;
-border-style: solid;
+.Mypage {
 
-} 
+}
+
+.mypage_wrapper {
+    height: 500px;
+}
+
+span {
+    width: 20%;
+    display: flex;
+    margin-left: 70%;
+    margin-top: 20px;
+    display: flex;
+    font-size: 16px;
+
+}
+
 
