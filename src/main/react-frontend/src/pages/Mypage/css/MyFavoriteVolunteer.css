@@ -2,7 +2,6 @@ div > .mypage_myfavoritemyvolunteer > span {
     display: flex;
     margin-left: 30%;
     margin-top: 3%;
-    margin-top: -630px;
 
 }
 
@@ -12,6 +11,6 @@ div > .mypage_myfavoritemyvolunteer > span {
     width: 800px;
     border-radius: 2px;
     margin-left: 250px;
-    margin-top: -20px;
+    margin-top: -220px;
 
 }

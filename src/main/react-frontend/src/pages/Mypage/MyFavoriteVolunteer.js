@@ -8,7 +8,7 @@ import MyPagination from "../../components/MyPagination";
 const MyFavoriteVolunteer = () => {
     
     return (
-        <div>
+        <div className="MyFavoriteVolunteer">
             <h1>봉사활동 - 찜한 봉사</h1>
             <MyPageHeader />
             <div className="mypage_myfavoritemyvolunteer">
