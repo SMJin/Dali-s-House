@@ -8,21 +8,6 @@ import MyHeader from "../../components/MyHeader";
 import MyFooter from "../../components/MyFooter";
 
 const Join = () => {
-  useEffect(() => {
-    axios({
-      url: "/api/user/signup",
-      method: "POST",
-      data: {
-        userId: id,
-        password: password,
-        username: name,
-        phone: number,
-        email: email,
-        permission: agree,
-      },
-    });
-  }, []);
-
   // 수정 시작
   const { onUserCreate } = useContext(UserDispatchContext);
   // 수정 끝
@@ -157,6 +142,21 @@ const Join = () => {
     } else setAgree(false);
     setCount(count + 1);
   };
+
+  useEffect(() => {
+    axios({
+      url: "/api/user/signup",
+      method: "POST",
+      data: {
+        userId: "id",
+        password: "password",
+        username: "name",
+        phone: "number",
+        email: "email",
+        permission: "agree",
+      },
+    });
+  }, []);
 
   return (
     <div>

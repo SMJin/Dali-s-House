@@ -12,26 +12,13 @@ const Login = () => {
       url: "/api/user/login",
       method: "POST",
       data: {
-        userId: id,
-        password: password,
+        userId: "id",
+        password: "password",
       },
     });
   }, []);
 
   const navigate = useNavigate();
-
-  // const confirm = JSON.parse(localStorage.getItem("user"));
-
-  // useEffect(() => {
-  //   if (confirm != null) {
-  //     for (let i = 0; i < confirm.length; i++) {
-  //       if (confirm[i].id == id && confirm[i].password == password) {
-  //         setisValid(true);
-  //         break;
-  //       } else setisValid(false);
-  //     }
-  //   }
-  // });
 
   const goJoin = () => {
     navigate(`/join`);
@@ -120,3 +107,16 @@ const Login = () => {
 };
 
 export default Login;
+
+// const confirm = JSON.parse(localStorage.getItem("user"));
+
+// useEffect(() => {
+//   if (confirm != null) {
+//     for (let i = 0; i < confirm.length; i++) {
+//       if (confirm[i].id == id && confirm[i].password == password) {
+//         setisValid(true);
+//         break;
+//       } else setisValid(false);
+//     }
+//   }
+// });
