@@ -26,11 +26,7 @@ public class UserController {
 //    }
     @PostMapping("/user/signup")
     public User signup(@RequestBody SignupRequestDto dto) {
-        userService.checkPermission(dto.isPermission());
-        userService.checkPhone(dto.getPhone());
-        userService.checkEmail(dto.getEmail());
-        User user = new User(dto);
-        return userRepository.save(user);
+        return userService.signup(dto);
     }
 
     @PostMapping("/user/login")
