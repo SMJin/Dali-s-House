@@ -3,23 +3,3 @@
   grid-template-columns: repeat(3, auto);
   gap: 5px;
 }
-
-.MagazineList > .imgbox {
-  cursor: pointer;
-  margin: 1.2%;
-}
-
-.MagazineList > .imgbox > .img {
-  width: 100%;
-  margin: 0px;
-  border-radius: 4px;
-}
-
-.MagazineList > div {
-  float: left;
-  margin: auto;
-}
-
-.MagazineList > div > h5 {
-  margin: auto;
-}
