@@ -17,6 +17,18 @@ const Join = () => {
     alert("가입이 완료되었습니다!");
     navigate(`/`);
     onUserCreate(id, password, name, number, email);
+    axios({
+      url: "/user/signup",
+      method: "POST",
+      data: {
+        "userId": `${id}`,
+        "password": `${password}`,
+        "username": `${name}`,
+        "phone": `${number}`,
+        "email": `${email}`,
+        "permission": `${agree}`,
+      },
+    });
   };
 
   const [id, setId] = useState("");
@@ -143,20 +155,20 @@ const Join = () => {
     setCount(count + 1);
   };
 
-  useEffect(() => {
-    axios({
-      url: "/api/user/signup",
-      method: "POST",
-      data: {
-        userId: "id",
-        password: "password",
-        username: "name",
-        phone: "number",
-        email: "email",
-        permission: "agree",
-      },
-    });
-  }, []);
+  // useEffect(() => {
+  //   axios({
+  //     url: "/api/user/signup",
+  //     method: "POST",
+  //     data: {
+  //       "userId": `${id}`,
+  //       "password": `${password}`,
+  //       "username": `${name}`,
+  //       "phone": `${number}`,
+  //       "email": `${email}`,
+  //       "permission": `${agree}`,
+  //     },
+  //   });
+  // }, []);
 
   return (
     <div>
