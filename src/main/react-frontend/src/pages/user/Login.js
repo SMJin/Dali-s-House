@@ -1,12 +1,37 @@
 import "./css/Login.css";
 
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MyFooter from "../../components/MyFooter";
 import MyHeader from "../../components/MyHeader";
 
 const Login = () => {
+  useEffect(() => {
+    axios({
+      url: "/api/user/login",
+      method: "POST",
+      data: {
+        userId: id,
+        password: password,
+      },
+    });
+  }, []);
+
   const navigate = useNavigate();
+
+  // const confirm = JSON.parse(localStorage.getItem("user"));
+
+  // useEffect(() => {
+  //   if (confirm != null) {
+  //     for (let i = 0; i < confirm.length; i++) {
+  //       if (confirm[i].id == id && confirm[i].password == password) {
+  //         setisValid(true);
+  //         break;
+  //       } else setisValid(false);
+  //     }
+  //   }
+  // });
 
   const goJoin = () => {
     navigate(`/join`);

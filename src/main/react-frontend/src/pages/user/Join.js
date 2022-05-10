@@ -1,15 +1,37 @@
 import "./css/Join.css";
 
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import React, { useCallback, useState } from "react";
+import { UserDispatchContext } from "../../App";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import MyHeader from "../../components/MyHeader";
 import MyFooter from "../../components/MyFooter";
 
 const Join = () => {
+  useEffect(() => {
+    axios({
+      url: "/api/user/signup",
+      method: "POST",
+      data: {
+        userId: id,
+        password: password,
+        username: name,
+        phone: number,
+        email: email,
+        permission: agree,
+      },
+    });
+  }, []);
+
+  // 수정 시작
+  const { onUserCreate } = useContext(UserDispatchContext);
+  // 수정 끝
+
   const navigate = useNavigate();
   const goJoin = () => {
     alert("가입이 완료되었습니다!");
     navigate(`/`);
+    onUserCreate(id, password, name, number, email);
   };
 
   const [id, setId] = useState("");
