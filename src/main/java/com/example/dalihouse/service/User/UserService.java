@@ -5,7 +5,7 @@ import com.example.dalihouse.model.User.User;
 import com.example.dalihouse.repository.User.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.expression.ExpressionException;
-import org.springframework.security.crypto.password.PasswordEncoder;
+//import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -16,20 +16,20 @@ public class UserService {
 
     private final int PHONE_NUMBER_LENGTH = 11;
     private final UserRepository userRepository;
-    private final PasswordEncoder passwordEncoder;
+//    private final PasswordEncoder passwordEncoder;
 
     public User signup(SignupRequestDto dto) {
         checkPermission(dto.isPermission());
         checkPhone(dto.getPhone());
         checkEmail(dto.getEmail());
-        dto.setPassword(encodingPassword(dto.getPassword()));
+//        dto.setPassword(encodingPassword(dto.getPassword()));
         User user = new User(dto);
         return userRepository.save(user);
     }
 
-    private String encodingPassword(String password) {
-        return passwordEncoder.encode(password);
-    }
+//    private String encodingPassword(String password) {
+//        return passwordEncoder.encode(password);
+//    }
 
     private boolean checkPermission(boolean permission) {
         if (!permission) {
@@ -58,8 +58,9 @@ public class UserService {
                 () -> new NullPointerException("일치하는 아이디가 없습니다.")
         );
 
-        String encodedPassword = passwordEncoder.encode(dto.getPassword());
-        if (!user.getPassword().equals(encodedPassword)) {
+//        String encodedPassword = passwordEncoder.encode(dto.getPassword());
+//        if (!user.getPassword().equals(encodedPassword)) {
+        if (!user.getPassword().equals(dto.getPassword())) {
             throw new ExpressionException("비밀번호가 틀렸습니다.");
         }
 
