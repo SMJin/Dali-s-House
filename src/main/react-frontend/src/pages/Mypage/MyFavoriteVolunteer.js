@@ -1,6 +1,5 @@
 import MyPageHeader from "./MyPageHeader";
 import MyFooter from "../../components/MyFooter";
-import SearchBox from "./SearchBox";
 import "./css/MyFavoriteVolunteer.css";
 import MyPageMenu from "./MyPageMenu";
 import MyPagination from "../../components/MyPagination";
@@ -12,7 +11,6 @@ const MyFavoriteVolunteer = () => {
             <h1>봉사활동 - 찜한 봉사</h1>
             <MyPageHeader />
             <div className="mypage_myfavoritemyvolunteer">
-            <SearchBox className="mypage_searchbox" />
             
                 <span className="mypage_myfavoritevolunteer_left"><b>찜한 봉사</b></span>
                 <MyPageMenu />

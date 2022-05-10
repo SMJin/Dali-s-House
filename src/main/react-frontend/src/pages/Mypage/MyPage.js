@@ -1,30 +1,24 @@
+import MyFooter from "../../components/MyFooter";
+import "./css/MyPage.css";
 import MyPageHeader from "./MyPageHeader";
 import MyPageMenu from "./MyPageMenu";
 
 const MyPage = () => {
-  return (
-    <div className="Mypage">
-      <div className="mypage_header">
+
+return (
+    <div className = "Mypage">
         <h1>마이페이지</h1>
         <MyPageHeader />
-        <hr />
-      </div>
-
-      <div className="my_volunteer">
-        <br />
-
-        <SearchBox className="searchbox" />
+        <div className="mypage_wrapper">
+        <span><b>마이페이지</b></span>
         <MyPageMenu />
-      </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <MyFooter />
+
+
+        
+        </div>
+
+        <MyFooter />
+
     </div>
   );
 };

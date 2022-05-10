@@ -1,6 +1,5 @@
 import MyPageHeader from "./MyPageHeader";
 import MyFooter from "../../components/MyFooter";
-import SearchBox from "./SearchBox";
 import MyVolunteerList from "./MyVolunteerList";
 import "./css/MyVolunteer.css";
 import MyPageMenu from "./MyPageMenu";
@@ -16,7 +15,6 @@ return (
         <h1>봉사활동 - 나의 봉사</h1><br/>
         <MyPageHeader />
         <div className="mypage_myvolunteer">
-        <SearchBox className="mypage_searchbox" />
         <span><b>나의 봉사</b></span>
 
         <MyPageMenu />
