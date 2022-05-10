@@ -14,6 +14,8 @@ import javax.transaction.Transactional;
 @Service
 public class UserService {
 
+    private User currentUser;
+
     private final int PHONE_NUMBER_LENGTH = 11;
     private final UserRepository userRepository;
 //    private final PasswordEncoder passwordEncoder;
@@ -64,6 +66,8 @@ public class UserService {
             throw new ExpressionException("비밀번호가 틀렸습니다.");
         }
 
+        currentUser = user;
+
         return user;
     }
 
@@ -92,5 +96,9 @@ public class UserService {
         return userRepository.findByUserIdAndEmail(dto.getUserId(), dto.getEmail()).orElseThrow(
                 () -> new NullPointerException("일치하는 아이디가 없습니다.")
         );
+    }
+
+    public User getCurrentUser() {
+        return currentUser;
     }
 }
