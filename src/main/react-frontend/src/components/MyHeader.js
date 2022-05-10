@@ -72,8 +72,8 @@ const MyHeader = () => {
       </div>
       <div>
         <MyButton
-          text={isLogin ? "MYPAGE" : "JOIN"}
-          type={"head_login"}
+          text={isLogin ? confirm.userId + " 님" : "JOIN"}
+          type={isLogin ? "head_menus" : "head_login"}
           onClick={isLogin ? goMypage : goJoin}
         />
       </div>
