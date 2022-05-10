@@ -5,6 +5,7 @@ import com.example.dalihouse.model.User.User;
 import com.example.dalihouse.repository.User.UserRepository;
 import com.example.dalihouse.service.User.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,16 +27,17 @@ public class UserController {
 //    }
     @PostMapping("/user/signup")
     public User signup(@RequestBody SignupRequestDto dto) {
-        userService.checkPermission(dto.isPermission());
-        userService.checkPhone(dto.getPhone());
-        userService.checkEmail(dto.getEmail());
-        User user = new User(dto);
-        return userRepository.save(user);
+        return userService.signup(dto);
     }
 
     @PostMapping("/user/login")
     public User login(@RequestBody LoginRequestDto dto) {
         return userService.login(dto);
+    }
+
+    @GetMapping("/user/current")
+    public User getCurrentUser() {
+        return userService.getCurrentUser();
     }
 
     @PostMapping("/user/find/id/phone")
