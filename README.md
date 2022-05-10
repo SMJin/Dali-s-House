@@ -87,10 +87,8 @@
 ###### AWS EC2 연결 http://54.234.14.19/ (Author by. SMJ)
 
 ### 22. 05. 09
-###### backend :: signUp (Author by. SMJ)
-###### backend :: signIn (Author by. SMJ)
-###### backend :: find Id (Author by. SMJ)
-###### backend :: find Password (Author by. SMJ)
+###### backend :: signUp / signIn (Author by. SMJ)
+###### backend :: find Id / Password (Author by. SMJ)
 
 ### 22. 05. 10
 ###### frontend :: edit signup/login axios error (Author by. SMJ)
