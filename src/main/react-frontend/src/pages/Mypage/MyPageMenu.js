@@ -33,3 +33,5 @@ const MyPageMenu = () => {
     </div>
   );
 };
+
+export default MyPageMenu;
