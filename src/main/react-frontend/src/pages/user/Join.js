@@ -19,20 +19,22 @@ const Join = () => {
       url: "/user/signup",
       method: "POST",
       data: {
-        "userId": `${id}`,
-        "password": `${password}`,
-        "username": `${name}`,
-        "phone": `${number}`,
-        "email": `${email}`,
-        "permission": `${agree}`,
+        userId: `${id}`,
+        password: `${password}`,
+        username: `${name}`,
+        phone: `${number}`,
+        email: `${email}`,
+        permission: `${agree}`,
       },
-    }).then((res) => {
-      console.log(res);
-      alert("가입이 완료되었습니다!");
-      navigate(`/`);
-    }).catch((res) => {
-      console.log(res);
-    });
+    })
+      .then((res) => {
+        console.log(res);
+        alert("가입이 완료되었습니다!");
+        navigate(`/`);
+      })
+      .catch((res) => {
+        console.log(res);
+      });
   };
 
   const [id, setId] = useState("");
