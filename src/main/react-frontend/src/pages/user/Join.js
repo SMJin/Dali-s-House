@@ -14,21 +14,21 @@ const Join = () => {
 
   const navigate = useNavigate();
   const goJoin = () => {
-    onUserCreate(id, password, name, number, email);
     axios({
       url: "/user/signup",
       method: "POST",
       data: {
-        userId: `${id}`,
-        password: `${password}`,
-        username: `${name}`,
-        phone: `${number}`,
-        email: `${email}`,
-        permission: `${agree}`,
+        "userId": `${id}`,
+        "password": `${password}`,
+        "username": `${name}`,
+        "phone": `${number}`,
+        "email": `${email}`,
+        "permission": `${agree}`,
       },
     })
       .then((res) => {
         console.log(res);
+        onUserCreate(id, password, name, number, email);
         alert("가입이 완료되었습니다!");
         navigate(`/`);
       })
