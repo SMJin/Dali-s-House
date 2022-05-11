@@ -1,5 +1,7 @@
+import MyFooter from "../../components/MyFooter";
 import MyPageHeader from "./MyPageHeader";
 import MyPageMenu from "./MyPageMenu";
+import SearchBox from "./SearchBox";
 
 const MyPage = () => {
   return (

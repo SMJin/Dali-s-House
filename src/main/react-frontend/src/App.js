@@ -22,6 +22,7 @@ import FindPW from "./pages/user/FindPW";
 import Community_New from "./pages/community/post/New";
 import Community_Edit from "./pages/community/post/Edit";
 import Community_Detail from "./pages/community/post/Detail";
+//import MyPageTest from "./pages/test/MyPageTest";
 
 const reducer = (state, action) => {
   let newState = [];
@@ -229,6 +230,7 @@ function App() {
                     path="/myFavoriteVolunteer"
                     element={<MyFavoriteVolunteer />}
                   />
+                  {/* <Route path="/test" element={<MyPageTest />}></Route> */}
                   <Route path="/community/magazine" element={<Magazine />} />
                   <Route path="/sponsor" element={<Sponsor />} />
                 </Routes>

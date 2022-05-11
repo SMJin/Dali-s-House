@@ -49,7 +49,7 @@ const MyHeader = () => {
   });
 
   return (
-    <header>
+    <header className="MyHeader">
       <div>
         <MyButton text={"달리네집"} type={"head_logo"} onClick={goMain} />
       </div>
