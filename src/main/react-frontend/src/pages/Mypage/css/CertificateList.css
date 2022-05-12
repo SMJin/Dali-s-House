@@ -1,0 +1,52 @@
+.CertList_wrapper {
+    padding-top: 20px;
+    width: 60%;
+    flex-grow:1;
+    justify-content: right;
+    margin-right: 140px;
+    float: right;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    height: 100%;
+}
+
+.CertList_list_wrapper{
+    margin-bottom: 10px;
+    width: 100%;
+    border: 1px;
+    border-radius: 5px;
+    border-color: #e2e2e2;
+    border-style: solid;
+    cursor: pointer;  
+    justify-content: center;
+    height: 75px;
+}
+
+.list_lssuance_text {
+    margin-top: 5px;
+    font-size: 10px;
+    color:#ff7373;
+    font-weight: bold;
+    padding: 5px;
+    margin-left: 3px;
+
+} 
+
+.list_title_text {
+    font-weight: bold;
+    font-size: 13px;
+    padding: 2px;
+    margin-left: 5px;
+    text-decoration-line : none;
+    color: inherit
+
+}
+
+.list_date_text {
+    color:#77777d;
+    font-size: 9px;
+    padding: 3px;
+    margin-left: 5px;
+
+
+}

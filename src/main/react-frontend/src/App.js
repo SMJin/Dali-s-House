@@ -235,9 +235,9 @@ function App() {
                   />
                   <Route path="/community/magazine" element={<Magazine />} />
                   <Route path="/sponsor" element={<Sponsor />} />
-                <Route path="/certificatedetail" element={<CertificateDetail />} />
+                <Route path="/certificatedetail/:id" element={<CertificateDetail />} />
                 <Route path="/myvolunteercertificate" element={<MyVolunteerCertificate />} />
-                </Routes>
+                </Routes> 
               </div>
             </BrowserRouter>
           </CommunityDispatchContext.Provider>
