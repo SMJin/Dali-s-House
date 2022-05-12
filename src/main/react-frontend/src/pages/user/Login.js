@@ -13,30 +13,42 @@ const Login = () => {
     navigate(`/join`);
   };
 
-  const goLogin = () => {
-    localStorage.setItem(
-      "login",
-      JSON.stringify({ userId: id, userPassword: password })
-    );
+  const confirm = JSON.parse(localStorage.getItem("user"));
+  const [isValid, setIsVaild] = useState(false);
 
-    axios({
-      url: "/user/login",
-      method: "POST",
-      data: {
-        userId: `${id}`,
-        password: `${password}`,
-      },
-    })
-      .then((res) => {
-        console.log(res);
-        alert("로그인이 되었습니다!");
-        navigate(`/`);
+  const goLogin = () => {
+    if (isValid) {
+      localStorage.setItem(
+        "login",
+        JSON.stringify({ userId: id, userPassword: password })
+      );
+
+      axios({
+        url: "/user/login",
+        method: "POST",
+        data: {
+          "userId": `${id}`,
+          "password": `${password}`,
+        },
       })
-      .catch((res) => {
+        .then((res) => {
+          // console.log(res);
+          alert("로그인이 되었습니다!");
+          navigate(`/`);
+        })
+        .catch((res) => {
+          console.log(res);
+        });
+
+      axios({
+        url: "/user/current",
+        method: "GET",
+      }).then((res) => {
         console.log(res);
-        console.log(id);
-        console.log(password);
       });
+    } else {
+      alert("로그인에 실패했습니다. 아이디와 비밀번호를 확인하세요!");
+    }
   };
 
   const goFindID = () => {
@@ -61,6 +73,17 @@ const Login = () => {
   const onChangePW = (e) => {
     setPassword(e.target.value);
   };
+
+  useEffect(() => {
+    if (confirm != null) {
+      for (let i = 0; i < confirm.length; i++) {
+        if (confirm[i].id == id && confirm[i].password == password) {
+          setIsVaild(true);
+          break;
+        } else setIsVaild(false);
+      }
+    }
+  });
 
   return (
     <div>
