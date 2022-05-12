@@ -1,0 +1,18 @@
+.MyVolunteerDetail {
+width: 100%;
+}
+
+.Certificate_box {
+    width: 500px;
+    height: 500px;
+    border: 1px #eeeff1 solid;
+    margin-right: 0px;
+    justify-content: right;
+    align-items: right;
+
+}
+
+.Certificate_box_wrapper {
+    justify-content: right;
+    align-items: right;
+}
