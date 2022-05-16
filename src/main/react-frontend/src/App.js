@@ -236,7 +236,7 @@ function App() {
                   <Route path="/community/magazine" element={<Magazine />} />
                   <Route path="/sponsor" element={<Sponsor />} />
                   <Route
-                    path="/certificatedetail"
+                    path="/certificatedetail/:id"
                     element={<CertificateDetail />}
                   />
                   <Route
