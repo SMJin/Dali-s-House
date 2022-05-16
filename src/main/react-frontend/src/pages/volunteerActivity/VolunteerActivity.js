@@ -5,7 +5,7 @@ import VolunteerActivityThumbnail from "./VolunteerActivityThumbnail";
 import MyFooter from "../../components/MyFooter";
 import MyPagination from "../../components/MyPagination";
 import Tag from "./Tag";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 const VolunteerActivity = () => {
@@ -22,18 +22,25 @@ const VolunteerActivity = () => {
   //   content: "사랑냥이 보호센터",
   // };
 
-    const [volunteerActivityThumbnailList, setVolunteerActivityThumbnailList] = useState([]);
+  const [volunteerActivityThumbnailList, setVolunteerActivityThumbnailList] =
+    useState([]);
 
-    useEffect(
-        () => {
-            axios({
-                url: '/api/volunteerActivity/thumbnails',
-                method: 'GET',
-            }).then((res) => {
-                setVolunteerActivityThumbnailList(res.data);
-            })
-        }, []
-    )
+  useEffect(() => {
+    if (volunteerActivityThumbnailList.length != 0) {
+      setTotalCount(volunteerActivityThumbnailList.length);
+    }
+    axios({
+      "url": "/api/volunteerActivity/thumbnails",
+      "method": "GET",
+    }).then((res) => {
+      setVolunteerActivityThumbnailList(res.data);
+    });
+  }, []);
+
+  const [totalCount, setTotalCount] = useState(1);
+  const [limit, setLimit] = useState(10);
+  const [page, setPage] = useState(1);
+  const offset = (page - 1) * limit;
 
   return (
     <div className="VolunteerActivity">
@@ -85,17 +92,24 @@ const VolunteerActivity = () => {
       <div className="VolunteerActivity_thumbnail_board">
         <div className="VolunteerActivity_thumbnail_board_nav">
           <MyNav {...regionProps} />
-          <h6>{volunteerActivityThumbnailList.length} 개의 게시물이 있습니다.</h6>
+          <h6>
+            {volunteerActivityThumbnailList.length} 개의 게시물이 있습니다.
+          </h6>
         </div>
         <div className="VolunteerActivity_thumbnail_board_content">
-          {
-              volunteerActivityThumbnailList.map((it) => (
+          {volunteerActivityThumbnailList
+            .slice(offset, offset + limit)
+            .map((it) => (
               <VolunteerActivityThumbnail key={it.id} {...it} />
-            ))
-          }
+            ))}
         </div>
       </div>
-      <MyPagination />
+      <MyPagination
+        totalCount={totalCount}
+        countPerPage={5}
+        page={page}
+        setPage={setPage}
+      />
       <MyFooter />
     </div>
   );
