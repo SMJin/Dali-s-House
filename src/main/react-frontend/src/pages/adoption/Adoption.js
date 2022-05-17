@@ -57,7 +57,12 @@ const Adoption = () => {
           ))}
         </div>
       </div>
-      <MyPagination totalCount={totalCount} page={page} setPage={setPage} />
+      <MyPagination
+        totalCount={totalCount}
+        countPerPage={limit}
+        page={page}
+        setPage={setPage}
+      />
       <MyFooter />
     </div>
   );
