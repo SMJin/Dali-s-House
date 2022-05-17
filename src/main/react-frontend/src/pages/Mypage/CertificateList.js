@@ -25,7 +25,7 @@ return (
                 <div className='list_lssuance_text'>{item.lssuance}</div>
                 <div>
                     <Link className='list_title_text' to={`/CertificateDetail/${item.id}`}>{item.title}</Link>
-                    <div className='list_date_text' >{item.date}</div>
+                    <div className='list_date_text' >{item.date}{item.time}</div>
                 </div>
             </div>
             </>

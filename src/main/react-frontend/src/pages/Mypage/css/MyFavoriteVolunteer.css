@@ -20,6 +20,7 @@ div > .mypage_myfavoritemyvolunteer > span {
 .mypage_myfavoritemyvolunteer_list {
     display: flex;
     align-items: right;
+    
    
 }
 

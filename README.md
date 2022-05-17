@@ -30,8 +30,8 @@
 
 ### 22. 04. 19 ~ 22
 
-###### mypage (Aythor by. Jungyeon)
-###### mypage Component(MyVolunteer, MyFavoriteVolunteer, MyPageMenu, MyVolunteerList)
+###### MyPage (Aythor by. CJY)
+###### MyPage Component(MyVolunteer, MyFavoriteVolunteer, MyPageMenu, MyVolunteerList) (Aythor by. CJY)
 
 
 ### 22. 04. 11 ~ 14
@@ -75,6 +75,10 @@
 ###### frontend :: adoptionThumbnail page axios communication (Author by. SMJ)
 ###### backend :: adoptionThumbnail Seoul Open Api 연동 (Author by. SMJ)
 
+### 22.05.04
+###### frontend :: edit Menubar of MyVolunteer, MyFavoriteVolunteer  (Author by. CJY)
+
+
 ### 22.05.04 ~ 05
 ###### frontend :: 커뮤니티 작성한 글 커뮤니티 페이지에 노출시키기 (Author by. YJI)
 
@@ -95,12 +99,31 @@
 ###### backend :: find Id / Password (Author by. SMJ)
 
 ### 22. 05. 10
-###### frontend :: login / join axios communication (Author by. YJI)
-###### frontend :: 로그인 시 헤더 login -> logout / join -> user id 보이도록 변경 (Author by. YJI)
 ###### frontend :: edit signup/login axios error (Author by. SMJ)
+
+### 22. 05. 11
+###### frontend :: edit Header of MyPage (Author by. CJY)
+###### frontend :: create MyPage Page Component (MyVolunteerCertificate, CertificateDetail) (Author by. CJY)
+###### frontend :: edit MyPage detail (Author by. CJY)
 
 ### 22. 05. 11
 ###### frontend :: handling login exceptions (Author by. YJI)
 
+### 22. 05. 12
+###### frontend :: add Link CertificateDetail(Author by. CJY)
+###### frontend :: create MyPage Page Component(CertificateList, DataList) (Author by. CJY)
+###### frontend :: edit MyPage Page Component(CertificateDetail, MyVolunteerCertificate) (Author by. CJY)
+
 ### 22. 05. 16 ~ 17
 ###### frontend :: edit pagination (Author by. YJI)
+
+### 22. 05. 18
+###### frontend :: edit MyPage Page Component(CertificateDetail, CertificateList, DataList) (Author by. CJY)
+
+###### frontend :: login / join axios communication (Author by. YJI)
+###### frontend :: 로그인 시 헤더 login -> logout / join -> user id 보이도록 변경 (Author by. YJI)
+###### frontend :: edit signup/login axios error (Author by. SMJ)
+
+
+
+
