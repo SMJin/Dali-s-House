@@ -3,6 +3,8 @@ package com.example.dalihouse.dto.Adoption;
 import lombok.Getter;
 import org.json.JSONObject;
 
+import java.io.File;
+
 @Getter
 public class AdoptionThumbnailDto {
     private String name;
@@ -29,10 +31,15 @@ public class AdoptionThumbnailDto {
         this.adoptionStatus = itemJson.getString("ADP_STTUS");
         this.tempProtect = itemJson.getString("TMPR_PRTC_STTUS");
         this.videoUrl = itemJson.getString("INTRCN_MVP_URL");
-        String youtube = "youtu.be/";
-        String videoId = videoUrl.substring(videoUrl.lastIndexOf(youtube)+youtube.length());
-//        System.out.println(videoId);
-        this.imgUrl = "https://img.youtube.com/vi/"+videoId+"/mqdefault.jpg";
+        if (videoUrl.equals("")) {
+            this.imgUrl = "https://my-dallihouse-bucket.s3.ap-northeast-2.amazonaws.com/icon.png";
+        } else {
+            String youtube = "youtu.be/";
+            String videoId = videoUrl.substring(videoUrl.lastIndexOf(youtube)+youtube.length());
+//            System.out.println("videoId ::::: " + videoId);
+            this.imgUrl = "https://img.youtube.com/vi/"+videoId+"/mqdefault.jpg";
+        }
+
         this.details = itemJson.getString("INTRCN_CN");
     }
 }

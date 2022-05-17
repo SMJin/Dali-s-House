@@ -86,9 +86,13 @@
 ###### frontend :: create community post edit page (Author by. YJI)
 ###### frontend :: create community post detail page (Author by. YJI)
 
-
 ### 22. 05. 07
 ###### AWS EC2 연결 http://54.234.14.19/ (Author by. SMJ)
+###### 가비아 도메인 구매 및 연결 http://dallihouse.com/ (Author by. SMJ)
+
+### 22. 05. 08
+###### frontend :: edit index.html - favicon & title (Author by. YJI)
+###### frontend :: edit detail design (Author by. YJI)
 
 ### 22. 05. 09
 ###### backend :: signUp / signIn (Author by. SMJ)
@@ -102,11 +106,24 @@
 ###### frontend :: create MyPage Page Component (MyVolunteerCertificate, CertificateDetail) (Author by. CJY)
 ###### frontend :: edit MyPage detail (Author by. CJY)
 
+### 22. 05. 11
+###### frontend :: handling login exceptions (Author by. YJI)
+
 ### 22. 05. 12
 ###### frontend :: add Link CertificateDetail(Author by. CJY)
 ###### frontend :: create MyPage Page Component(CertificateList, DataList) (Author by. CJY)
 ###### frontend :: edit MyPage Page Component(CertificateDetail, MyVolunteerCertificate) (Author by. CJY)
 
+### 22. 05. 16 ~ 17
+###### frontend :: edit pagination (Author by. YJI)
 
 ### 22. 05. 18
 ###### frontend :: edit MyPage Page Component(CertificateDetail, CertificateList, DataList) (Author by. CJY)
+
+###### frontend :: login / join axios communication (Author by. YJI)
+###### frontend :: 로그인 시 헤더 login -> logout / join -> user id 보이도록 변경 (Author by. YJI)
+###### frontend :: edit signup/login axios error (Author by. SMJ)
+
+
+
+
