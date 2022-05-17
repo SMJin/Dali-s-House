@@ -85,6 +85,7 @@
 
 ### 22. 05. 07
 ###### AWS EC2 연결 http://54.234.14.19/ (Author by. SMJ)
+###### 가비아 도메인 구매 및 연결 http://dallihouse.com/ (Author by. SMJ)
 
 ### 22. 05. 09
 ###### backend :: signUp / signIn (Author by. SMJ)
