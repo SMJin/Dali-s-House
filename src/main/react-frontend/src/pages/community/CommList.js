@@ -40,6 +40,8 @@ const CommList = ({ communityList }) => {
   }, [postList, category]);
   // 수정 끝
 
+  const confirm = JSON.parse(localStorage.getItem("login"));
+
   return (
     <div className="CommList">
       <div className="topWrapper">
@@ -55,20 +57,25 @@ const CommList = ({ communityList }) => {
         </div>
         <MySearch />
       </div>
-
       <div className="listUpper">
         <h6>{data.length} 개의 게시물이 있습니다.</h6>
         <button
           className="commNew"
           onClick={() => {
             navigate("/community/new");
+            // if (confirm != null) {
+            //   navigate("/community/new");
+            // } else {
+            //   alert("로그인 해주세요!");
+            //   navigate("/login");
+            // }
           }}
         >
           글쓰기
         </button>
       </div>
-      <PostList postList={data} />
-      <MyPagination />
+      <PostList postList={data} postLength={data.length} />
+      {/* <MyPagination totalCount={data.length} countPerPage={5} /> */}
     </div>
   );
 };
