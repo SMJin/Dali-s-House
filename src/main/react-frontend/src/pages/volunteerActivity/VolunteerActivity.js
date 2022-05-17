@@ -106,7 +106,7 @@ const VolunteerActivity = () => {
       </div>
       <MyPagination
         totalCount={totalCount}
-        countPerPage={5}
+        countPerPage={limit}
         page={page}
         setPage={setPage}
       />
