@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from "react-router-dom"; 
 import MyButton from '../../components/MyButton';
-import { getCertificateById } from './DataList';
+import { getCertificateById } from './CertDataList';
 
 import "./css/CertificateDetail.css";
 import MyHeader from "../../components/MyHeader";
