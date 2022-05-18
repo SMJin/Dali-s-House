@@ -1,11 +1,19 @@
+import React, { useState, useEffect } from "react";
+
 import "./css/Magazine.css";
 import MyFooter from "../../components/MyFooter";
 import MyHeader from "../../components/MyHeader";
-import MyPagination from "../../components/MyPagination";
 import MySearch from "../../components/MySearch";
-import MagazinePostList from "./magazinepost/MagazinePostList";
+import MagazinePostList from "./magazinepost/component/MagazinePostList";
+import { MagazineDataList } from "./magazinepost/component/MagazineDataList";
 
-const Magazine = ({ magazineList }) => {
+const Magazine = () => {
+  const [dataList, setDataList] = useState([]);
+
+  useEffect(() => {
+    setDataList(MagazineDataList);
+  }, []);
+
   return (
     <div>
       <h1>매거진 페이지</h1>
@@ -20,10 +28,9 @@ const Magazine = ({ magazineList }) => {
           <MySearch />
         </div>
         <div className="Magazine_box">
-          <h6>{magazineList.length} 개의 게시물이 있습니다.</h6>
-          <MagazinePostList />
+          <h6>{dataList.length} 개의 게시물이 있습니다.</h6>
+          <MagazinePostList dataList={dataList} />
         </div>
-        <MyPagination />
       </div>
       <MyFooter />
     </div>
