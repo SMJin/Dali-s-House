@@ -26,6 +26,7 @@ import FindPW from "./pages/user/FindPW";
 import Community_New from "./pages/community/post/New";
 import Community_Edit from "./pages/community/post/Edit";
 import Community_Detail from "./pages/community/post/Detail";
+import MyPageSponsor from "./pages/Mypage/MyPageSponsor";
 
 const reducer = (state, action) => {
   let newState = [];
@@ -242,6 +243,10 @@ function App() {
                   <Route
                     path="/myvolunteercertificate"
                     element={<MyVolunteerCertificate />}
+                  />
+                  <Route
+                    path="/mypageSponsor"
+                    element={<MyPageSponsor />}
                   />
                 </Routes>
               </div>
