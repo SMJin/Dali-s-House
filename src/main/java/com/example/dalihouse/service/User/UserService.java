@@ -57,7 +57,7 @@ public class UserService {
     @Transactional
     public User login(LoginRequestDto dto) {
         User user = userRepository.findByUserId(dto.getUserId()).orElseThrow(
-                () -> new NullPointerException("일치하는 아이디가 없습니다.")
+                () -> new NullPointerException("일치하는 아이디가 없습니다. : " + dto.getUserId())
         );
 
 //        String encodedPassword = passwordEncoder.encode(dto.getPassword());
@@ -66,7 +66,7 @@ public class UserService {
             throw new ExpressionException("비밀번호가 틀렸습니다.");
         }
 
-        currentUser = user;
+        this.currentUser = user;
 
         return user;
     }
