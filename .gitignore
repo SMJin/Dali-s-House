@@ -35,3 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### trash files ###
+src/main/resources/
