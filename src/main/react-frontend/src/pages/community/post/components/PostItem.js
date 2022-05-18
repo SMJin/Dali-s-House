@@ -25,15 +25,11 @@ const PostItem = ({
         <div className="text_wrapper">
           <div className="userInfo">
             <div className="userImgWrapper">
-              {/* <img
-                className="userImg"
-                src={process.env.PUBLIC_URL + `/assets/icon.png`}
-              /> */}
               <img
                 className="userImg"
                 src={
                   process.env.PUBLIC_URL +
-                  `/assets/communityPost/userImage/icon${id}.png`
+                  `/assets/communityPost/userImage/icon.png`
                 }
               />
             </div>
@@ -69,15 +65,11 @@ const PostItem = ({
           </div>
         </div>
         <div className="image_wrapper">
-          {/* <img
-            className="postImg"
-            src={process.env.PUBLIC_URL + `/assets/community_img.png`}
-          /> */}
           <img
             className="postImg"
             src={
               process.env.PUBLIC_URL +
-              `/assets/communityPost/PostImage/community_img${id}.png`
+              `/assets/communityPost/PostImage/community_img${(id % 2) + 1}.png`
             }
           />
         </div>
