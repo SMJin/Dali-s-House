@@ -124,6 +124,11 @@
 ###### frontend :: 로그인 시 헤더 login -> logout / join -> user id 보이도록 변경 (Author by. YJI)
 ###### frontend :: edit signup/login axios error (Author by. SMJ)
 
+### 22. 05. 18 ~ 22. 05. 19
+
+###### frontend :: create magazine detail page (Author by. YJI)
+###### frontend :: add magazine page - magazine post list (Author by. YJI)
+
 
 
 
