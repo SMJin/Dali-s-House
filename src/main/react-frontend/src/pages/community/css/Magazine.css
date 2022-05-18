@@ -1,11 +1,19 @@
 .Magazine {
   margin: 0 15%;
+  text-align: center;
 }
 
 .Magazine > .title {
   display: flex;
+
+  justify-content: space-between;
+  align-items: center;
 }
 
 .Magazine > .title > .MySearch {
-  margin: 20px 0px 0px 410px;
+  text-align: left;
+}
+
+.Magazine > .Magazine_box > h6 {
+  text-align: left;
 }

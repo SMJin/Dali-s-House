@@ -1,8 +1,9 @@
+import "./css/Magazine.css";
 import MyFooter from "../../components/MyFooter";
 import MyHeader from "../../components/MyHeader";
 import MyPagination from "../../components/MyPagination";
 import MySearch from "../../components/MySearch";
-import "./css/Magazine.css";
+import MagazinePostList from "./magazinepost/MagazinePostList";
 
 const Magazine = ({ magazineList }) => {
   return (
@@ -18,9 +19,9 @@ const Magazine = ({ magazineList }) => {
           <h3>달리 매거진</h3>
           <MySearch />
         </div>
-
         <div className="Magazine_box">
           <h6>{magazineList.length} 개의 게시물이 있습니다.</h6>
+          <MagazinePostList />
         </div>
         <MyPagination />
       </div>
