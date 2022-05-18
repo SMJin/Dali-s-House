@@ -1,0 +1,5 @@
+.SponListWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+}

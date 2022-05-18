@@ -241,6 +241,7 @@ function App() {
                     element={<MagazinePost />}
                   />
                   <Route path="/sponsor" element={<Sponsor />} />
+
                   <Route
                     path="/certificatedetail/:id"
                     element={<CertificateDetail />}
@@ -261,3 +262,7 @@ function App() {
 }
 
 export default App;
+
+/*
+<Route path="/sponsor/:id" element={<SponPost />} />
+*/

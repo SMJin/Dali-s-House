@@ -1,11 +1,17 @@
 .Sponsor {
   margin: 0 15%;
+
+  text-align: center;
 }
 
 .Sponsor > .title {
   display: flex;
+
+  justify-content: space-between;
+  align-items: center;
 }
 
-.Sponsor > .title > .MySearch {
-  margin: 20px 0px 0px 410px;
+.Sponsor_box > h6 {
+  text-align: left;
+  margin-left: 20px;
 }
