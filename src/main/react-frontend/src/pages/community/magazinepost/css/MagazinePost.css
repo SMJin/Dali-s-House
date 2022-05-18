@@ -1,0 +1,51 @@
+.MagazinePost {
+  margin: 0 15%;
+
+  text-align: center;
+}
+
+.MagazinePostHeaderWrapper {
+  margin: 0px 80px;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.MagazinePostHeaderButton {
+  font-family: AppleFont;
+  font-weight: bold;
+
+  border: none;
+  background-color: rgb(255, 255, 255, 0%);
+  cursor: pointer;
+}
+
+.MagazinePostImageWrapper {
+  overflow: hidden;
+}
+
+.MagazinePostImage {
+  width: 600px;
+  border-radius: 5px;
+
+  margin-top: 10px;
+}
+
+.MagazinePostTextWrapper {
+  margin: 30px 0px;
+}
+
+.MagazinePostSubTitleWrapper {
+  font-weight: bold;
+  font-size: 1.5em;
+
+  margin: 50px 0px;
+}
+
+.MagazinePostSubImage {
+  width: 300px;
+  margin: 0px 2.5px;
+
+  border-radius: 5px;
+}

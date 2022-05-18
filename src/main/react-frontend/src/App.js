@@ -27,6 +27,7 @@ import Community_New from "./pages/community/post/New";
 import Community_Edit from "./pages/community/post/Edit";
 import Community_Detail from "./pages/community/post/Detail";
 import MyPageSponsor from "./pages/Mypage/MyPageSponsor";
+import MagazinePost from "./pages/community/magazinepost/MagazinePost";
 
 const reducer = (state, action) => {
   let newState = [];
@@ -235,6 +236,10 @@ function App() {
                     element={<MyFavoriteVolunteer />}
                   />
                   <Route path="/community/magazine" element={<Magazine />} />
+                  <Route
+                    path="/community/magazine/:id"
+                    element={<MagazinePost />}
+                  />
                   <Route path="/sponsor" element={<Sponsor />} />
                   <Route
                     path="/certificatedetail/:id"
@@ -244,10 +249,7 @@ function App() {
                     path="/myvolunteercertificate"
                     element={<MyVolunteerCertificate />}
                   />
-                  <Route
-                    path="/mypageSponsor"
-                    element={<MyPageSponsor />}
-                  />
+                  <Route path="/mypageSponsor" element={<MyPageSponsor />} />
                 </Routes>
               </div>
             </BrowserRouter>

@@ -1,0 +1,65 @@
+.magazinePostList {
+  display: flex;
+}
+
+/*
+.MagazinePostItem {
+  margin: 10px 0px;
+  display: inline-block;
+}
+
+.MagazinePostItem > .imgbox {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 5px;
+  width: 700px;
+  height: 200px;
+}
+
+.MagazinePostItem > .imgbox > .img_main {
+  width: 100%;
+  margin-top: -130px;
+}
+
+.MagazinePostItem > .imgbox > .cate {
+  position: relative;
+  z-index: 2;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 0.73em;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  width: 80px;
+  height: 20px;
+  line-height: 20px;
+  margin-left: 70px;
+  margin-top: -355px;
+  margin-bottom: 20px;
+  padding: 1px 0px 1px 0px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.MagazinePostItem > .imgbox > .title {
+  text-align: left;
+  height: 15px;
+  padding-bottom: 5px;
+  line-height: 15px;
+  margin-left: 70px;
+
+  text-shadow: 0px 0px 5px black;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.MagazinePostItem > .imgbox > .organ {
+  text-align: left;
+  height: 15px;
+  padding-bottom: 0px;
+  line-height: 15px;
+  margin-left: 70px;
+  margin-top: 10px;
+
+  text-shadow: 0px 0px 5px black;
+  color: rgba(255, 255, 255, 0.95);
+}
+*/
