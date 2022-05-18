@@ -1,10 +1,16 @@
+import { useNavigate } from "react-router-dom";
 import "./css/Magazine_item.css";
 
 const Magazine_item = ({ id, category, title, title1, title2 }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="Magazine_item">
       <div
         className="imgbox"
+        onClick={() => {
+          navigate(`/community/magazine/${id}`);
+        }}
         // style={{ backgroundImage: `url(/assets/magazine/magazine_${id}}.png)` }}
       >
         <img
