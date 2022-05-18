@@ -13,7 +13,7 @@
       <li><a href="MyVolunteerCertificate">봉사인증서 발급</a></li>
       </ul>
   </li>
-  <li><a href="#">후원 기부</a></li>
+  <li><a href="MyPageSponsor">후원 기부</a></li>
   <li><a href="#">설정</a></li>
   <li><a href="#">공지사항</a></li>
   </ul>

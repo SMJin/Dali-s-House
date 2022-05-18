@@ -11,7 +11,7 @@ const PostList = ({ postList, postLength }) => {
   const offset = (page - 1) * limit;
 
   useEffect(() => {
-    if ((postLength = !0)) {
+    if (postLength != 0) {
       setTotalCount(postLength);
     }
   });
@@ -38,7 +38,7 @@ const PostList = ({ postList, postLength }) => {
         ))}
       <MyPagination
         totalCount={totalCount}
-        countPerPage={5}
+        countPerPage={limit}
         page={page}
         setPage={setPage}
       />

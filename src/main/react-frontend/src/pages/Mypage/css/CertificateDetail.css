@@ -1,18 +1,228 @@
-.MyVolunteerDetail {
+.CertificateDetail {
 width: 100%;
 }
 
-.Certificate_box {
-    width: 500px;
-    height: 500px;
+.CertificateDetail > .Certificate_box {
+    width: 700px;
+    height: 900px;
     border: 1px #eeeff1 solid;
-    margin-right: 0px;
-    justify-content: right;
-    align-items: right;
+    border-radius: 7px;
+    position: absolute; 
+    left: 32%; 
+    margin-top: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 }
 
 .Certificate_box_wrapper {
-    justify-content: right;
-    align-items: right;
+    height: 120vh;
+
 }
+.CertificateDetail > .Certificate_box > .Certificate_box_wrapper > .Certificate_box_wrapper_top {
+    border-bottom: 2px #eeeff1 solid;
+    width: 100%;
+
+}
+
+
+
+.CertificateDetail > .Certificate_box > .Certificate_box_wrapper > .Certificate_box_wrapper_top > span {
+    text-align: left;
+    width: 100px;
+    margin: 0px;
+    margin-left: 45px;
+    margin-top: -26px;
+} 
+
+.CertificateDetail > .Certificate_box > .Certificate_box_wrapper > .Certificate_box_wrapper_top > span > b {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+.CertificateDetail > .Certificate_box > .Certificate_box_wrapper > .Certificate_box_wrapper_top > .MyButton_default {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.CertificateDetail > .Certificate_box > .Certificate_box_wrapper > .Certificate_box_wrapper_middle_top {
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.CertificateDetail > .Certificate_box > .Certificate_box_wrapper > .Certificate_box_wrapper_middle_box {
+    border: 3px solid;
+    border-color :black;
+    border-radius: 10px;
+    height: 650px;
+    width: 85%;
+    margin-left: 50px;
+
+}
+
+.Certificate_box_wrapper_middle_box_title { 
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.Certificate_box_wrapper_middle_box_user  {
+    width: 80%;
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    font-size: 15px;
+
+} 
+
+.Certificate_box_wrapper_middle_box_user > span {
+    width: 100%;
+
+ }
+
+ .Certificate_box_wrapper_middle_box_user_left > b{
+    margin-right: 5px;    
+} 
+.Certificate_box_wrapper_middle_box_user_right > b{
+    margin-right: 5px;    
+} 
+
+
+.Certificate_box_wrapper_middle_box_content {
+    width: 80%;
+    height: 25%;
+    margin-left: 60px;
+    margin-top: 50px;
+    font-size: 15px;
+
+} 
+
+.Certificate_box_wrapper_middle_box_content_dete > b , .Certificate_box_wrapper_middle_box_content_time > b
+, .Certificate_box_wrapper_middle_box_content_count > b , .Certificate_box_wrapper_middle_box_content_content > b {
+    margin-right: 30px;    
+    
+} 
+
+.Certificate_box_wrapper_middle_box_content_dete, .Certificate_box_wrapper_middle_box_content_time, 
+.Certificate_box_wrapper_middle_box_content_count, .Certificate_box_wrapper_middle_box_content_content {
+    margin-bottom: 15px;
+}
+
+
+.Certificate_box_wrapper_bottom_box {
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    margin-left: 60px;
+    
+} 
+
+.Certificate_box_wrapper_bottom_box > .Certificate_box_wrapper_bottom_box_text_top {
+    width: 80%;
+    font-size: 14px;
+    margin-top: 20px;    
+    margin-bottom: 70px;
+    display: flex;
+    text-align: center;
+}
+
+.Certificate_box_wrapper_bottom_box > .Certificate_box_wrapper_bottom_box_text_middle {
+    width: 70%;
+    display: flex;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 40px;
+    margin-left: 90px;
+
+} 
+
+
+.Certificate_box_wrapper_bottom_box > .Certificate_box_wrapper_bottom_box_text_bottom {
+    margin-top: 50px;
+    width: 85%;
+    display: flex;
+    text-align: left;
+    font-size: 14px;
+} 
+
+.CertificateDetail > .Certificate_box > .Certificate_box_wrapper > 
+.Certificate_box_wrapper_bottom_box_button {
+    display:flex;
+    margin-top: 20px;
+    width: 90%;
+    height: 10%;
+    justify-content: space-between;
+    
+} 
+
+.CertificateDetail > .Certificate_box > .Certificate_box_wrapper > 
+.Certificate_box_wrapper_bottom_box_button > .Certificate_box_wrapper_bottom_box_button_pdf > .MyButton_default {
+    width: 130px;
+    height: 40px;
+    border: 2px #eeeff1 solid;
+    border-radius: 5px;
+    margin-left: 60px;
+    font-size: 12px;
+}
+.CertificateDetail > .Certificate_box > .Certificate_box_wrapper > 
+    .Certificate_box_wrapper_bottom_box_button > .Certificate_box_wrapper_bottom_box_button_pdf > .MyButton_default:hover {
+        background-color: #ff7373;
+        color:#ffffff;
+    }
+
+.CertificateDetail > .Certificate_box > .Certificate_box_wrapper > 
+.Certificate_box_wrapper_bottom_box_button > .Certificate_box_wrapper_bottom_box_button_img > .MyButton_default {
+    width: 130px;
+    height: 40px;
+    border: 2px #eeeff1 solid;
+    border-radius: 5px;
+    font-size: 12px;
+
+}
+
+.CertificateDetail > .Certificate_box > .Certificate_box_wrapper > 
+    .Certificate_box_wrapper_bottom_box_button > .Certificate_box_wrapper_bottom_box_button_img > .MyButton_default:hover {
+        background-color: #ff7373;
+        color:#ffffff;
+    }
+
+.CertificateDetail > .Certificate_box > .Certificate_box_wrapper > 
+.Certificate_box_wrapper_bottom_box_button > .Certificate_box_wrapper_bottom_box_button_email > .MyButton_default {
+    width: 130px;
+    height: 40px;
+    border: 2px #eeeff1 solid;
+    border-radius: 5px;
+    font-size: 12px;
+
+}
+
+.CertificateDetail > .Certificate_box > .Certificate_box_wrapper > 
+    .Certificate_box_wrapper_bottom_box_button > .Certificate_box_wrapper_bottom_box_button_email > .MyButton_default:hover {
+        background-color: #ff7373;
+        color:#ffffff;
+    }
+
+.CertificateDetail > .Certificate_box > .Certificate_box_wrapper > 
+.Certificate_box_wrapper_bottom_box_button > .Certificate_box_wrapper_bottom_box_button_kakao > .MyButton_default {
+    width: 130px;
+    height: 40px;
+    border: 2px #eeeff1 solid;
+    border-radius: 5px;
+    font-size: 12px;
+
+}
+
+.CertificateDetail > .Certificate_box > .Certificate_box_wrapper > 
+    .Certificate_box_wrapper_bottom_box_button > .Certificate_box_wrapper_bottom_box_button_kakao > .MyButton_default:hover {
+        background-color: #ff7373;
+        color:#ffffff;
+    }
+
