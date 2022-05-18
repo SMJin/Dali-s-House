@@ -65,7 +65,7 @@ const Community_Detail = ({ originData }) => {
                     className="detailUserImg"
                     src={
                       process.env.PUBLIC_URL +
-                      `/assets/communityPost/userImage/icon${id}.png`
+                      `/assets/communityPost/userImage/icon.png`
                     }
                   />
                 </div>
@@ -100,7 +100,9 @@ const Community_Detail = ({ originData }) => {
                 className="detailPostImage"
                 src={
                   process.env.PUBLIC_URL +
-                  `/assets/communityPost/PostImage/community_img${id}.png`
+                  `/assets/communityPost/PostImage/community_img${
+                    (id % 2) + 1
+                  }.png`
                 }
               />
             </div>

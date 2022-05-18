@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 
 import "./css/CommList.css";
 import CommCate_item from "./component/CommCate_item";
-import MyPagination from "../../components/MyPagination";
 import MySearch from "../../components/MySearch";
 import { CommunityStateContext } from "../../App";
 import PostList from "./post/components/PostList";
@@ -63,19 +62,18 @@ const CommList = ({ communityList }) => {
           className="commNew"
           onClick={() => {
             navigate("/community/new");
-            // if (confirm != null) {
-            //   navigate("/community/new");
-            // } else {
-            //   alert("로그인 해주세요!");
-            //   navigate("/login");
-            // }
+            if (confirm != null) {
+              navigate("/community/new");
+            } else {
+              alert("로그인 해주세요!");
+              navigate("/login");
+            }
           }}
         >
           글쓰기
         </button>
       </div>
       <PostList postList={data} postLength={data.length} />
-      {/* <MyPagination totalCount={data.length} countPerPage={5} /> */}
     </div>
   );
 };
