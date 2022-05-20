@@ -14,6 +14,8 @@ const MyPageSponsor = props => {
         <MyHeader />
 
         <MySearch/>
+        <span>후원 내역</span>
+
         <MyPageMenu/>
 
         <SponsorList />
