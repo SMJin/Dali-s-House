@@ -1,0 +1,13 @@
+.MyFavoriteVolunteerListWrapper {
+
+}
+
+.MyFavoriteVolunteerList_wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+    width: 30%;
+    margin-top: 30px;
+
+  }
+  
