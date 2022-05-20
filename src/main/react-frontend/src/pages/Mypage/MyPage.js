@@ -2,7 +2,6 @@ import MyFooter from "../../components/MyFooter";
 import "./css/MyPage.css";
 import MyHeader from "../../components/MyHeader";
 import MyPageMenu from "./MyPageMenu";
-import ProgressBar from "./component/ProgressBar";
 
 
 

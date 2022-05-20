@@ -40,7 +40,7 @@ const Main = () => {
         src={process.env.PUBLIC_URL + `/assets/main_adv.png`}
       />
       <div className="main">
-        <div>
+        <div className="main_volunteer">
           <MyTitle
             titleText={"이번주 달리단 모집"}
             totalbutton={<MyButton text={"전체보기"} onClick={goVolunteer} />}
