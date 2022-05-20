@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "./css/MyFavoriteVolunteer_Item.css";
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "../../../components/ProgressBar";
 
 const MyFavoriteVolunteer_Item = ({ id, title, organ, recruitment_cur, recruitment_limit,  completed }) => {
   const navigate = useNavigate();
@@ -31,10 +31,7 @@ const MyFavoriteVolunteer_Item = ({ id, title, organ, recruitment_cur, recruitme
        </div>
        </div>
       </div>
-
-
-
-          </div>
+      </div>
      
     </>
   );
