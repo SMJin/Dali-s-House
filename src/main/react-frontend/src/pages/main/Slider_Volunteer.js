@@ -32,6 +32,7 @@ const Slider_Volunteer = ({ dataList }) => {
 
 const cssstyle_v = `
 .container {
+  text-align: center;
   margin: 0 auto;
   padding: 5px 0px 30px 0px;
   width: 100%;

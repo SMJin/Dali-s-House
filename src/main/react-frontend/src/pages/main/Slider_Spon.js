@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Spon_item from "./component/Spon_item";
+import SponItem from "../sponsor/component/SponItem";
 
-const Slider_Spon = () => {
+const Slider_Spon = ({ dataList }) => {
   const settings = {
     // focusOnSelect: true,
     infinite: false,
@@ -16,6 +16,40 @@ const Slider_Spon = () => {
     <div className="container">
       <style>{cssstyle_s}</style>
       <Slider {...settings}>
+        {dataList
+          .slice(0)
+          .reverse() // 역순으로
+          .slice(0, 10) // 상위 10개만 노출
+          .map((it) => (
+            <div key={it.id}>
+              <SponItem key={it.id} {...it} />
+            </div>
+          ))}
+      </Slider>
+    </div>
+  );
+};
+
+const cssstyle_s = `
+.container {
+  text-align: center;
+
+  margin: 0 auto;
+  padding: 5px 0px 30px 0px;
+  width: 100%;
+}
+.slick-next:before, .slick-prev:before {
+  color: #f34949;
+}
+.item{
+    overflow: hidden;
+}
+`;
+
+export default Slider_Spon;
+
+/*
+<Slider {...settings}>
         <div className="item">
           <Spon_item
             organ={"광주동물보호협회 위드1"}
@@ -97,22 +131,4 @@ const Slider_Spon = () => {
           />
         </div>
       </Slider>
-    </div>
-  );
-};
-
-const cssstyle_s = `
-.container {
-  margin: 0 auto;
-  padding: 5px 0px 30px 0px;
-  width: 100%;
-}
-.slick-next:before, .slick-prev:before {
-  color: #f34949;
-}
-.item{
-    overflow: hidden;
-}
-`;
-
-export default Slider_Spon;
+*/

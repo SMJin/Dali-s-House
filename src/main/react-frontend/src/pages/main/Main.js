@@ -13,6 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import VolunteerSituation from "../../components/VolunteerSituation";
 import { VolunteerDataList } from "../volunteerActivity/component/VolunteerDataList";
+import { SponsorDataList } from "../sponsor/component/SponsorDataList";
 
 const Main = () => {
   const navigate = useNavigate();
@@ -33,10 +34,12 @@ const Main = () => {
     navigate(`/community/magazine`);
   };
 
-  const [dataList, setDataList] = useState([]);
+  const [volDataList, setVolDataList] = useState([]);
+  const [sponDataList, setSponDataList] = useState([]);
 
   useEffect(() => {
-    setDataList(VolunteerDataList);
+    setVolDataList(VolunteerDataList);
+    setSponDataList(SponsorDataList);
   }, []);
 
   return (
@@ -53,7 +56,7 @@ const Main = () => {
             titleText={"이번주 달리단 모집"}
             totalbutton={<MyButton text={"전체보기"} onClick={goVolunteer} />}
           />
-          <Slider_Volunteer dataList={dataList} />
+          <Slider_Volunteer dataList={volDataList} />
         </div>
       </div>
       <div>
@@ -77,7 +80,7 @@ const Main = () => {
             titleText={"소중한 후원을 요청드려요"}
             totalbutton={<MyButton text={"전체보기"} onClick={goSponsor} />}
           />
-          <Slider_Spon />
+          <Slider_Spon dataList={sponDataList} />
         </div>
         <div>
           <MyTitle
