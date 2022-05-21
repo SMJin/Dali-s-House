@@ -10,7 +10,9 @@ import Slider_Spon from "./Slider_Spon";
 import MagazineList from "./MagazineList";
 
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import VolunteerSituation from "../../components/VolunteerSituation";
+import { MyFavoriteVolunteer_DataList } from "../Mypage/component/MyFavoriteVolunteer_DataList";
 
 const Main = () => {
   const navigate = useNavigate();
@@ -31,6 +33,12 @@ const Main = () => {
     navigate(`/community/magazine`);
   };
 
+  const [dataList, setDataList] = useState([]);
+
+  useEffect(() => {
+    setDataList(MyFavoriteVolunteer_DataList);
+  }, []);
+
   return (
     <div>
       <h1>메인 페이지</h1>
@@ -40,12 +48,12 @@ const Main = () => {
         src={process.env.PUBLIC_URL + `/assets/main_adv.png`}
       />
       <div className="main">
-        <div className="main_volunteer">
+        <div>
           <MyTitle
             titleText={"이번주 달리단 모집"}
             totalbutton={<MyButton text={"전체보기"} onClick={goVolunteer} />}
           />
-          <Slider_Volunteer />
+          <Slider_Volunteer dataList={dataList} />
         </div>
       </div>
       <div>

@@ -1,67 +1,78 @@
-.Volunteer_item {
-  width: 100%;
-  margin: 5px;
-
-}
-
-.Volunteer_item_imgbox {
+.Volunteer_item > .imgbox {
   cursor: pointer;
-  width:100%;
-  
 }
 
-
-.Volunteer_item_img {
-  width: 140px;
-  padding: 5px;
-  border-radius: 10px;
+.Volunteer_item > .imgbox > .img_main {
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 90%;
+  border-radius: 5px;
   /* overflow: hidden; */
-
 }
 
+.Volunteer_item > .imgbox > .img_percent {
+  padding-left: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 90%;
+}
 
-
-.main_vol_title{
+.Volunteer_item > .imgbox > .title {
+  height: 30px;
+  padding-bottom: 0px;
+  font-size: 0.74em;
+  font-weight: bolder;
+  margin-top: 7%;
+  margin-bottom: 2%;
+  line-height: 15px;
+  padding-left: 5%;
+  padding-right: 5%;
   text-align: left;
-  font-size: 15px;
-  font-weight: 500;
 }
 
-.main_vol_organ{
-  font-size: 13px;
-  color:#96969E;
+.Volunteer_item > .imgbox > .organ {
+  height: 10px;
+  font-size: 0.4em;
+  font-weight: bolder;
+  color: rgb(150, 150, 150);
+  margin: 0px;
+  line-height: 10px;
+  padding-left: 5%;
+  padding-bottom: 2px;
+  text-align: left;
 }
 
-.main_vol_completed{
-  color: #FF5252;
+.Volunteer_item > .imgbox > .progress_degree > .percentage {
+  color: #ff5252;
   font-weight: bold;
   font-size: 15px;
+
+  padding-left: 5%;
+  text-align: left;
 }
 
-
-  .main_vol_recuriment_wrapper {
-      display:flex;
-
-  }
-
-
-.main_vol_recuriment {
-    width: 100%;
-    display:flex;
-    text-align: right;
-    justify-content: right;
-    
+.progressbar {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
+.progress_degree {
+  display: flex;
 
-  .main_vol_recuriment_cur{
-    text-align: right;
-    font-size: 13px;
-  }
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .main_vol_recuriment_limit{
-    text-align: right;
-    font-size: 13px;
-    color:#96969E;
+.Volunteer_item > .imgbox > .progress_degree > .count {
+  padding-right: 5%;
+}
 
-  }
+.Volunteer_item > .imgbox > .progress_degree > .count > .present {
+  font-size: 13px;
+}
+
+.Volunteer_item > .imgbox > .progress_degree > .count > .total {
+  font-size: 13px;
+  color: #96969e;
+}
