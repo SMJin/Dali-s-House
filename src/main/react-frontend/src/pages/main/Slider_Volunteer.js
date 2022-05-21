@@ -16,18 +16,15 @@ const Slider_Volunteer = ({ dataList }) => {
     <div className="container">
       <style>{cssstyle_v}</style>
       <Slider {...settings}>
-        {dataList.map((it) => (
-          <div key={it.id}>
-            <Volunteer_item
-              id={it.id}
-              title={it.title}
-              organ={it.organ}
-              recruitment_cur={it.recruitment_cur}
-              recruitment_limit={it.recruitment_limit}
-              completed={it.completed}
-            />
-          </div>
-        ))}
+        {dataList
+          .slice(0)
+          .reverse() // 역순으로
+          .slice(0, 10) // 상위 10개만 노출
+          .map((it) => (
+            <div key={it.id}>
+              <Volunteer_item key={it.id} {...it} />
+            </div>
+          ))}
       </Slider>
     </div>
   );

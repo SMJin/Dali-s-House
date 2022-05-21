@@ -3,43 +3,33 @@
 }
 
 .Volunteer_item > .imgbox > .img_main {
-  margin-left: 5%;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  width: 90%;
+  width: 170px;
   border-radius: 5px;
-  /* overflow: hidden; */
-}
-
-.Volunteer_item > .imgbox > .img_percent {
-  padding-left: 5%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  width: 90%;
 }
 
 .Volunteer_item > .imgbox > .title {
+  width: 170px;
   height: 30px;
   padding-bottom: 0px;
   font-size: 0.74em;
   font-weight: bolder;
-  margin-top: 7%;
-  margin-bottom: 2%;
+  margin-top: 5px;
+  margin-bottom: 4px;
   line-height: 15px;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 5px;
   text-align: left;
 }
 
 .Volunteer_item > .imgbox > .organ {
+  width: 170px;
   height: 10px;
   font-size: 0.4em;
   font-weight: bolder;
   color: rgb(150, 150, 150);
   margin: 0px;
   line-height: 10px;
-  padding-left: 5%;
-  padding-bottom: 2px;
+  padding-left: 5px;
+  padding-bottom: 3px;
   text-align: left;
 }
 
@@ -47,17 +37,19 @@
   color: #ff5252;
   font-weight: bold;
   font-size: 15px;
+  width: 170px;
 
-  padding-left: 5%;
   text-align: left;
 }
 
 .progressbar {
-  padding-left: 5%;
-  padding-right: 5%;
+  width: 170px;
+  padding-left: 5px;
 }
 
 .progress_degree {
+  width: 165px;
+  padding-left: 5px;
   display: flex;
 
   justify-content: space-between;
@@ -65,14 +57,15 @@
 }
 
 .Volunteer_item > .imgbox > .progress_degree > .count {
-  padding-right: 5%;
+  width: 150px;
+  text-align: right;
 }
 
 .Volunteer_item > .imgbox > .progress_degree > .count > .present {
-  font-size: 13px;
+  font-size: 0.8em;
 }
 
 .Volunteer_item > .imgbox > .progress_degree > .count > .total {
-  font-size: 13px;
+  font-size: 0.8em;
   color: #96969e;
 }

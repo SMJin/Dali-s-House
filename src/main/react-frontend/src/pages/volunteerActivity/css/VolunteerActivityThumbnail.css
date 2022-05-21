@@ -1,14 +1,14 @@
 .VolunteerActivityThumbnail {
-    margin: 5px;
+  margin: 5px;
 }
 
 .VolunteerActivity_thumbnail_title {
-    width: 150px;
-    font-size: 12px;
-    font-weight: bold;
+  width: 150px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .VolunteerActivity_thumbnail_content {
-    width: 150px;
-    font-size: 8px;
+  width: 150px;
+  font-size: 8px;
 }

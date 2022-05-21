@@ -222,6 +222,10 @@ function App() {
                     element={<VolunteerActivity />}
                   />
                   <Route
+                    path="/volunteerActivity/:id"
+                    // element={<VolunteerActivity />}
+                  />
+                  <Route
                     path="/volunteerActivity/thumbnail/edit"
                     element={<VolunteerActivityThumbnailEdit />}
                   />

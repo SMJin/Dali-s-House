@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import ProgressBar from "../../../components/ProgressBar";
 import "./css/Volunteer_item.css";
 
@@ -9,14 +10,19 @@ const Volunteer_item = ({
   recruitment_limit,
   completed,
 }) => {
+  const navigate = useNavigate();
   return (
     <div className="Volunteer_item">
-      <div className="imgbox">
+      <div
+        className="imgbox"
+        onClick={() => {
+          navigate(`/volunteerActivity/${id}`);
+        }}
+      >
         <img
           class="img_main"
           src={
-            process.env.PUBLIC_URL +
-            `assets/myFavoriteVolunteer/myFavoriteVolunteer_${id}.png`
+            process.env.PUBLIC_URL + `assets/volunteer/volunteer_${id % 8}.png`
           }
         />
         <div className="title">{title}</div>
@@ -27,8 +33,8 @@ const Volunteer_item = ({
         <div className="progress_degree">
           <div className="percentage">{`${completed}%`}</div>
           <div className="count">
-            <span className="present">{recruitment_cur}명 / </span>
-            <span className="total">{recruitment_limit}명</span>
+            <span className="present">{recruitment_cur}명&nbsp;/</span>
+            <span className="total"> {recruitment_limit}명</span>
           </div>
         </div>
       </div>
