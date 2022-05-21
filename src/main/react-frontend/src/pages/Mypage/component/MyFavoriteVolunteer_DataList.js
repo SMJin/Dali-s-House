@@ -1,7 +1,7 @@
 const MyFavoriteVolunteer_DataList = [
   {
     id: 1,
-    title: "아직 엄마 품이 필요한 고양이들에게 사랑을 나누어 주세요.",
+    title: "아직 엄마 품이 필요한 고양이들에게 사랑을 나누어 주세요",
     organ: "사랑냥이 보호센터",
     recruitment_cur: 40,
     recruitment_limit: 50,
@@ -9,7 +9,7 @@ const MyFavoriteVolunteer_DataList = [
   },
   {
     id: 2,
-    title: "청소 및 산책 봉사자 모집.",
+    title: "청소 및 산책 봉사자 모집",
     organ: "광주동물보호협회 위드",
     recruitment_cur: 1,
     recruitment_limit: 10,
@@ -25,7 +25,7 @@ const MyFavoriteVolunteer_DataList = [
   },
   {
     id: 4,
-    title: "아직 엄마 품이 필요한 고양이들에게 사랑을 나누어 주세요.",
+    title: "아직 엄마 품이 필요한 고양이들에게 사랑을 나누어 주세요",
     organ: "사랑냥이 보호센터",
     recruitment_cur: 40,
     recruitment_limit: 50,
@@ -49,7 +49,7 @@ const MyFavoriteVolunteer_DataList = [
   },
   {
     id: 7,
-    title: "아직 엄마 품이 필요한 고양이들에게 사랑을 나누어 주세요.",
+    title: "아직 엄마 품이 필요한 고양이들에게 사랑을 나누어 주세요",
     organ: "사랑냥이 보호센터",
     recruitment_cur: 50,
     recruitment_limit: 50,
@@ -57,7 +57,7 @@ const MyFavoriteVolunteer_DataList = [
   },
   {
     id: 8,
-    title: "청소 및 산책 봉사자 모집.",
+    title: "청소 및 산책 봉사자 모집",
     organ: "광주동물보호협회 위드",
     recruitment_cur: 1,
     recruitment_limit: 10,
