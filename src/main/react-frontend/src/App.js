@@ -28,6 +28,7 @@ import Community_Edit from "./pages/community/post/Edit";
 import Community_Detail from "./pages/community/post/Detail";
 import MyPageSponsor from "./pages/Mypage/MyPageSponsor";
 import MagazinePost from "./pages/community/magazinepost/MagazinePost";
+import VolunteerActivityDetail from "./pages/volunteerActivity/component/VolunteerActivityDetail";
 
 const reducer = (state, action) => {
   let newState = [];
@@ -223,7 +224,7 @@ function App() {
                   />
                   <Route
                     path="/volunteerActivity/:id"
-                    // element={<VolunteerActivity />}
+                    element={<VolunteerActivityDetail />}
                   />
                   <Route
                     path="/volunteerActivity/thumbnail/edit"

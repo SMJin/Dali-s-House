@@ -8,6 +8,7 @@ import MyPagination from "../../components/MyPagination";
 import VolunteerSituation from "../../components/VolunteerSituation";
 import { VolunteerDataList } from "./component/VolunteerDataList";
 import Volunteer_item from "../main/component/Volunteer_item";
+import MySearch from "../../components/MySearch";
 
 const VolunteerActivity = () => {
   const regionProps = {
@@ -47,8 +48,9 @@ const VolunteerActivity = () => {
       <div className="VolunteerActivity_thumbnail_board">
         <div className="VolunteerActivity_thumbnail_board_nav">
           <MyNav {...regionProps} />
-          <h6>{dataList.length} 개의 게시물이 있습니다.</h6>
+          <MySearch />
         </div>
+        <h6>{dataList.length} 개의 게시물이 있습니다.</h6>
         <div className="VolunteerActivity_thumbnail_board_content">
           {dataList
             .slice(0)
