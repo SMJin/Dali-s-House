@@ -1,12 +1,13 @@
+import { useEffect, useState } from "react";
+
 import "./css/VounteerActivity.css";
 import MyHeader from "../../components/MyHeader";
 import MyNav from "./MyNav";
-import VolunteerActivityThumbnail from "./VolunteerActivityThumbnail";
 import MyFooter from "../../components/MyFooter";
 import MyPagination from "../../components/MyPagination";
-import Tag from "./Tag";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import VolunteerSituation from "../../components/VolunteerSituation";
+import { VolunteerDataList } from "./component/VolunteerDataList";
+import Volunteer_item from "../main/component/Volunteer_item";
 
 const VolunteerActivity = () => {
   const regionProps = {
@@ -16,11 +17,65 @@ const VolunteerActivity = () => {
     region3: "전국",
   };
 
-  // const volunteerActivityThumbnailProps = {
-  //   imgUrl: "/assets/vol_img.png",
-  //   title: "아직 엄마 품이 필요한 고양이들에게 사랑을 나누어 주세요.",
-  //   content: "사랑냥이 보호센터",
-  // };
+  const [dataList, setDataList] = useState([]);
+
+  useEffect(() => {
+    setDataList(VolunteerDataList);
+  }, []);
+
+  useEffect(() => {
+    if (dataList != null) {
+      setTotalCount(dataList.length);
+    }
+  });
+
+  const [totalCount, setTotalCount] = useState(1);
+  const limit = 16;
+  const [page, setPage] = useState(1);
+  const offset = (page - 1) * limit;
+
+  return (
+    <div className="VolunteerActivity">
+      <h1>봉사활동 페이지</h1>
+      <MyHeader />
+      <VolunteerSituation
+        vol={10 + "," + 275}
+        adopt={321}
+        dona={5 + "," + 114}
+        spon={7 + "," + 225}
+      />
+      <div className="VolunteerActivity_thumbnail_board">
+        <div className="VolunteerActivity_thumbnail_board_nav">
+          <MyNav {...regionProps} />
+          <h6>{dataList.length} 개의 게시물이 있습니다.</h6>
+        </div>
+        <div className="VolunteerActivity_thumbnail_board_content">
+          {dataList
+            .slice(0)
+            .reverse() // 역순으로
+            .slice(offset, offset + limit)
+            .map((it) => (
+              <Volunteer_item key={it.id} {...it} />
+            ))}
+        </div>
+      </div>
+      <MyPagination
+        totalCount={totalCount}
+        countPerPage={limit}
+        page={page}
+        setPage={setPage}
+      />
+      <MyFooter />
+    </div>
+  );
+};
+
+export default VolunteerActivity;
+
+/*
+import Tag from "./Tag";
+import axios from "axios";
+import VolunteerActivityThumbnail from "./VolunteerActivityThumbnail";
 
   const [volunteerActivityThumbnailList, setVolunteerActivityThumbnailList] =
     useState([]);
@@ -30,22 +85,13 @@ const VolunteerActivity = () => {
       setTotalCount(volunteerActivityThumbnailList.length);
     }
     axios({
-      "url": "/api/volunteerActivity/thumbnails",
-      "method": "GET",
+      url: "/api/volunteerActivity/thumbnails",
+      method: "GET",
     }).then((res) => {
       setVolunteerActivityThumbnailList(res.data);
     });
   }, []);
-
-  const [totalCount, setTotalCount] = useState(1);
-  const [limit, setLimit] = useState(10);
-  const [page, setPage] = useState(1);
-  const offset = (page - 1) * limit;
-
-  return (
-    <div className="VolunteerActivity">
-      <h1>봉사활동 페이지</h1>
-      <MyHeader />
+  
       <div className="VolunteerActivity_today">
         <div className="VolunteerActivity_today_title">
           <h2>
@@ -89,30 +135,4 @@ const VolunteerActivity = () => {
           </div>
         </div>
       </div>
-      <div className="VolunteerActivity_thumbnail_board">
-        <div className="VolunteerActivity_thumbnail_board_nav">
-          <MyNav {...regionProps} />
-          <h6>
-            {volunteerActivityThumbnailList.length} 개의 게시물이 있습니다.
-          </h6>
-        </div>
-        <div className="VolunteerActivity_thumbnail_board_content">
-          {volunteerActivityThumbnailList
-            .slice(offset, offset + limit)
-            .map((it) => (
-              <VolunteerActivityThumbnail key={it.id} {...it} />
-            ))}
-        </div>
-      </div>
-      <MyPagination
-        totalCount={totalCount}
-        countPerPage={limit}
-        page={page}
-        setPage={setPage}
-      />
-      <MyFooter />
-    </div>
-  );
-};
-
-export default VolunteerActivity;
+*/

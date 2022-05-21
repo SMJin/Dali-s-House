@@ -12,7 +12,7 @@ import MagazineList from "./MagazineList";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import VolunteerSituation from "../../components/VolunteerSituation";
-import { MyFavoriteVolunteer_DataList } from "../Mypage/component/MyFavoriteVolunteer_DataList";
+import { VolunteerDataList } from "../volunteerActivity/component/VolunteerDataList";
 
 const Main = () => {
   const navigate = useNavigate();
@@ -36,7 +36,7 @@ const Main = () => {
   const [dataList, setDataList] = useState([]);
 
   useEffect(() => {
-    setDataList(MyFavoriteVolunteer_DataList);
+    setDataList(VolunteerDataList);
   }, []);
 
   return (

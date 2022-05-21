@@ -1,3 +1,24 @@
+.VolunteerActivity_thumbnail_board {
+  margin: 0 15%;
+
+  text-align: center;
+}
+
+.VolunteerActivity
+  > .VolunteerActivity_thumbnail_board
+  > .VolunteerActivity_thumbnail_board_nav
+  > h6 {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.VolunteerActivity_thumbnail_board_content {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+}
+
+/*
 .VolunteerActivity_today {
   background-color: indianred;
   color: white;
@@ -29,9 +50,11 @@
 
 } */
 
+/*
 .VolunteerActivity_thumbnail_board_content {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  /* justify-content: space-around; */
-}
+  /* justify-content: space-around; 
+} 
+*/
