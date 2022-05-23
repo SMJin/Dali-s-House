@@ -5,10 +5,9 @@ import com.example.dalihouse.model.User.User;
 import com.example.dalihouse.repository.User.UserRepository;
 import com.example.dalihouse.service.User.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 
 @RequiredArgsConstructor
 @RestController
@@ -31,13 +30,18 @@ public class UserController {
     }
 
     @PostMapping("/user/login")
-    public User login(@RequestBody LoginRequestDto dto) {
-        return userService.login(dto);
+    public User login(@RequestBody LoginRequestDto dto, HttpServletRequest request) {
+        return userService.login(dto, request);
+    }
+
+    @PostMapping("/user/logout")
+    public String logout(@ModelAttribute("user") User user, HttpServletRequest request) {
+        return userService.logout(user, request);
     }
 
     @GetMapping("/user/current")
-    public User getCurrentUser() {
-        return userService.getCurrentUser();
+    public User getCurrentUser(HttpServletRequest request) {
+        return userService.getCurrentUser(request);
     }
 
     @PostMapping("/user/find/id/phone")

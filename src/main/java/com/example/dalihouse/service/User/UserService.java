@@ -8,22 +8,25 @@ import org.springframework.expression.ExpressionException;
 //import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.transaction.Transactional;
 
 @RequiredArgsConstructor
 @Service
 public class UserService {
 
-    private User currentUser;
+//    private User currentUser;
 
     private final int PHONE_NUMBER_LENGTH = 11;
     private final UserRepository userRepository;
 //    private final PasswordEncoder passwordEncoder;
 
     public User signup(SignupRequestDto dto) {
-        checkPermission(dto.isPermission());
-        checkPhone(dto.getPhone());
-        checkEmail(dto.getEmail());
+//        checkPermission(dto.isPermission());
+//        checkPhone(dto.getPhone());
+//        checkEmail(dto.getEmail());
 //        dto.setPassword(encodingPassword(dto.getPassword()));
         User user = new User(dto);
         return userRepository.save(user);
@@ -55,7 +58,7 @@ public class UserService {
     }
 
     @Transactional
-    public User login(LoginRequestDto dto) {
+    public User login(LoginRequestDto dto, HttpServletRequest request) {
         User user = userRepository.findByUserId(dto.getUserId()).orElseThrow(
                 () -> new NullPointerException("일치하는 아이디가 없습니다. : " + dto.getUserId())
         );
@@ -66,9 +69,19 @@ public class UserService {
             throw new ExpressionException("비밀번호가 틀렸습니다.");
         }
 
-        this.currentUser = user;
+//        this.currentUser = user;
+
+        HttpSession session = request.getSession();
+        session.setAttribute("user", user);
 
         return user;
+    }
+
+    @Transactional
+    public String logout(User user, HttpServletRequest request) {
+        HttpSession session =request.getSession();
+        session.invalidate();
+        return user.getUserId();
     }
 
     @Transactional
@@ -98,7 +111,8 @@ public class UserService {
         );
     }
 
-    public User getCurrentUser() {
-        return currentUser;
+    public User getCurrentUser(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        return (User) session.getAttribute("user");
     }
 }
