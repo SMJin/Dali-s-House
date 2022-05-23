@@ -123,12 +123,17 @@
 ###### frontend :: login / join axios communication (Author by. YJI)
 ###### frontend :: 로그인 시 헤더 login -> logout / join -> user id 보이도록 변경 (Author by. YJI)
 ###### frontend :: edit signup/login axios error (Author by. SMJ)
+###### backend :: seoul api 받아올때 영상 없을 경우 에러 처리 (Author by. SMJ)
 
 ### 22. 05. 18 ~ 22. 05. 19
 
 ###### frontend :: create magazine detail page (Author by. YJI)
 ###### frontend :: add magazine page - magazine post list (Author by. YJI)
+###### backend :: git AWS RDS 연결 및 서버 재배포 (Author by. SMJ)
 
+### 22. 05. 23
+
+###### backend :: update login using HttpSession (Author by. SMJ)
 
 
 
