@@ -8,8 +8,17 @@ import MyPagination from "../../components/MyPagination";
 import VolunteerSituation from "../../components/VolunteerSituation";
 import { VolunteerDataList } from "./component/VolunteerDataList";
 import Volunteer_item from "../main/component/Volunteer_item";
+import MyButton from "../../components/MyButton";
+import { useNavigate } from "react-router-dom";
 
 const VolunteerActivity = () => {
+  const navigate = useNavigate();
+
+  const goVolunteerEdit = () => {
+    navigate(`/volunteerActivity/edit`);
+  };
+
+
   const regionProps = {
     pageName: "봉사활동",
     region1: "전국",
@@ -47,7 +56,12 @@ const VolunteerActivity = () => {
       <div className="VolunteerActivity_thumbnail_board">
         <div className="VolunteerActivity_thumbnail_board_nav">
           <MyNav {...regionProps} />
+          <div className="VolunteerActivity_thumbnail_board_wrapper">
           <h6>{dataList.length} 개의 게시물이 있습니다.</h6>
+          <div className="VolunteerActivity_thumbnail_board_writing">
+          <MyButton text={"+ 등록하기"}  onClick={goVolunteerEdit}/>
+          </div>
+        </div>
         </div>
         <div className="VolunteerActivity_thumbnail_board_content">
           {dataList

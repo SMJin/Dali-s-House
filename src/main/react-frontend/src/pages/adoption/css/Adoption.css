@@ -6,9 +6,49 @@
 
 } */
 
+
+.adoption_thumbnail_board
+> .adoption_thumbnail_board_nav {
+    margin: 0px;
+    width: 100%;
+    height: 90px;
+  }
+
+.adoption_thumbnail_board
+  > .adoption_thumbnail_board_nav
+  >.adoption_thumbnail_board_wrapper
+  > h6 {
+  text-align: left;
+  margin-left: 10px;
+  width: 120px;
+  
+}
+
 .adoption_thumbnail_board_contents {
     display: flex;
     flex-flow: row wrap;
     /* justify-content: space-between; */
     margin-top: 5px;
+}
+
+.adoption_thumbnail_board > .adoption_thumbnail_board_nav > .adoption_thumbnail_board_wrapper {
+    width: 80%;
+    height: 50px;
+    justify-content: space-between;
+    display: flex;      
+  
+  }
+
+
+.adoption_thumbnail_board > .adoption_thumbnail_board_nav > .adoption_thumbnail_board_wrapper >
+.adoption_thumbnail_board_writing > .MyButton_default {
+  background-color: #FF5252;  
+  color: white;
+  width: 80px;
+  height: 25px;
+  font-size: 6px;
+  font-weight: 100;
+  margin-right: -150px;
+  margin-top: 10px;
+  float: right;
 }
