@@ -7,6 +7,8 @@ import AdoptionBest from "./AdoptionBest";
 import MyPagination from "../../components/MyPagination";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import MyButton from "../../components/MyButton";
+import { useNavigate } from "react-router-dom";
 
 const Adoption = () => {
   useEffect(() => {
@@ -15,6 +17,14 @@ const Adoption = () => {
       .catch((e) => console.log(e));
   }, []);
 
+
+    const navigate = useNavigate();
+  
+    const goAdoptionEdit = () => {
+      navigate(`/adoption/edit`);
+    };
+
+    
   const regionProps = {
     pageName: "입양연결",
     region1: "전국",
@@ -49,7 +59,12 @@ const Adoption = () => {
       <div className="adoption_thumbnail_board">
         <div className="adoption_thumbnail_board_nav">
           <MyNav {...regionProps} />
+          <div className="adoption_thumbnail_board_wrapper">
           <h6>{adoptionThumbnailList.length} 개의 게시물이 있습니다.</h6>
+          <div className="adoption_thumbnail_board_writing">
+          <MyButton text={"+ 등록하기"}  onClick={goAdoptionEdit}/>
+          </div>
+        </div>
         </div>
         <div className="adoption_thumbnail_board_contents">
           {adoptionThumbnailList.slice(offset, offset + limit).map((item) => (
