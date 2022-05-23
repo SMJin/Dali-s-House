@@ -1,5 +1,7 @@
 .Volunteer_item {
-  padding-left: 10px;
+  cursor: pointer;
+
+  display: inline-block;
 }
 
 .Volunteer_item > .imgbox {
@@ -12,7 +14,6 @@
 }
 
 .Volunteer_item > .imgbox > .title {
-  width: 170px;
   height: 30px;
   padding-bottom: 0px;
   font-size: 0.8em;
@@ -25,14 +26,12 @@
 }
 
 .Volunteer_item > .imgbox > .organ {
-  width: 170px;
   height: 10px;
   font-size: 0.4em;
   font-weight: bolder;
   color: rgb(150, 150, 150);
   margin: 0px;
   line-height: 10px;
-  /* padding-left: 5px; */
   padding-bottom: 3px;
   text-align: left;
 }

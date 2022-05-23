@@ -10,7 +10,7 @@ const SponItem = ({ id, type, organ, activity, review }) => {
         navigate(`/sponsor/${id}`);
       }}
     >
-      <div className="imgWrapper">
+      <div className="sponImgWrapper">
         <img
           class="sponImage"
           src={process.env.PUBLIC_URL + `/assets/spon/spon_img${id % 4}.png`}
