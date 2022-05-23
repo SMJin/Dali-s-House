@@ -1,0 +1,61 @@
+.VolunteerItem {
+  width: 170px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.volunteerImgWrapper {
+  overflow: hidden;
+}
+
+.volunteerImage {
+  width: 170px;
+  border-radius: 5px;
+  height: auto;
+}
+
+.volunteerTitle {
+  text-align: left;
+  height: 40px;
+  line-height: 17px;
+
+  margin-top: 5px;
+
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.volunteerOrgan {
+  text-align: left;
+
+  margin-bottom: 5px;
+  font-size: 0.7em;
+  font-weight: bolder;
+  color: rgb(150, 150, 150);
+}
+
+.volunteerProgressDegree {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 5px;
+}
+
+.volunteerPercentage {
+  color: #ff5252;
+  font-weight: bold;
+  font-size: 15px;
+
+  text-align: left;
+}
+
+.volunteerPresent {
+  font-size: 0.8em;
+}
+
+.volunteerTotal {
+  font-size: 0.8em;
+  color: #96969e;
+}

@@ -9,6 +9,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import MyButton from "../../components/MyButton";
 import { useNavigate } from "react-router-dom";
+import MyTitle from "../../components/MyTitle";
+import MySearch from "../../components/MySearch";
 
 const Adoption = () => {
   useEffect(() => {
@@ -17,39 +19,33 @@ const Adoption = () => {
       .catch((e) => console.log(e));
   }, []);
 
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
-  
-    const goAdoptionEdit = () => {
-      navigate(`/adoption/edit`);
-    };
-
-    
-  const regionProps = {
-    pageName: "입양연결",
-    region1: "전국",
-    region2: "전국",
-    region3: "전국",
+  const goAdoptionEdit = () => {
+    navigate(`/adoption/edit`);
   };
 
   const [adoptionThumbnailList, setAdoptionThumbnailList] = useState([]);
 
   const [totalCount, setTotalCount] = useState(1);
-  const [limit, setLimit] = useState(10);
+  const limit = 16;
   const [page, setPage] = useState(1);
   const offset = (page - 1) * limit;
+
+  useEffect(() => {
+    axios({
+      url: "/api/adoptionThumbnails/1/24",
+      method: "GET",
+    }).then((res) => {
+      setAdoptionThumbnailList(res.data);
+    });
+  }, []);
 
   useEffect(() => {
     if (adoptionThumbnailList.length != 0) {
       setTotalCount(adoptionThumbnailList.length);
     }
-    axios({
-      "url": "/api/adoptionThumbnails/1/10",
-      "method": "GET",
-    }).then((res) => {
-      setAdoptionThumbnailList(res.data);
-    });
-  }, []);
+  });
 
   return (
     <div>
@@ -57,14 +53,13 @@ const Adoption = () => {
       <MyHeader />
       <AdoptionBest />
       <div className="adoption_thumbnail_board">
-        <div className="adoption_thumbnail_board_nav">
-          <MyNav {...regionProps} />
-          <div className="adoption_thumbnail_board_wrapper">
-          <h6>{adoptionThumbnailList.length} 개의 게시물이 있습니다.</h6>
-          <div className="adoption_thumbnail_board_writing">
-          <MyButton text={"+ 등록하기"}  onClick={goAdoptionEdit}/>
-          </div>
+        <div className="adoption_thumbnail_board_titlewrapper">
+          <MyTitle titleText={"입양연결"} />
+          <MySearch />
         </div>
+        <div className="adoption_thumbnail_board_titlewrapper">
+          <h6>{totalCount} 개의 게시물이 있습니다.</h6>
+          <MyButton text={"+ 등록하기"} onClick={goAdoptionEdit} />
         </div>
         <div className="adoption_thumbnail_board_contents">
           {adoptionThumbnailList.slice(offset, offset + limit).map((item) => (

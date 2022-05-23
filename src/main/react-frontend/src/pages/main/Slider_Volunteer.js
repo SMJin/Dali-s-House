@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Volunteer_item from "./component/Volunteer_item";
+import VolunteerItem from "../volunteerActivity/component/VolunteerItem";
 
 const Slider_Volunteer = ({ dataList }) => {
   const settings = {
@@ -22,7 +23,7 @@ const Slider_Volunteer = ({ dataList }) => {
           .slice(0, 10) // 상위 10개만 노출
           .map((it) => (
             <div key={it.id}>
-              <Volunteer_item key={it.id} {...it} />
+              <VolunteerItem key={it.id} {...it} />
             </div>
           ))}
       </Slider>
