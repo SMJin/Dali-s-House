@@ -119,7 +119,6 @@
 
 ### 22. 05. 18
 ###### frontend :: edit MyPage Page Component(CertificateDetail, CertificateList, DataList) (Author by. CJY)
-
 ###### frontend :: login / join axios communication (Author by. YJI)
 ###### frontend :: 로그인 시 헤더 login -> logout / join -> user id 보이도록 변경 (Author by. YJI)
 ###### frontend :: edit signup/login axios error (Author by. SMJ)
@@ -130,10 +129,16 @@
 ###### frontend :: create magazine detail page (Author by. YJI)
 ###### frontend :: add magazine page - magazine post list (Author by. YJI)
 ###### backend :: git AWS RDS 연결 및 서버 재배포 (Author by. SMJ)
+###### frontend :: create MypageSponsorList page (Author by. CJY)
+###### frontend :: MypageMenu에 MypageSponsorList page연결(Author by. CJY)
+
+### 22. 05. 20
+###### frontend :: edit Volunteer in Main Page (Author by. CJY)
+
 
 ### 22. 05. 23
 
 ###### backend :: update login using HttpSession (Author by. SMJ)
-
-
+###### frontend :: adoption / volunteer 글작성 버튼 생성 및 페이지 연결(Author by. CJY)
+ 
 
