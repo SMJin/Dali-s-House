@@ -1,0 +1,112 @@
+.volunteerPost {
+  margin: 0 20%;
+
+  text-align: center;
+}
+
+.volunteerPostTitleWrapper {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.volunteerPostHeaderApplyButton {
+  font-family: Applefont;
+  background-color: #ff5252;
+  color: white;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+
+  font-weight: 100;
+
+  border: none;
+  cursor: pointer;
+}
+
+.volunteerPostHeaderCloseButton {
+  font-family: Applefont;
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  background-color: rgb(255, 255, 255, 0);
+
+  cursor: pointer;
+}
+
+.volunteerPostContentWrapper {
+  display: flex;
+}
+
+.volunteerPostImageWrapper {
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+
+  overflow: hidden;
+}
+
+.volunteerPostImage {
+  width: 250px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.volunteerPostTextWrapper {
+  width: 360px;
+  margin-left: 20px;
+}
+
+.volunteerPostTitle {
+  text-align: left;
+
+  font-weight: bold;
+
+  margin-bottom: 5px;
+}
+
+.volunteerPostOrgan {
+  text-align: left;
+
+  color: #96969e;
+  font-size: 0.8em;
+  font-weight: bold;
+
+  margin-bottom: 20px;
+}
+
+.volunteerPostApplyButtonWrapper {
+  text-align: right;
+
+  margin-top: 10px;
+}
+
+.apply_on {
+  font-family: Applefont;
+  background-color: #ff5252;
+  color: white;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+
+  font-weight: 100;
+
+  border: none;
+  cursor: pointer;
+}
+
+.apply_off {
+  font-family: Applefont;
+  background-color: #d5d7db;
+  color: white;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+
+  font-weight: 100;
+
+  border: none;
+}

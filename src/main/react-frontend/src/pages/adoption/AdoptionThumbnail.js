@@ -1,3 +1,4 @@
+// import { useNavigate, useParams } from "react-router-dom";
 import "./css/AdoptionThumbnail.css";
 
 const AdoptionThumbnail = ({
@@ -14,10 +15,16 @@ const AdoptionThumbnail = ({
   videoUrl,
   details,
 }) => {
+  // const navigate = useNavigate();
   return (
-    <div className="adoption_thumbnail">
+    <div
+      className="adoption_thumbnail"
+      // onClick={() => {
+      //   navigate(`/adoption/${key}`);
+      // }}
+    >
       <img className="adoption_img" src={imgUrl} />
-      {/* <MyImage imgUrl={imgUrl} type={"img_thumbnail"} /> */}
+
       <div className="adoption_thumbnail_name">{name}</div>
       <div className="adoption_thumbnail_details1">
         {age} · {sex == "M" ? "남아♂" : "여아♀"}
@@ -38,4 +45,5 @@ export default AdoptionThumbnail;
 /* 
 import MyImage from "../../components/MyImage";
 {entryDate}
+      {<MyImage imgUrl={imgUrl} type={"img_thumbnail"} />}
 */

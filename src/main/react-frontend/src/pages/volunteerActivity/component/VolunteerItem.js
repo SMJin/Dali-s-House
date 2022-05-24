@@ -16,7 +16,7 @@ const VolunteerItem = ({
     <div
       className="VolunteerItem"
       onClick={() => {
-        navigate(`/sponsor/${id}`);
+        navigate(`/volunteerActivity/${id}`);
       }}
     >
       <div className="volunteerImgWrapper">

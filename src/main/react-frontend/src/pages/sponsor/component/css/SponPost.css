@@ -1,0 +1,80 @@
+.sponPost {
+  margin: 0 20%;
+
+  text-align: center;
+}
+
+.sponPostTitleWrapper {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sponPostHeaderCloseButton {
+  font-family: Applefont;
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  background-color: rgb(255, 255, 255, 0);
+
+  cursor: pointer;
+}
+
+.sponPostContentWrapper {
+  display: flex;
+}
+
+.sponPostImageWrapper {
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+
+  overflow: hidden;
+}
+
+.sponPostImage {
+  width: 250px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.sponPostTextWrapper {
+  width: 360px;
+  margin-left: 20px;
+}
+
+.sponPostOrgan {
+  text-align: left;
+
+  font-weight: bold;
+}
+
+.sponPostInfo {
+  text-align: left;
+
+  margin-top: 10px;
+
+  font-size: 0.8em;
+  color: #96969e;
+}
+
+.sponPostType {
+  text-align: left;
+
+  margin-top: 5px;
+
+  color: #f34949;
+  font-size: 0.7em;
+  font-weight: bold;
+  width: 45px;
+  height: 16px;
+  line-height: 16.5px;
+  background-color: rgb(255, 82, 82, 0.14);
+  display: flex;
+
+  padding: 2px 1px 2px 8px;
+  border-radius: 25px;
+}
