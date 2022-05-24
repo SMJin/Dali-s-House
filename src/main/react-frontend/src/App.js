@@ -15,7 +15,6 @@ import MyVolunteerCertificate from "./pages/Mypage/MyVolunteerCertificate";
 
 import MyFavoriteVolunteer from "./pages/Mypage/MyFavoriteVolunteer";
 import AdoptionThumbnailEdit from "./pages/adoption/AdoptionThumbnailEdit";
-import VolunteerActivityEdit from "./pages/volunteerActivity/VolunteerActivityEdit";
 import VolunteerActivityThumbnailEdit from "./pages/volunteerActivity/VolunteerActivityThumbnailEdit";
 import Sponsor from "./pages/sponsor/Sponsor";
 import Magazine from "./pages/community/Magazine";
@@ -31,6 +30,8 @@ import MagazinePost from "./pages/community/magazinepost/MagazinePost";
 import VolunteerPost from "./pages/volunteerActivity/component/VolunteerPost";
 import AdoptionPost from "./pages/adoption/component/AdoptionPost";
 import SponPost from "./pages/sponsor/component/SponPost";
+import VolunteerApply from "./pages/volunteerActivity/component/VolunteerApply";
+import AdoptionApply from "./pages/adoption/component/AdoptionApply";
 
 const reducer = (state, action) => {
   let newState = [];
@@ -221,6 +222,7 @@ function App() {
                     path="/adoption/edit"
                     element={<AdoptionEdit onCreate={null} />}
                   />
+                  <Route path="/adoption/apply" element={<AdoptionApply />} />
                   <Route
                     path="/volunteerActivity"
                     element={<VolunteerActivity />}
@@ -230,8 +232,8 @@ function App() {
                     element={<VolunteerPost />}
                   />
                   <Route
-                    path="/volunteerActivity/:id/edit"
-                    element={<VolunteerActivityEdit />}
+                    path="/volunteerActivity/:id/apply"
+                    element={<VolunteerApply />}
                   />
                   <Route
                     path="/volunteerActivity/thumbnail/edit"
