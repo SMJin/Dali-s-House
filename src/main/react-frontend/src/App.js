@@ -28,6 +28,9 @@ import Community_Edit from "./pages/community/post/Edit";
 import Community_Detail from "./pages/community/post/Detail";
 import MyPageSponsor from "./pages/Mypage/MyPageSponsor";
 import MagazinePost from "./pages/community/magazinepost/MagazinePost";
+import VolunteerPost from "./pages/volunteerActivity/component/VolunteerPost";
+import AdoptionPost from "./pages/adoption/component/AdoptionPost";
+import SponPost from "./pages/sponsor/component/SponPost";
 
 const reducer = (state, action) => {
   let newState = [];
@@ -209,6 +212,7 @@ function App() {
                   />
                   <Route path="/community/:id" element={<Community_Detail />} />
                   <Route path="/adoption" element={<Adoption />} />
+                  <Route path="/adoption/:id" element={<AdoptionPost />} />
                   <Route
                     path="/adoption/thumbnail/edit"
                     element={<AdoptionThumbnailEdit />}
@@ -223,16 +227,17 @@ function App() {
                   />
                   <Route
                     path="/volunteerActivity/:id"
-                    // element={<VolunteerActivity />}
+                    element={<VolunteerPost />}
+                  />
+                  <Route
+                    path="/volunteerActivity/:id/edit"
+                    element={<VolunteerActivityEdit />}
                   />
                   <Route
                     path="/volunteerActivity/thumbnail/edit"
                     element={<VolunteerActivityThumbnailEdit />}
                   />
-                  <Route
-                    path="/volunteerActivity/edit"
-                    element={<VolunteerActivityEdit />}
-                  />
+
                   <Route path="/myPage" element={<MyPage />} />
                   <Route path="/myVolunteer" element={<MyVolunteer />} />
                   <Route
@@ -245,6 +250,7 @@ function App() {
                     element={<MagazinePost />}
                   />
                   <Route path="/sponsor" element={<Sponsor />} />
+                  <Route path="/sponsor/:id" element={<SponPost />} />
 
                   <Route
                     path="/certificatedetail/:id"

@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 import "./css/VounteerActivity.css";
 import MyHeader from "../../components/MyHeader";
 import MyFooter from "../../components/MyFooter";
-import MyButton from "../../components/MyButton";
 import MyTitle from "../../components/MyTitle";
 import MySearch from "../../components/MySearch";
 import VolunteerList from "./VolunteerList";
@@ -12,12 +10,6 @@ import VolunteerSituation from "../../components/VolunteerSituation";
 import { VolunteerDataList } from "./component/VolunteerDataList";
 
 const VolunteerActivity = () => {
-  const navigate = useNavigate();
-
-  const goVolunteerEdit = () => {
-    navigate(`/volunteerActivity/edit`);
-  };
-
   const [dataList, setDataList] = useState([]);
 
   useEffect(() => {
@@ -31,9 +23,6 @@ const VolunteerActivity = () => {
   });
 
   const [totalCount, setTotalCount] = useState(1);
-  const limit = 16;
-  const [page, setPage] = useState(1);
-  const offset = (page - 1) * limit;
 
   return (
     <div className="VolunteerActivity">
@@ -52,7 +41,6 @@ const VolunteerActivity = () => {
         </div>
         <div className="VolunteerActivity_thumbnail_board_titlewrapper">
           <h6>{totalCount} 개의 게시물이 있습니다.</h6>
-          <MyButton text={"+ 등록하기"} onClick={goVolunteerEdit} />
         </div>
         <div className="VolunteerActivity_thumbnail_board_content">
           <VolunteerList dataList={dataList} />
