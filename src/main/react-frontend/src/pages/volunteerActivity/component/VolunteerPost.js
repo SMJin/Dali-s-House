@@ -11,7 +11,7 @@ const VolunteerPost = () => {
   const navigate = useNavigate();
 
   const goVolunteerEdit = () => {
-    navigate(`/volunteerActivity/${id}/edit`);
+    navigate(`/volunteerActivity/${id}/apply`);
   };
 
   const { id } = useParams();

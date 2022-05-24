@@ -1,0 +1,12 @@
+.adoptionApply {
+  margin: 0% 20%;
+}
+
+.adoptionApplyTitleWrapper {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 15px;
+}
