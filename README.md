@@ -40,7 +40,7 @@
 ###### Community page (Author by. YJI)
 
 
-### 22.04.15 ~ 28
+### 22. 04. 15 ~ 28
 
 ###### edit overall page layout
 
@@ -56,33 +56,33 @@
 ###### backend :: adoptionThumbnail axios communication (Author by. SMJ)
 ###### backend :: volunteerActivityThumbnail axios communication (Author by. SMJ)
 
-### 22.04.30
+### 22. 04. 30
 
 ###### frontend :: create join page (Author by. YJI)
 ###### frontend :: create login page (Author by. YJI)
 
-### 22.05.01
+### 22. 05. 01
 
 ###### frontend :: create FindID page (Author by. YJI)
 ###### frontend :: create FindPW page (Author by. YJI)
 
 
-### 22.05.02 ~ 03
+### 22. 05. 02 ~ 03
 ###### frontend :: Join/Login/FindID/FindPW examine of input value's effectiveness (Author by. YJI)
 ###### frontend :: Join/Login/FindID/FindPW implement dynamic functions (Author by. YJI)
 
-### 22.05.04
+### 22. 05. 04
 ###### frontend :: adoptionThumbnail page axios communication (Author by. SMJ)
 ###### backend :: adoptionThumbnail Seoul Open Api 연동 (Author by. SMJ)
 
-### 22.05.04
+### 22. 05. 04
 ###### frontend :: edit Menubar of MyVolunteer, MyFavoriteVolunteer  (Author by. CJY)
 
 
-### 22.05.04 ~ 05
+### 22. 05. 04 ~ 05
 ###### frontend :: 커뮤니티 작성한 글 커뮤니티 페이지에 노출시키기 (Author by. YJI)
 
-### 22.05.06
+### 22. 05. 06
 ###### frontend :: create community post edit page (Author by. YJI)
 ###### frontend :: create community post detail page (Author by. YJI)
 
