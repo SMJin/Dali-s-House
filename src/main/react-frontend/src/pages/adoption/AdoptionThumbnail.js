@@ -19,12 +19,12 @@ const AdoptionThumbnail = ({
       <img className="adoption_img" src={imgUrl} />
       {/* <MyImage imgUrl={imgUrl} type={"img_thumbnail"} /> */}
       <div className="adoption_thumbnail_name">{name}</div>
-      <div className="adoption_thumbnail_details">
-        {age} · {sex == "M" ? "남아" : "여아"}
+      <div className="adoption_thumbnail_details1">
+        {age} · {sex == "M" ? "남아♂" : "여아♀"}
       </div>
-      <div className="adoption_thumbnail_details">
-        {species} {breedOf}
-      </div>
+      <span className="adoption_thumbnail_details2">
+        {species} | {breedOf}
+      </span>
     </div>
   );
 };
