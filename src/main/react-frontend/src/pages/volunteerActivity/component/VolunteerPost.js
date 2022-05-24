@@ -11,6 +11,7 @@ const VolunteerPost = () => {
   const navigate = useNavigate();
 
   const goVolunteerEdit = () => {
+    window.confirm("주의사항을 숙지하셨습니까?");
     navigate(`/volunteerActivity/${id}/apply`);
   };
 
@@ -60,6 +61,12 @@ const VolunteerPost = () => {
             <div className="volunteerPostOrgan">
               {VolunteerDataList[id - 1].organ}
             </div>
+            <div className="volunteerPostPeriod">
+              접수 기간 : {VolunteerDataList[id - 1].application_period}
+            </div>
+            <div className="volunteerPostDate">
+              활동 날짜 : {VolunteerDataList[id - 1].date}
+            </div>
             <div className="volunteerProgressBar">
               <ProgressBar
                 key={id}
@@ -90,6 +97,26 @@ const VolunteerPost = () => {
               </button>
             </div>
           </div>
+        </div>
+        <div className="volunteerNotice">
+          <span className="volunteerNoticeTitle">
+            <b>주의사항 안내</b>
+          </span>
+          <br />
+          <br />
+          주의사항을 안내드립니다. <br />
+          이런분들은 참여하실 수 없습니다.
+          <br />
+          <br />
+          - 보호소에는 소형견 뿐만 아니라 대형견도 많습니다. 개를 무서워하시는
+          분들은 참여를 자제해주세요.
+          <br />
+          - 중간에 이탈하시는 분들이 많습니다. 끝까지 함께하실 분들만 참여
+          부탁드립니다.
+          <br />
+          - 다수의 사람들이 다녀가는 곳으로, 백신 2차 완료자만 참여하실 수
+          있습니다. (현장에서 확인합니다.)
+          <br />- 단체 참여는 센터로 문의주세요.
         </div>
       </div>
       <MyFooter />

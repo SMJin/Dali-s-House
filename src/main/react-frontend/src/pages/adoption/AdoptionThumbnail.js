@@ -1,4 +1,4 @@
-// import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./css/AdoptionThumbnail.css";
 
 const AdoptionThumbnail = ({
@@ -15,13 +15,13 @@ const AdoptionThumbnail = ({
   videoUrl,
   details,
 }) => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <div
       className="adoption_thumbnail"
-      // onClick={() => {
-      //   navigate(`/adoption/${key}`);
-      // }}
+      onClick={() => {
+        navigate(`/adoption/post`);
+      }}
     >
       <img className="adoption_img" src={imgUrl} />
 

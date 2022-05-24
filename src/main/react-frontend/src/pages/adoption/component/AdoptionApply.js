@@ -3,9 +3,20 @@ import { useNavigate } from "react-router-dom";
 import "./css/AdoptionApply.css";
 import MyFooter from "../../../components/MyFooter";
 import MyHeader from "../../../components/MyHeader";
+import { useState } from "react";
 
 const AdoptionApply = () => {
   const navigate = useNavigate();
+
+  const [agree, setAgree] = useState(false);
+  const [count, setCount] = useState(1);
+
+  const onChangeAgree = (e) => {
+    if (count % 2 == 1) {
+      setAgree(true);
+    } else setAgree(false);
+    setCount(count + 1);
+  };
 
   return (
     <div>
@@ -23,9 +34,107 @@ const AdoptionApply = () => {
             × 닫기
           </button>
         </div>
+        <div className="adoptionContentWrapper">
+          <div className="adoptionTextWrapper">
+            <div className="adoptionProtectorWrapper">
+              <div className="sectionTitle"> 보호자 정보를 입력해주세요</div>
+
+              <div className="applyItem">
+                <div className="applyItemTitle_adoption">직업</div>
+                <input
+                  className="applyItemInput"
+                  placeholder="어떤 일을 하고 계신가요?"
+                  type="text"
+                />
+              </div>
+              <div className="applyItem">
+                <div className="applyItemTitle_adoption">수입</div>
+                <input
+                  className="applyItemInput"
+                  placeholder="한달 평균 수입은 어떻게 되시나요?"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div className="adoptionExperienceWrapper">
+              <div className="sectionTitle"> 반려동물 경험을 입력해주세요</div>
+              <div className="applyItem">
+                <div className="applyItemTitle_adoption">품종</div>
+                <input
+                  className="applyItemInput"
+                  placeholder="키워본 반려동물의 종은 무엇인가요?"
+                  type="text"
+                />
+              </div>
+              <div className="applyItem">
+                <div className="applyItemTitle_adoption">기간</div>
+                <input
+                  className="applyItemInput"
+                  placeholder="같이 살았던 기간은 어느정도인가요?"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div className="adoptionConditionWrapper">
+              <div className="sectionTitle"> 입양하는 환경을 입력해주세요</div>
+
+              <div className="applyItem">
+                <input
+                  className="applyItemInput"
+                  placeholder="하루에 몇 시간을 함께 보낼 수 있나요?"
+                  type="text"
+                />
+              </div>
+              <div className="applyItem">
+                <input
+                  className="applyItemInput"
+                  placeholder="한달에 반려동물에게 얼마정도 사용하실 수 있나요?"
+                  type="text"
+                />
+              </div>
+              <div className="applyItem">
+                <input
+                  className="applyItemInput"
+                  placeholder="가족 구성원은 몇 명인가요?"
+                  type="text"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="adoptionPostInfoWrapper">입양 동물 정보</div>
+        </div>
+        <div className="adoptionPrivacyCheck">
+          <input
+            className="adoptionPrivacyCheck_checkbox"
+            type={"checkbox"}
+            value={agree}
+            onChange={onChangeAgree}
+          />
+          <label className="adoptionPrivacyCheck_label">
+            {" "}
+            개인정보 수집 및 이용 동의
+          </label>
+        </div>
+        <div className="adoptionPrivacyNotice">
+          1. 해당 문서는 보호소에서 작성자님을 파악하는데 사용하는 문서 입니다.{" "}
+          <br />
+          2. 본 문서는 해당 보호소에만 전달되고 어디에도 공유되지 않으며 접수
+          1주일 후 파기됩니다. <br />
+        </div>
+        <button
+          className="adoptionSubmitButton"
+          disabled={!agree}
+          onClick={() => {
+            navigate(-1, { replace: true });
+          }}
+        >
+          제출하기
+        </button>
       </div>
       <MyFooter />
     </div>
   );
 };
 export default AdoptionApply;
+
+//IsName && IsBirth && IsNumber && IsEmail &&

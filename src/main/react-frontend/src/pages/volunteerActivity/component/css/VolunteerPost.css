@@ -62,9 +62,8 @@
 
 .volunteerPostTitle {
   text-align: left;
-
   font-weight: bold;
-
+  padding-top: 40px;
   margin-bottom: 5px;
 }
 
@@ -75,7 +74,22 @@
   font-size: 0.8em;
   font-weight: bold;
 
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.volunteerPostPeriod {
+  text-align: left;
+  font-size: 0.8em;
+
+  margin: 2px 0px;
+}
+
+.volunteerPostDate {
+  text-align: left;
+  font-size: 0.85em;
+  font-weight: bold;
+
+  margin: 3px 0px;
 }
 
 .volunteerPostApplyButtonWrapper {
@@ -109,4 +123,20 @@
   font-weight: 100;
 
   border: none;
+}
+
+.volunteerProgressBar {
+  margin-top: 10px;
+}
+
+.volunteerNotice {
+  white-space: nowrap;
+  text-align: left;
+  width: 590px;
+  border-radius: 2px;
+
+  font-size: 0.9em;
+  padding: 10px 20px;
+  margin-top: 15px;
+  background-color: rgba(248, 248, 251, 1);
 }
