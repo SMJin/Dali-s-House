@@ -125,7 +125,6 @@
 ###### backend :: seoul api 받아올때 영상 없을 경우 에러 처리 (Author by. SMJ)
 
 ### 22. 05. 18 ~ 22. 05. 19
-
 ###### frontend :: create magazine detail page (Author by. YJI)
 ###### frontend :: add magazine page - magazine post list (Author by. YJI)
 ###### backend :: git AWS RDS 연결 및 서버 재배포 (Author by. SMJ)
@@ -135,10 +134,13 @@
 ### 22. 05. 20
 ###### frontend :: edit Volunteer in Main Page (Author by. CJY)
 
+### 22. 05. 21
+###### frontend :: edit volunteer list & main carousel (Author by. YJI)
 
 ### 22. 05. 23
-
 ###### backend :: update login using HttpSession (Author by. SMJ)
-###### frontend :: adoption / volunteer 글작성 버튼 생성 및 페이지 연결(Author by. CJY)
+###### frontend :: adoption / volunteer 글작성 버튼 생성 및 페이지 연결 (Author by. CJY)
+###### frontend :: edit adoption list & main carousel (Author by. YJI)
+
  
 
