@@ -213,7 +213,7 @@ function App() {
                   />
                   <Route path="/community/:id" element={<Community_Detail />} />
                   <Route path="/adoption" element={<Adoption />} />
-                  <Route path="/adoption/:id" element={<AdoptionPost />} />
+                  <Route path="/adoption/post" element={<AdoptionPost />} />
                   <Route
                     path="/adoption/thumbnail/edit"
                     element={<AdoptionThumbnailEdit />}

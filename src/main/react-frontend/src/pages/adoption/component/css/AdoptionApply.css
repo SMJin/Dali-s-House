@@ -10,3 +10,83 @@
 
   margin-top: 15px;
 }
+
+.adoptionContentWrapper {
+  display: flex;
+}
+
+.adoptionTextWrapper {
+  width: 300px;
+  /* border: 1px solid black; */
+}
+
+.applyItemTitle_adoption {
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.sectionTitle {
+  font-weight: bold;
+  margin: 15px 0px;
+}
+
+.applyItemInput {
+  font-family: Applefont;
+  width: 290px;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 10px 0px;
+}
+
+.adoptionPostInfoWrapper {
+  text-align: center;
+  margin-left: 25px;
+  width: 300px;
+  border: 1px solid black;
+}
+
+.adoptionPrivacyCheck {
+  margin: 10px 0px;
+
+  display: flex;
+}
+
+.adoptionPrivacyCheck_label {
+  font-size: 0.9em;
+
+  margin-top: 1px;
+  margin-left: 5px;
+}
+
+.adoptionPrivacyNotice {
+  width: 610px;
+  padding: 10px;
+
+  font-size: 0.95em;
+  background-color: #f8f8fb;
+  color: #555558;
+
+  white-space: pre-wrap;
+}
+
+.adoptionSubmitButton {
+  font-family: Applefont;
+
+  width: 630px;
+  height: 50px;
+
+  margin-top: 10px;
+
+  border: none;
+
+  background-color: #ff7373;
+  color: white;
+
+  cursor: pointer;
+}
+
+.adoptionSubmitButton:disabled {
+  background-color: #e2e2e2;
+  cursor: Default;
+}

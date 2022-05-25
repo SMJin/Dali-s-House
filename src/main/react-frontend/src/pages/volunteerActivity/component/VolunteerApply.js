@@ -217,6 +217,9 @@ const VolunteerApply = () => {
             <div className="volunteerPostOrgan_Apply">
               {VolunteerDataList[id - 1].organ}
             </div>
+            <div className="volunteerPostOrgan_Apply">
+              <b>활동 날짜 : {VolunteerDataList[id - 1].date}</b>
+            </div>
             <div className="volunteerCount_Apply">
               <span className="volunteerPresent_Apply">
                 인원: {VolunteerDataList[id - 1].recruitment_cur}명&nbsp;/
