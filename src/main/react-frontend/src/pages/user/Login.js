@@ -27,8 +27,8 @@ const Login = () => {
         url: "/user/login",
         method: "POST",
         data: {
-          userId: `${id}`,
-          password: `${password}`,
+          "userId": `${id}`,
+          "password": `${password}`,
         },
       })
         .then((res) => {
