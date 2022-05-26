@@ -7,20 +7,19 @@ import MyFooter from "../../components/MyFooter";
 import MySearch from "../../components/MySearch";
 import "./css/MyPageSponsor.css";
 
-const MyPageSponsor = props => {
-    return (
-        <div className="MyPageSponsor">
-        <h2>후원 리스트 페이지</h2>
-        <MyHeader />
+const MyPageSponsor = (props) => {
+  return (
+    <div className="MyPageSponsor">
+      <MyHeader />
 
-        <MySearch/>
-        <span>후원 내역</span>
+      <MySearch />
+      <span>후원 내역</span>
 
-        <MyPageMenu/>
+      <MyPageMenu />
 
-        <SponsorList />
-        </div>
-    )
-}
+      <SponsorList />
+    </div>
+  );
+};
 
-export default  MyPageSponsor;
+export default MyPageSponsor;

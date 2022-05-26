@@ -100,7 +100,6 @@ const FindID = () => {
 
   return (
     <div>
-      <h1>아이디 찾기 페이지</h1>
       <MyHeader />
       <div className="findID">
         <h2>아이디 찾기</h2>

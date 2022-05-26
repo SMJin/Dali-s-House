@@ -12,7 +12,6 @@ const MagazinePost = () => {
 
   return (
     <div>
-      <h1>매거진 페이지</h1>
       <MyHeader />
       <div className="MagazinePost">
         <div className="MagazinePostHeaderWrapper">

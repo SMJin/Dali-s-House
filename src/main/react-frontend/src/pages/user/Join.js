@@ -18,12 +18,12 @@ const Join = () => {
       url: "/user/signup",
       method: "POST",
       data: {
-        "userId": `${id}`,
-        "password": `${password}`,
-        "username": `${name}`,
-        "phone": `${number}`,
-        "email": `${email}`,
-        "permission": `${agree}`,
+        userId: `${id}`,
+        password: `${password}`,
+        username: `${name}`,
+        phone: `${number}`,
+        email: `${email}`,
+        permission: `${agree}`,
       },
     })
       .then((res) => {
@@ -161,24 +161,8 @@ const Join = () => {
     setCount(count + 1);
   };
 
-  // useEffect(() => {
-  //   axios({
-  //     url: "/api/user/signup",
-  //     method: "POST",
-  //     data: {
-  //       "userId": `${id}`,
-  //       "password": `${password}`,
-  //       "username": `${name}`,
-  //       "phone": `${number}`,
-  //       "email": `${email}`,
-  //       "permission": `${agree}`,
-  //     },
-  //   });
-  // }, []);
-
   return (
     <div>
-      <h1>회원가입 페이지</h1>
       <MyHeader />
       <div className="join">
         <h2>회원가입</h2>

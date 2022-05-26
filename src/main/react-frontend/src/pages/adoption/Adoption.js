@@ -2,7 +2,6 @@ import "./css/Adoption.css";
 import MyHeader from "../../components/MyHeader";
 import MyFooter from "../../components/MyFooter";
 import AdoptionThumbnail from "./AdoptionThumbnail";
-import MyNav from "../volunteerActivity/MyNav";
 import AdoptionBest from "./AdoptionBest";
 import MyPagination from "../../components/MyPagination";
 import { useEffect, useState } from "react";
@@ -49,7 +48,6 @@ const Adoption = () => {
 
   return (
     <div>
-      <h1>입양 페이지</h1>
       <MyHeader />
       <AdoptionBest />
       <div className="adoption_thumbnail_board">
@@ -59,12 +57,13 @@ const Adoption = () => {
         </div>
         <div className="adoption_thumbnail_board_titlewrapper">
           <h6>{totalCount} 개의 게시물이 있습니다.</h6>
-          <MyButton text={"+ 등록하기"} onClick={goAdoptionEdit} />
         </div>
         <div className="adoption_thumbnail_board_contents">
-          {adoptionThumbnailList.slice(offset, offset + limit).map((item) => (
-            <AdoptionThumbnail key={item.id} {...item} />
-          ))}
+          {adoptionThumbnailList
+            .slice(offset, offset + limit)
+            .map((item, index) => (
+              <AdoptionThumbnail key={index} {...item} />
+            ))}
         </div>
       </div>
       <MyPagination

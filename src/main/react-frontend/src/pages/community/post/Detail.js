@@ -44,7 +44,6 @@ const Community_Detail = ({ originData }) => {
     const timeGap = Date.now() - parseInt(data.date);
     return (
       <div>
-        <h1>커뮤니티 글 상세 페이지</h1>
         <MyHeader />
         <div className="Community_Detail">
           <div className="detailPostTop">

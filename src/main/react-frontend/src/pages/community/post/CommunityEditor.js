@@ -51,21 +51,6 @@ const CommPostEditor = ({ isEdit, originData }) => {
       }
     }
 
-    // axios({
-    //   url: "/api/communityPosts",
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   data: data,
-    // })
-    //   .then((res) => {
-    //     console.log(res);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
-
     navigate(-1, { replace: true });
   };
 
@@ -86,7 +71,6 @@ const CommPostEditor = ({ isEdit, originData }) => {
 
   return (
     <div>
-      <h1>{isEdit ? "커뮤니티 글 수정 페이지" : "커뮤니티 글 작성 페이지"}</h1>
       <MyHeader />
       <div className="Community_New">
         <h2>{isEdit ? "커뮤니티 글 수정하기" : "커뮤니티 글 작성하기"}</h2>

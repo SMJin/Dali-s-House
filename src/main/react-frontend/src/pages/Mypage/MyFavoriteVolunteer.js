@@ -9,7 +9,6 @@ import MyFavoriteVolunteerList from "./MyFavoriteVolunteerList";
 import "./css/MyFavoriteVolunteer.css";
 import MyPageMenu from "./MyPageMenu";
 
-
 const MyFavoriteVolunteer = ({ sponsorList }) => {
   const [dataList, setDataList] = useState([]);
 
@@ -19,11 +18,10 @@ const MyFavoriteVolunteer = ({ sponsorList }) => {
 
   return (
     <>
-        <div className="MyFavoriteVolunteer">
-      <h1>찜한봉사 페이지</h1>
-      <MyHeader />
-      <MySearch />
-      <span>찜한 봉사</span>
+      <div className="MyFavoriteVolunteer">
+        <MyHeader />
+        <MySearch />
+        <span>찜한 봉사</span>
 
         <MyPageMenu />
 
@@ -38,7 +36,7 @@ const MyFavoriteVolunteer = ({ sponsorList }) => {
 };
 
 MyFavoriteVolunteer.defaultProps = {
-    MyFavoriteVolunteerList: [],
+  MyFavoriteVolunteerList: [],
 };
 
 export default MyFavoriteVolunteer;

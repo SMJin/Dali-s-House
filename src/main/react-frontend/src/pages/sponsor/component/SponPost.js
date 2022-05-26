@@ -11,7 +11,6 @@ const SponPost = () => {
 
   return (
     <div>
-      <h1>후원 상세 페이지</h1>
       <MyHeader />
       <div className="sponPost">
         <div className="sponPostTitleWrapper">

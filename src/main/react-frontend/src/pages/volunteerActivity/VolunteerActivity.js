@@ -26,7 +26,6 @@ const VolunteerActivity = () => {
 
   return (
     <div className="VolunteerActivity">
-      <h1>봉사활동 페이지</h1>
       <MyHeader />
       <VolunteerSituation
         vol={10 + "," + 275}
