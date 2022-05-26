@@ -2,6 +2,11 @@
   margin: 0 15%;
 }
 
+.adoptionBest {
+  width: 100%;
+  image-rendering: -webkit-optimize-contrast;
+}
+
 .adoption_thumbnail_board_titlewrapper {
   display: flex;
 
