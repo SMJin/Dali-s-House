@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import "./css/AdoptionApply.css";
 import MyFooter from "../../../components/MyFooter";
@@ -7,6 +7,9 @@ import { useState } from "react";
 
 const AdoptionApply = () => {
   const navigate = useNavigate();
+
+  const location = useLocation();
+  const data = location.state;
 
   const [agree, setAgree] = useState(false);
   const [count, setCount] = useState(1);
@@ -20,7 +23,6 @@ const AdoptionApply = () => {
 
   return (
     <div>
-      <h1>입양 신청서 작성 페이지</h1>
       <MyHeader />
       <div className="adoptionApply">
         <div className="adoptionApplyTitleWrapper">
@@ -101,7 +103,30 @@ const AdoptionApply = () => {
               </div>
             </div>
           </div>
-          <div className="adoptionPostInfoWrapper">입양 동물 정보</div>
+          <div className="adoptionPostInfoWrapper">
+            <img className="adoptionApplyPostImg" src={data.img} />
+            <div className="adoptionApplyPostName">{data.name}</div>
+            <div className="adoptionApplyPostDetail1">
+              {data.age} · {data.sex == "M" ? "남아♂" : "여아♀"}
+            </div>
+            <span className="adoptionApplyPostDetail2">
+              {data.species} | {data.breedOf}
+            </span>
+            <div className="adoptionApplyPostExplainWrapper">
+              <span className="adoptionApplyPostExplain">
+                누구보다 활동적이고 웃음 많은 {data.name}입니다.
+              </span>
+              <span className="adoptionApplyPostExplain">
+                활동적인 걸 좋아해서 마당이 있는 집이나
+              </span>
+              <span className="adoptionApplyPostExplain">
+                산책을 자주 할 수 있으면
+              </span>
+              <span className="adoptionApplyPostExplain">
+                {data.name}(이)가 아주 좋아할거에요!
+              </span>
+            </div>
+          </div>
         </div>
         <div className="adoptionPrivacyCheck">
           <input

@@ -26,7 +26,6 @@ const VolunteerPost = () => {
 
   return (
     <div>
-      <h1>봉사활동 상세 페이지</h1>
       <MyHeader />
       <div className="volunteerPost">
         <div className="volunteerPostTitleWrapper">

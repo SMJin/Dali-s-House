@@ -16,7 +16,6 @@ const Magazine = () => {
 
   return (
     <div>
-      <h1>매거진 페이지</h1>
       <MyHeader />
       <img
         class="main_adv"

@@ -112,7 +112,6 @@ const VolunteerApply = () => {
 
   return (
     <div>
-      <h1>봉사활동 신청서 작성 페이지</h1>
       <MyHeader />
       <div className="volunteerApply">
         <div className="volunteerApplyTitleWrapper">

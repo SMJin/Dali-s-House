@@ -7,7 +7,6 @@ import Community from "./pages/community/Community";
 import Adoption from "./pages/adoption/Adoption";
 import VolunteerActivity from "./pages/volunteerActivity/VolunteerActivity";
 import MyPage from "./pages/Mypage/MyPage";
-import AdoptionEdit from "./pages/adoption/AdoptionEdit";
 import MyVolunteer from "./pages/Mypage/MyVolunteer";
 
 import CertificateDetail from "./pages/Mypage/CertificateDetail";
@@ -28,7 +27,6 @@ import Community_Detail from "./pages/community/post/Detail";
 import MyPageSponsor from "./pages/Mypage/MyPageSponsor";
 import MagazinePost from "./pages/community/magazinepost/MagazinePost";
 import VolunteerPost from "./pages/volunteerActivity/component/VolunteerPost";
-import AdoptionPost from "./pages/adoption/component/AdoptionPost";
 import SponPost from "./pages/sponsor/component/SponPost";
 import VolunteerApply from "./pages/volunteerActivity/component/VolunteerApply";
 import AdoptionApply from "./pages/adoption/component/AdoptionApply";
@@ -75,16 +73,6 @@ const reducerUser = (state, action) => {
       newState = [action.data, ...state];
       break;
     }
-    // case "REMOVE": {
-    //   newState = state.filter((it) => it.id !== action.targetId);
-    //   break;
-    // }
-    // case "EDIT": {
-    //   newState = state.map((it) =>
-    //     it.id === action.data.id ? { ...action.data } : it
-    //   );
-    //   break;
-    // }
     default:
       return state;
   }
@@ -198,7 +186,6 @@ function App() {
           >
             <BrowserRouter>
               <div className="App">
-                <h1>달리네 집 App.js</h1>
                 <Routes>
                   <Route path="/" element={<Main />} />
                   <Route path="/login" element={<Login />} />
@@ -213,16 +200,11 @@ function App() {
                   />
                   <Route path="/community/:id" element={<Community_Detail />} />
                   <Route path="/adoption" element={<Adoption />} />
-                  <Route path="/adoption/post" element={<AdoptionPost />} />
+                  <Route path="/adoption/apply" element={<AdoptionApply />} />
                   <Route
                     path="/adoption/thumbnail/edit"
                     element={<AdoptionThumbnailEdit />}
                   />
-                  <Route
-                    path="/adoption/edit"
-                    element={<AdoptionEdit onCreate={null} />}
-                  />
-                  <Route path="/adoption/apply" element={<AdoptionApply />} />
                   <Route
                     path="/volunteerActivity"
                     element={<VolunteerActivity />}
@@ -274,7 +256,3 @@ function App() {
 }
 
 export default App;
-
-/*
-<Route path="/sponsor/:id" element={<SponPost />} />
-*/

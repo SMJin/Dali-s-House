@@ -17,7 +17,6 @@ const Sponsor = ({ sponsorList }) => {
 
   return (
     <div>
-      <h1>후원 페이지</h1>
       <MyHeader />
       <div className="Sponsor">
         <div className="title">

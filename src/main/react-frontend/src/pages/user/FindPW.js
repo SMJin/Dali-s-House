@@ -99,7 +99,6 @@ const FindPW = () => {
 
   return (
     <div>
-      <h1>비밀번호 찾기 페이지</h1>
       <MyHeader />
       <div className="findPW">
         <h2>비밀번호 찾기</h2>
