@@ -49,7 +49,11 @@ const Adoption = () => {
   return (
     <div>
       <MyHeader />
-      <AdoptionBest />
+
+      <img
+        className="adoptionBest"
+        src={process.env.PUBLIC_URL + `/assets/adoptionBest.png`}
+      />
       <div className="adoption_thumbnail_board">
         <div className="adoption_thumbnail_board_titlewrapper">
           <MyTitle titleText={"입양연결"} />
