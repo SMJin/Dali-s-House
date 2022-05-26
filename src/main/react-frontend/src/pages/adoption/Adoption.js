@@ -33,8 +33,8 @@ const Adoption = () => {
 
   useEffect(() => {
     axios({
-      url: "/api/adoptionThumbnails/1/24",
-      method: "GET",
+      "url": "/api/adoptionThumbnails/1/24",
+      "method": "GET",
     }).then((res) => {
       setAdoptionThumbnailList(res.data);
     });

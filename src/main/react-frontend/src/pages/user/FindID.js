@@ -1,7 +1,7 @@
 import "./css/FindID.css";
 
 import { useNavigate } from "react-router-dom";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import MyHeader from "../../components/MyHeader";
 import MyFooter from "../../components/MyFooter";
 
@@ -13,6 +13,8 @@ const FindID = () => {
   const [postposition, setPostposition] = useState("를");
   const [byPhone, setByPhone] = useState(true);
   const [byEmail, setByEmail] = useState(false);
+
+  const [findId, setFindId] = useState();
 
   const goFindByPhoneNumber = () => {
     setWay("휴대폰 번호");
@@ -37,7 +39,11 @@ const FindID = () => {
   };
 
   const goFindID = () => {
-    alert("회원님의 아이디는 '     ' 입니다.");
+    if (isValid) {
+      alert(`회원님의 아이디는 ${findId} 입니다.`);
+    } else {
+      alert(`일치하는 정보가 없습니다.`);
+    }
   };
 
   const goFindPW = () => {
@@ -97,6 +103,24 @@ const FindID = () => {
       }
     }
   };
+
+  const confirm = JSON.parse(localStorage.getItem("user"));
+  const [isValid, setIsVaild] = useState(false);
+
+  useEffect(() => {
+    if (confirm != null) {
+      for (let i = 0; i < confirm.length; i++) {
+        if (
+          confirm[i].name == name &&
+          (confirm[i].number == input || confirm[i].email == input)
+        ) {
+          setIsVaild(true);
+          setFindId(confirm[i].id);
+          break;
+        } else setIsVaild(false);
+      }
+    }
+  });
 
   return (
     <div>
