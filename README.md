@@ -142,5 +142,7 @@
 ###### frontend :: adoption / volunteer 글작성 버튼 생성 및 페이지 연결 (Author by. CJY)
 ###### frontend :: edit adoption list & main carousel (Author by. YJI)
 
- 
+### 22. 05. 25 ~ 22. 05. 27
+###### frontend :: edit adoption apply page (Author by. YJI)
+###### frontend :: last modification (Author by. YJI)
 
