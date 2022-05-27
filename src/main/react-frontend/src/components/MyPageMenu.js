@@ -22,7 +22,17 @@ const MyPageMenuTest = ({ clicked }) => {
   return (
     <div className="MyPageMenuTest">
       <details className="menuTop" open={isVolunteer}>
-        <summary>봉사 활동</summary>
+        <summary>
+          봉사 활동{" "}
+          <img
+            className="mypagemenuIcon"
+            src={
+              isVolunteer
+                ? process.env.PUBLIC_URL + `./assets/open.png`
+                : process.env.PUBLIC_URL + `./assets/close.png`
+            }
+          />
+        </summary>
         <div
           onClick={() => {
             navigate(`/MyVolunteer`);
@@ -46,16 +56,48 @@ const MyPageMenuTest = ({ clicked }) => {
         </div>
       </details>
       <details open={isSpon}>
-        <summary>후원 기부</summary>
-        <div>나의 후원</div>
-        <div>나의 기부</div>
+        <summary>
+          후원 기부{" "}
+          <img
+            className="mypagemenuIcon"
+            src={
+              isSpon
+                ? process.env.PUBLIC_URL + `./assets/open.png`
+                : process.env.PUBLIC_URL + `./assets/close.png`
+            }
+          />
+        </summary>
+        <div
+          onClick={() => {
+            navigate(`/mypageSponsor`);
+          }}
+        >
+          후원내역
+        </div>
+        <div>기부내역</div>
       </details>
       <details open={isSet}>
-        <summary>설정</summary>
+        <summary>
+          설정{" "}
+          <img
+            className="mypagemenuIcon"
+            src={
+              isSet
+                ? process.env.PUBLIC_URL + `./assets/open.png`
+                : process.env.PUBLIC_URL + `./assets/close.png`
+            }
+          />
+        </summary>
         <div>내 정보 수정</div>
       </details>
       <details className="menuBottom">
-        <summary>공지사항</summary>
+        <summary>
+          공지사항{" "}
+          <img
+            className="mypagemenuIcon"
+            src={process.env.PUBLIC_URL + `./assets/close.png`}
+          />
+        </summary>
       </details>
     </div>
   );

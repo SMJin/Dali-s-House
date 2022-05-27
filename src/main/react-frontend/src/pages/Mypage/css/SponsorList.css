@@ -1,107 +1,94 @@
 .SponsorList_wrapper {
-    padding-top: 20px;
-    width: 60%;
-    flex-grow:1;
-    justify-content: right;
-    margin-right: 140px;
-    float: right;
-    margin-top: 5px;
-    margin-bottom: 50px;
-    height: 100%;
+  margin-top: 5px;
 }
 
-.SponsorList_list_wrapper{
-    margin-bottom: 10px;
-    width: 100%;
-    border: 1px;
-    border-color: #e2e2e2;
-    border-style: solid;
-    cursor: pointer;  
-    justify-content: center;
-    height: 160px;
-}
+.SponsorList_list_wrapper {
+  margin-bottom: 10px;
 
+  border: 1px;
+  border-radius: 3px;
+  border-color: #e2e2e2;
+  border-style: solid;
+  cursor: pointer;
+  justify-content: center;
+  height: 140px;
+}
 
 .sponlist_code_text {
-    width: 215px;
-    height: 16px;
-    margin-top: 15px;
-    margin-left: 10px;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 16px;
+  width: 215px;
+  height: 16px;
+  margin-top: 15px;
+  margin-left: 15px;
+  font-weight: 600;
+  font-size: 13px;
 
-    color: #17181A;
-} 
+  color: #17181a;
+}
 
 .sponlist_title_text {
-    width: 473px;
-    height: 22px;
+  width: 473px;
+  height: 22px;
 
-    font-weight: 550;
-    font-size: 15px;
-    line-height: 22px;
-    margin-left: 8px;
-    margin-top: 3px;
+  font-weight: 550;
+  font-size: 15px;
 
-    color: #17181A;
+  margin-left: 15px;
+  margin-top: 3px;
+
+  color: #17181a;
 }
 
 .sponlist_place_text {
-    width: 223px;
-    height: 16px;
+  width: 223px;
+  height: 16px;
 
-    margin-left: 10px;
-    margin-top: 5px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    
-    color: #555558;
+  margin-left: 15px;
+  margin-top: 5px;
+  font-weight: 400;
+  font-size: 12px;
 
+  color: #555558;
 }
 
 .sponlist_delivery_text {
-    width: 70px;
-    height: 16px;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 16px;
-    margin-left: 10px;
-    margin-top: 20px;
+  width: 70px;
+  height: 16px;
+  font-weight: 600;
+  font-size: 12px;
 
-    
-    color:  #555558;
+  margin-left: 15px;
+  margin-top: 20px;
 
+  color: #555558;
 }
 
 .sponlist_date_text {
-    width: 77px;
-    height: 16px;
-    margin-left: 10px;
-    margin-top: 3px;
+  width: 77px;
+  height: 16px;
+  margin-left: 15px;
+  margin-top: 3px;
 
-    font-style: normal;
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 16px;
-    
-    color: #555558;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
 
+  color: #555558;
 }
 
 .sponlist_total_amount_text {
-    width: 95%;
-    height: 38px;
-    text-align: right;
+  width: 95%;
+  height: 38px;
+  text-align: right;
 
-    font-weight: 800;
-    font-size: 17px;
-    line-height: 38px;
-    margin-top: -35px;
+  font-weight: 800;
+  font-size: 17px;
 
-    color: #17181A;
+  margin-top: 20px;
+  margin-right: 20px;
 
+  color: #17181a;
 }
 
-
+.sponlist_place_textWrapper {
+  display: flex;
+}
