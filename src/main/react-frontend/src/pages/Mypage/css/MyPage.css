@@ -1,7 +1,30 @@
 .Mypage {
 }
 
-.mypage_wrapper {
+.mypageWrapper {
+  display: flex;
+}
+.mypageContentWrapper {
+  width: 700px;
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+.mypageContentLengthWrapper {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mypageContentLength {
+  font-size: 0.75em;
+  font-weight: bold;
+
+  margin: 20px 0px 15px 0px;
+}
+
+/* .mypage_wrapper {
   height: 500px;
 }
 
@@ -12,4 +35,4 @@
   margin-top: 20px;
   display: flex;
   font-size: 16px;
-}
+} */

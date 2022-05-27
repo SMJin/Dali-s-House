@@ -37,7 +37,13 @@ const MyPageMenuTest = ({ clicked }) => {
         >
           찜한봉사
         </div>
-        <div>봉사인증서발급</div>
+        <div
+          onClick={() => {
+            navigate(`/MyVolunteerCertificate`);
+          }}
+        >
+          봉사인증서발급
+        </div>
       </details>
       <details open={isSpon}>
         <summary>후원 기부</summary>
