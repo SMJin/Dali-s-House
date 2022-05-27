@@ -1,6 +1,5 @@
 .mypage_myvolunteer {
   width: 40%;
-
 }
 
 div > .mypage_myvolunteer > span {
@@ -10,8 +9,6 @@ div > .mypage_myvolunteer > span {
   margin-top: 20px;
   display: flex;
   font-size: 16px;
-
-
 }
 
 .mypage_myvolunteer_list {
@@ -22,13 +19,66 @@ div > .mypage_myvolunteer > span {
   margin-top: 20px;
   padding-bottom: 10px;
   padding-top: 10px;
-
 }
 
-.MyVolunteer > .mypage_myvolunteer > .MySearch { 
+.MyVolunteer > .mypage_myvolunteer > .MySearch {
   margin-top: -28px;
   margin-left: 505px;
   justify-content: right;
   align-items: right;
   width: 100%;
+}
+
+.mypageVolunteerItemWapper {
+  display: flex;
+
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+
+  width: 700px;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+.mypageVolunteerImgWrapper {
+  width: 150px;
+  height: 100px;
+  border-radius: 5px;
+  margin: 10px 20px 10px 10px;
+
+  overflow: hidden;
+}
+
+.mypageVolunteerImg {
+  width: 150px;
+  margin-top: -10px;
+  border-radius: 5px;
+}
+
+.mypageVolunteerTextWapper {
+  width: 500px;
+  padding-top: 25px;
+}
+
+.mypageVolunteerTitle {
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.mypageVolunteerOrgan {
+  color: #adadad;
+  margin: 2px 0px;
+  font-size: 0.8em;
+}
+
+.mypageVolunteerDate {
+  color: #555558;
+  font-size: 0.8em;
+}
+
+.mypageVolunteerContent {
+  color: #555558;
+
+  font-size: 0.85em;
 }
