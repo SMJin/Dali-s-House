@@ -1,0 +1,45 @@
+.MyPageMenuTest {
+  align-items: center;
+  text-align: center;
+  width: 260px;
+
+  border-right: 1px solid #e2e2e2;
+}
+
+.MyPageMenuTest > details > summary {
+  font-size: 1.1em;
+  font-weight: bold;
+
+  height: 50px;
+  line-height: 50px;
+
+  cursor: pointer;
+}
+
+.MyPageMenuTest > details summary::marker {
+  font-size: 0;
+}
+
+.MyPageMenuTest > details > div {
+  align-items: center;
+  text-align: center;
+
+  height: 40px;
+  line-height: 40px;
+  margin: 5px 20px;
+
+  cursor: pointer;
+}
+
+.MyPageMenuTest > details > div:hover {
+  font-weight: bold;
+  background-color: #f8f8fb;
+}
+
+.menuTop {
+  padding-top: 15px;
+}
+
+.menuBottom {
+  padding-bottom: 20px;
+}
