@@ -261,6 +261,7 @@ const VolunteerApply = () => {
           className="volunteerSubmitButton"
           disabled={!(IsName && IsBirth && IsNumber && IsEmail && agree)}
           onClick={() => {
+            alert("제출이 완료되었습니다!");
             navigate(-1, { replace: true });
           }}
         >
