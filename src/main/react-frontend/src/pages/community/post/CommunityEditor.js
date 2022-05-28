@@ -51,7 +51,7 @@ const CommPostEditor = ({ isEdit, originData }) => {
       }
     }
 
-    navigate(-1, { replace: true });
+    navigate(`/community`);
   };
 
   const handleRemove = () => {

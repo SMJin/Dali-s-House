@@ -30,13 +30,6 @@ const Community_Detail = ({ originData }) => {
     }
   }, [id, postList]);
 
-  const handleRemove = () => {
-    if (window.confirm("정말 삭제하시겠습니까?")) {
-      onRemove(originData.id);
-      navigate("/community", { replace: true });
-    }
-  };
-
   if (!data) {
     return <div className="CommunityDetailPage">로딩중입니다...</div>;
   } else {
@@ -111,9 +104,6 @@ const Community_Detail = ({ originData }) => {
               <HeartnReply heart={data.heart} reply={data.reply} />
             </div>
             <div className="detailPostButtonWrapper">
-              <button className="detailPostDeleteButton" onClick={handleRemove}>
-                삭제하기
-              </button>
               <button
                 className="detailPostEditButton"
                 onClick={() => {
@@ -132,3 +122,16 @@ const Community_Detail = ({ originData }) => {
 };
 
 export default Community_Detail;
+
+/*
+  const handleRemove = () => {
+    if (window.confirm("정말 삭제하시겠습니까?")) {
+      onRemove(postList.id);
+      navigate("/community", { replace: true });
+    }
+  };
+
+              <button className="detailPostDeleteButton" onClick={handleRemove}>
+                삭제하기
+              </button>
+*/

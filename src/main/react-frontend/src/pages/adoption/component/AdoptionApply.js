@@ -150,6 +150,7 @@ const AdoptionApply = () => {
           className="adoptionSubmitButton"
           disabled={!agree}
           onClick={() => {
+            alert("제출이 완료되었습니다!");
             navigate(-1, { replace: true });
           }}
         >
